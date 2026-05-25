@@ -36,11 +36,11 @@ export function BlogSection() {
   return (
     <section 
       id="blog" 
-      className="py-24 md:py-32 px-6 md:px-12 transition-colors duration-300"
-      style={{ background: 'linear-gradient(to bottom, #090514 0%, #25104d 60%, transparent 100%)' }}
+      className="pt-40 pb-24 md:pt-56 md:pb-32 px-6 md:px-12 border-t border-white/10 transition-colors duration-300"
+      style={{ background: 'linear-gradient(to bottom, #090514 0%, #25104d 60%, #090514 100%)' }}
       aria-label="LED Screen Buying Guides and Industry Insights"
     >
-      <div className="max-w-[1600px] mx-auto">
+      <div className="max-w-[1200px] mx-auto">
         {/* Header */}
         <div className="grid grid-cols-12 gap-6 pb-12 mb-8">
           <div className="col-span-12 md:col-span-4 lg:col-span-3">
@@ -49,8 +49,8 @@ export function BlogSection() {
             </span>
           </div>
           <div className="col-span-12 md:col-span-8 lg:col-span-9">
-            <h2 className="font-serif text-[6vw] md:text-[4.5vw] font-medium tracking-[-0.04em] leading-[0.95] mb-6 text-white">
-              Practical Advice. Written for Buyers.
+            <h2 className="font-serif text-[6vw] md:text-[4.5vw] lg:text-6xl font-medium tracking-[-0.04em] leading-[0.95] mb-6 text-white">
+              Practical Advice. <br className="hidden md:block" />Written for Buyers.
             </h2>
             <p className="text-sm md:text-base tracking-normal leading-relaxed text-white/70 max-w-2xl">
               Practical advice on LED screen selection, pixel pitch metrics, installation setups, and maintenance operations.
@@ -59,11 +59,11 @@ export function BlogSection() {
         </div>
 
         {/* Sereniche Style Card Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
           {posts.map((post, idx) => (
             <article 
               key={idx}
-              className="group relative h-[28rem] lg:h-[32rem] flex flex-col justify-between p-6 lg:p-8 overflow-hidden bg-[#05020a] border border-white/[0.03] hover:border-white/10 transition-colors duration-500"
+              className="group relative h-[24rem] lg:h-[28rem] flex flex-col justify-between p-6 lg:p-8 overflow-hidden bg-[#05020a] border border-white/[0.03] hover:border-white/10 transition-colors duration-500"
             >
               {/* Background Image Layer */}
               <div className="absolute inset-0 z-0">
@@ -71,13 +71,13 @@ export function BlogSection() {
                   src={post.image} 
                   alt={post.title} 
                   fill
-                  className="object-cover transition-transform duration-[1.5s] ease-out group-hover:scale-110 opacity-30 mix-blend-luminosity group-hover:mix-blend-normal group-hover:opacity-60"
+                  className="object-cover transition-transform duration-[1.5s] ease-out group-hover:scale-110 opacity-50 group-hover:opacity-70"
                   sizes="(max-width: 768px) 100vw, 33vw"
                   loading="lazy"
                 />
                 {/* Gradient overlays to ensure text readability */}
-                <div className="absolute inset-0 bg-gradient-to-b from-[#05020a]/90 via-transparent to-[#05020a]/95" />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#05020a]/90 via-[#05020a]/40 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-b from-[#05020a]/70 via-transparent to-[#05020a]/80" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#05020a]/80 via-[#05020a]/20 to-transparent" />
               </div>
 
               {/* Content Container (Z-10) */}
@@ -91,21 +91,21 @@ export function BlogSection() {
                 </div>
 
                 {/* Middle/Bottom Section: Excerpt */}
-                <div className="mt-auto mb-8">
+                <div className="mt-auto mb-5">
                   <p className="text-sm text-white/70 leading-relaxed font-light drop-shadow-sm md:opacity-70 group-hover:opacity-100 transition-opacity duration-500 line-clamp-3">
                     {post.excerpt}
                   </p>
                 </div>
 
                 {/* Bottom Section: Read More Link */}
-                <div className="flex items-center justify-between border-t border-white/10 pt-4 mt-2">
+                <div className="flex items-center justify-between border-t border-white/10 pt-4 shrink-0">
                   <a 
                     href={`/blog/${post.slug}`}
                     className="inline-flex items-center gap-2 font-mono text-[9px] tracking-[0.2em] uppercase text-white hover:text-purple-300 transition-colors"
                   >
                     + READ MORE
                   </a>
-                  <span className="text-[9px] font-mono text-white/40 uppercase tracking-widest">
+                  <span className="text-[9px] font-mono text-white/40 uppercase tracking-widest text-right max-w-[50%] truncate">
                     {post.category}
                   </span>
                 </div>

@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import Image from 'next/image'
+import { motion, AnimatePresence } from 'framer-motion'
 import { 
   ShoppingBag, Building2, Hotel, Heart, 
   GraduationCap, Landmark, PartyPopper, Trophy,
@@ -106,99 +107,111 @@ export function SolutionsSection() {
   return (
     <section 
       id="solutions" 
-      className="py-24 md:py-32 px-6 md:px-12 border-b border-[var(--canvas-border)] transition-colors duration-300"
+      className="pt-24 pb-48 md:pt-40 md:pb-72 px-6 md:px-12 border-b border-[var(--canvas-border)] relative z-10"
       style={{ backgroundColor: 'transparent' }}
       aria-label="LED Screen Solutions by Industry"
     >
-      <div className="max-w-7xl mx-auto">
-        {/* Asymmetric Grid Header */}
-        <div className="grid grid-cols-12 gap-6 border-b border-[var(--canvas-border)] pb-12 mb-16">
-          <div className="col-span-12 md:col-span-4 lg:col-span-3">
-            <span className="text-[10px] tracking-widest uppercase font-mono text-purple-500/80 block">
-              OUR DEPLOYMENTS // MARKETS
+      <div className="max-w-[1400px] mx-auto">
+        {/* Header */}
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-end pb-12 mb-12 border-b border-[var(--canvas-border)]">
+          <div className="mb-8 md:mb-0">
+            <span className="block font-mono text-[10px] uppercase tracking-[0.24em] text-purple-600/80 mb-6 drop-shadow-sm">
+              // CORE DEPLOYMENT MARKETS
             </span>
-          </div>
-          <div className="col-span-12 md:col-span-8 lg:col-span-9">
-            <h2 className="font-serif text-[6vw] md:text-[5vw] font-medium tracking-[-0.04em] leading-[0.95] mb-6">
-              Every Sector. Custom Engineered.
+            <h2 className="max-w-3xl font-sans text-4xl md:text-5xl lg:text-6xl font-medium leading-[1.05] text-[var(--canvas-text)] tracking-tight">
+              Every Sector. <br className="hidden md:block"/>Custom Engineered.
             </h2>
-            <p className="text-xs md:text-sm tracking-normal leading-relaxed text-neutral-400 max-w-xl">
-              Aztech has delivered custom configurations to 8 core market sectors. Whether it&apos;s a single-screen retail installation or a secure municipal command center, we execute on time.
-            </p>
           </div>
+          <p className="max-w-[320px] text-sm md:text-base leading-[1.8] text-[var(--canvas-text-muted)] text-left md:text-right font-light">
+            We deliver highly specialized configurations across 8 core market sectors. Whether it's a single-screen retail installation or a secure municipal command center, we execute on time.
+          </p>
         </div>
 
-        {/* Industry Grid: Asymmetric Layout split between tabs and content */}
-        <div className="grid grid-cols-12 gap-0 border-t border-l border-[var(--canvas-border)]">
+        {/* Premium Grid Layout */}
+        <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 relative mt-16 md:mt-24">
           
-          {/* Tab Selector Column - Span 4 */}
-          <div className="col-span-12 md:col-span-4 lg:col-span-3 flex flex-row md:flex-col overflow-x-auto md:overflow-visible border-r border-[var(--canvas-border)]">
-            {industries.map((industry) => (
-              <button
-                key={industry.id}
-                onClick={() => setActiveTab(industry.id)}
-                className={`flex-shrink-0 md:flex-shrink text-left p-6 md:p-8 border-b border-r md:border-r-0 border-[var(--canvas-border)] hover:bg-neutral-500/[0.02] transition-colors relative rounded-none flex flex-col items-start gap-1`}
-              >
-                <span className={`text-xs font-mono tracking-widest uppercase ${activeTab === industry.id ? "text-purple-500 font-bold" : "text-neutral-400"}`}>
-                  {industry.name}
-                </span>
-                <span className="text-[10px] text-neutral-500 font-mono">
-                  {industry.projects} Projects
-                </span>
-                {activeTab === industry.id && (
-                  <div className="absolute right-0 top-0 bottom-0 w-[2px] bg-purple-500 hidden md:block" />
-                )}
-              </button>
-            ))}
+          {/* Left Column: Interactive List */}
+          <div className="w-full lg:w-5/12 flex flex-col gap-8 lg:gap-10">
+            {industries.map((industry) => {
+              const isActive = activeTab === industry.id
+              return (
+                <div 
+                  key={industry.id}
+                  onMouseEnter={() => setActiveTab(industry.id)}
+                  onClick={() => setActiveTab(industry.id)}
+                  className={`group cursor-pointer transition-all duration-500 flex items-center gap-6 ${isActive ? 'opacity-100 pl-4 lg:pl-6 border-l border-purple-500' : 'opacity-30 hover:opacity-70 border-l border-transparent'}`}
+                >
+                  <h3 className={`font-serif text-3xl md:text-4xl lg:text-[3.5rem] font-medium leading-[1] transition-transform duration-500 ${isActive ? 'text-[var(--canvas-text)]' : 'text-[var(--canvas-text-muted)] group-hover:translate-x-2'}`}>
+                    {industry.name}
+                  </h3>
+                  <div className={`hidden md:flex flex-col transition-all duration-500 ${isActive ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-4'}`}>
+                    <span className="text-[10px] font-mono tracking-[0.2em] uppercase text-purple-600 mb-1">Projects</span>
+                    <span className="text-xl font-serif text-[var(--canvas-text)]">{industry.projects}</span>
+                  </div>
+                </div>
+              )
+            })}
           </div>
 
-          {/* Industry Details Column - Span 8 */}
-          <div className="col-span-12 md:col-span-8 lg:col-span-9 p-6 md:p-12 border-r border-b border-[var(--canvas-border)] flex flex-col justify-between">
-            <div>
-              {/* Image Frame - Borderless */}
-              <div className="relative w-full aspect-video md:aspect-[21/9] overflow-hidden bg-neutral-900/10 border border-[var(--canvas-border)] mb-8">
-                <Image 
-                  key={activeIndustry.id} 
-                  src={activeIndustry.image} 
-                  alt={`${activeIndustry.title} LED display installations`} 
-                  className="absolute inset-0 w-full h-full object-cover brightness-95"
-                  width={900}
-                  height={385}
-                  sizes="(max-width: 1024px) 100vw, 60vw"
-                  loading="lazy"
-                />
+          {/* Right Column: Sticky Visuals */}
+          <div className="w-full lg:w-7/12 lg:sticky lg:top-32 h-[fit-content]">
+            <div className="relative w-full aspect-[4/3] lg:aspect-[16/11] overflow-hidden rounded-none border border-white/5 bg-[#05020a] group shadow-2xl">
+              
+              {/* Dynamic Image with Crossfade */}
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={activeIndustry.id}
+                  initial={{ opacity: 0, scale: 1.05 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+                  className="absolute inset-0 w-full h-full"
+                >
+                  <Image 
+                    src={activeIndustry.image} 
+                    alt={`${activeIndustry.title} LED display installations`} 
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 60vw"
+                    className="object-cover transition-transform duration-[2s] ease-out group-hover:scale-105"
+                    priority
+                  />
+                  {/* Elegant Gradient Scrim */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#090514] via-[#090514]/40 to-transparent opacity-90" />
+                </motion.div>
+              </AnimatePresence>
+
+              {/* Dynamic Content Overlay */}
+              <div className="absolute bottom-0 left-0 w-full p-8 lg:p-12 z-10 flex flex-col justify-end pointer-events-none">
+                <AnimatePresence mode="wait">
+                  <motion.div
+                    key={`content-${activeIndustry.id}`}
+                    initial={{ opacity: 0, y: 15 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -10 }}
+                    transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
+                  >
+                    <div className="flex items-center gap-4 mb-4">
+                      <div className="w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center backdrop-blur-md">
+                        <activeIndustry.icon className="w-5 h-5 text-purple-400" />
+                      </div>
+                      <h4 className="font-sans text-2xl md:text-3xl font-medium text-white/90">
+                        {activeIndustry.title}
+                      </h4>
+                    </div>
+                    
+                    <p className="text-sm md:text-base leading-[1.8] text-white/60 font-light max-w-xl mb-6">
+                      {activeIndustry.description}
+                    </p>
+
+                    <div className="flex flex-col gap-2 pt-6 border-t border-white/10">
+                      <span className="text-[9px] uppercase tracking-[0.2em] font-mono text-purple-400">Selected Deployments</span>
+                      <p className="text-xs text-white/40 font-light leading-relaxed max-w-xl">
+                        {activeIndustry.clients}
+                      </p>
+                    </div>
+                  </motion.div>
+                </AnimatePresence>
               </div>
-
-              {/* Title & Description */}
-              <div className="flex items-center gap-3 mb-6">
-                <activeIndustry.icon className="w-5 h-5 text-purple-500/80 stroke-[1.5]" aria-hidden="true" />
-                <h3 className="font-serif text-2xl md:text-3xl font-medium tracking-tight">
-                  {activeIndustry.title}
-                </h3>
-              </div>
-
-              <p className="text-xs md:text-sm leading-relaxed text-neutral-400 max-w-xl mb-8">
-                {activeIndustry.description}
-              </p>
-
-              {/* Key Clients List - Hairline Divider block */}
-              <div className="border-t border-[var(--canvas-border)] pt-6 mb-8">
-                <span className="text-[10px] tracking-widest uppercase font-mono text-purple-500/80 block mb-2">
-                  KEY CLIENTS DEPLOYED
-                </span>
-                <p className="text-xs text-neutral-500 leading-relaxed font-mono">
-                  {activeIndustry.clients}
-                </p>
-              </div>
-            </div>
-
-            <div>
-              <a 
-                href="#projects" 
-                className="inline-flex h-12 px-8 items-center justify-center border border-[var(--canvas-border)] bg-transparent text-[10px] tracking-widest uppercase font-mono transition-all duration-300 hover:bg-neutral-500/[0.05]"
-              >
-                View Related Project Logs
-              </a>
             </div>
           </div>
 

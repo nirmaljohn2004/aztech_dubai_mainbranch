@@ -18,40 +18,47 @@ const clients = [
 ]
 
 export function ClientMarquee() {
+  // We need enough copies so that half the track fills the screen.
+  const track = [...clients, ...clients, ...clients, ...clients]
+
   return (
     <section
       id="trust"
-      className="relative z-10 border-b border-white/5 px-6 py-20 md:px-12"
+      className="relative z-10 border-b border-[var(--canvas-border)] py-16 md:py-24 overflow-hidden"
       aria-label="Strategic partnerships"
       style={{ backgroundColor: 'transparent' }}
     >
-      <div className="mx-auto max-w-7xl flex flex-col md:flex-row items-center gap-12">
-        <div className="md:w-1/4 shrink-0">
-          <span className="block font-mono text-[10px] uppercase tracking-[0.24em] text-purple-400/80">
-            // STRATEGIC PARTNERSHIPS
+      <div className="mx-auto max-w-[1800px] flex flex-col lg:flex-row items-center gap-10 px-6 md:px-12">
+        
+        {/* Label */}
+        <div className="shrink-0 w-full lg:w-auto flex justify-center lg:justify-start">
+          <span className="inline-block font-mono text-[10px] uppercase tracking-[0.3em] text-[var(--canvas-text-muted)] border border-[var(--canvas-border)] px-4 py-2 rounded-full">
+            Strategic Partners
           </span>
         </div>
         
-        {/* Infinite Scrolling Marquee */}
+        {/* Premium Minimalist Marquee */}
         <div 
-          className="md:w-3/4 overflow-hidden relative flex items-center h-10 w-full"
-          style={{ maskImage: 'linear-gradient(to right, transparent, black 15%, black 85%, transparent)' }}
+          className="w-full overflow-hidden relative flex items-center h-16"
+          style={{ maskImage: 'linear-gradient(to right, transparent, black 10%, black 90%, transparent)' }}
         >
           <motion.div
             animate={{ x: ["0%", "-50%"] }}
-            transition={{ repeat: Infinity, ease: "linear", duration: 30 }}
-            className="flex whitespace-nowrap items-center gap-16"
+            transition={{ repeat: Infinity, ease: "linear", duration: 50 }}
+            className="flex whitespace-nowrap items-center w-max"
           >
-            {[...clients, ...clients, ...clients].map((client, index) => (
-              <span 
-                key={`${client}-${index}`} 
-                className="text-[11px] font-mono uppercase tracking-[0.2em] text-white/40"
-              >
-                {client}
-              </span>
+            {track.map((client, index) => (
+              <div key={`track-${index}`} className="flex items-center">
+                <span className="text-xl md:text-2xl font-sans font-light uppercase tracking-[0.15em] text-[var(--canvas-text)] opacity-40 hover:opacity-100 transition-opacity duration-500 cursor-default px-8 md:px-12">
+                  {client}
+                </span>
+                {/* Elegant Minimal Separator */}
+                <span className="w-1.5 h-1.5 rounded-full bg-[var(--canvas-text-muted)] opacity-20" />
+              </div>
             ))}
           </motion.div>
         </div>
+
       </div>
     </section>
   )

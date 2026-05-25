@@ -5,6 +5,7 @@ import { HeroSection } from "@/components/sections/hero"
 import { CompanyProcess } from "@/components/sections/company-process"
 import { ClientMarquee } from "@/components/sections/client-marquee"
 import { ProductsSection } from "@/components/sections/products"
+import { SolutionsSection } from "@/components/sections/solutions"
 import { PortfolioSection } from "@/components/sections/portfolio"
 import { BlogSection } from "@/components/sections/blog"
 import { ContactSection } from "@/components/sections/contact"
@@ -20,6 +21,7 @@ export default function Home() {
           <CompanyProcess />
           <ClientMarquee />
           <ProductsSection />
+          <SolutionsSection />
           <PortfolioSection />
           <BlogSection />
           <ContactSection />

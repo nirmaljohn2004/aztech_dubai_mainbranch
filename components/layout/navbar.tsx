@@ -7,13 +7,13 @@ import { Menu, X } from 'lucide-react'
 import { AnimatePresence, motion } from 'framer-motion'
 
 const navLinks = [
-  { href: '/', label: 'Home' },
-  { href: '/about', label: 'About' },
-  { href: '/products', label: 'Products' },
-  { href: '/sectors', label: 'Sectors' },
+  { href: '#hero', label: 'Home' },
+  { href: '#about', label: 'About' },
+  { href: '#products', label: 'Products' },
+  { href: '#solutions', label: 'Sectors' },
   { href: '#projects', label: 'Projects' },
   { href: '#blog', label: 'Blog' },
-  { href: '/contact', label: 'Contact' },
+  { href: '#contact', label: 'Contact' },
 ]
 
 export function Navbar() {
@@ -31,7 +31,7 @@ export function Navbar() {
       <nav
         className={`fixed left-0 right-0 top-0 z-50 transition-all duration-300 ${
           isScrolled
-            ? 'bg-[var(--canvas-bg)]/80 border-b border-[var(--canvas-border)] backdrop-blur-md'
+            ? 'bg-[var(--nav-bg)] border-b border-[var(--canvas-border)] backdrop-blur-md'
             : 'bg-transparent'
         }`}
         role="navigation"
@@ -55,18 +55,18 @@ export function Navbar() {
 
           <div className="hidden items-center gap-8 lg:flex">
             {navLinks.map((link) => (
-              <Link
+              <a
                 key={link.label}
                 href={link.href}
                 className="text-xs font-mono uppercase tracking-wider text-[var(--canvas-text)] transition-colors hover:text-purple-400 font-medium"
               >
                 {link.label}
-              </Link>
+              </a>
             ))}
           </div>
 
           <a
-            href="/contact"
+            href="#contact"
             className="hidden min-h-10 items-center border border-[var(--canvas-border)] bg-transparent px-6 text-xs font-mono uppercase tracking-widest text-[var(--canvas-text)] transition duration-300 hover:bg-[var(--canvas-text)]/5 lg:inline-flex rounded-none"
           >
             Get a Quote
@@ -102,17 +102,17 @@ export function Navbar() {
             >
               <div className="flex flex-col space-y-4">
                 {navLinks.map((link) => (
-                  <Link
+                  <a
                     key={link.label}
                     href={link.href}
                     className="text-xs font-mono uppercase tracking-wider text-[var(--canvas-text)]/80 transition hover:text-[var(--canvas-text)]"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     {link.label}
-                  </Link>
+                  </a>
                 ))}
                 <a
-                  href="/contact"
+                  href="#contact"
                   className="mt-2 text-center text-xs font-mono uppercase tracking-widest text-[var(--canvas-text)] border border-[var(--canvas-border)] py-3 hover:bg-[var(--canvas-text)]/5"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >

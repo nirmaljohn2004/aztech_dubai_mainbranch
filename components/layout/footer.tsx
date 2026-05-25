@@ -8,8 +8,7 @@ export function Footer() {
 
   return (
     <footer 
-      className="border-t border-[var(--canvas-border)] relative z-10"
-      style={{ backgroundColor: 'transparent', color: 'var(--canvas-text)' }}
+      className="border-t border-[var(--canvas-border)] relative z-10 bg-transparent text-[var(--canvas-text)] transition-colors duration-300"
     >
       {/* Main Footer Asymmetric Grid */}
       <div className="max-w-7xl mx-auto px-6 md:px-12 py-16">
@@ -17,10 +16,10 @@ export function Footer() {
           
           {/* Brand Info (Span 12 -> 3) */}
           <div className="col-span-12 lg:col-span-4 flex flex-col items-start gap-4">
-            <h3 className="font-serif text-lg font-medium tracking-tight">
+            <h3 className="font-serif text-lg font-medium tracking-tight text-[var(--canvas-text)]">
               Aztech LED Screens
             </h3>
-            <p className="text-xs text-neutral-400 leading-relaxed max-w-xs">
+            <p className="text-xs text-[var(--canvas-text-muted)] leading-relaxed max-w-xs">
               India&apos;s LED display engineering specialists. Backed by 20+ years of Dubai execution excellence.
             </p>
             <div className="flex gap-4 pt-2">
@@ -28,7 +27,7 @@ export function Footer() {
                 href="https://linkedin.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-neutral-500 hover:text-purple-400 transition-colors"
+                className="text-[var(--canvas-text-muted)] hover:text-purple-500 transition-colors"
                 aria-label="LinkedIn"
               >
                 <Linkedin size={16} />
@@ -37,7 +36,7 @@ export function Footer() {
                 href="https://instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-neutral-500 hover:text-purple-400 transition-colors"
+                className="text-[var(--canvas-text-muted)] hover:text-purple-500 transition-colors"
                 aria-label="Instagram"
               >
                 <Instagram size={16} />
@@ -46,7 +45,7 @@ export function Footer() {
                 href="https://facebook.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-neutral-500 hover:text-purple-400 transition-colors"
+                className="text-[var(--canvas-text-muted)] hover:text-purple-500 transition-colors"
                 aria-label="Facebook"
               >
                 <Facebook size={16} />
@@ -56,7 +55,7 @@ export function Footer() {
 
           {/* Products Menu (Span 12 -> 3) */}
           <div className="col-span-6 md:col-span-4 lg:col-span-3">
-            <span className="text-[10px] tracking-widest uppercase font-mono text-purple-500/80 mb-4 block">
+            <span className="text-[10px] tracking-widest uppercase font-mono text-purple-500 mb-4 block">
               HARDWARE PRODUCTS
             </span>
             <ul className="space-y-2.5">
@@ -64,7 +63,7 @@ export function Footer() {
                 <li key={idx}>
                   <Link
                     href="#products"
-                    className="text-xs text-neutral-400 hover:text-white transition-colors"
+                    className="text-xs text-[var(--canvas-text-muted)] hover:text-[var(--canvas-text)] transition-colors"
                   >
                     {item}
                   </Link>
@@ -75,7 +74,7 @@ export function Footer() {
 
           {/* Company Links (Span 12 -> 2) */}
           <div className="col-span-6 md:col-span-4 lg:col-span-2">
-            <span className="text-[10px] tracking-widest uppercase font-mono text-neutral-500 mb-4 block">
+            <span className="text-[10px] tracking-widest uppercase font-mono text-[var(--canvas-text-muted)] mb-4 block">
               CORPORATE
             </span>
             <ul className="space-y-2.5">
@@ -88,7 +87,7 @@ export function Footer() {
                 <li key={idx}>
                   <Link
                     href={link.href}
-                    className="text-xs text-neutral-400 hover:text-white transition-colors"
+                    className="text-xs text-[var(--canvas-text-muted)] hover:text-[var(--canvas-text)] transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -99,22 +98,22 @@ export function Footer() {
 
           {/* Contact Hotline (Span 12 -> 3) */}
           <div className="col-span-12 md:col-span-4 lg:col-span-3">
-            <span className="text-[10px] tracking-widest uppercase font-mono text-neutral-500 mb-4 block">
+            <span className="text-[10px] tracking-widest uppercase font-mono text-[var(--canvas-text-muted)] mb-4 block">
               HOTLINES
             </span>
-            <ul className="space-y-2 text-xs text-neutral-400 font-mono">
+            <ul className="space-y-2 text-xs text-[var(--canvas-text-muted)] font-mono">
               <li>
-                <a href="tel:+917356780866" className="hover:text-purple-400 transition-colors">
+                <a href="tel:+917356780866" className="hover:text-[var(--canvas-text)] transition-colors">
                   +91 73567 80866 (India)
                 </a>
               </li>
               <li>
-                <a href="https://wa.me/971561425339" target="_blank" rel="noopener noreferrer" className="hover:text-purple-400 transition-colors">
+                <a href="https://wa.me/971561425339" target="_blank" rel="noopener noreferrer" className="hover:text-[var(--canvas-text)] transition-colors">
                   +971 56 142 5339 (Dubai)
                 </a>
               </li>
               <li>
-                <a href="mailto:sales@az-tech.ae" className="hover:text-purple-400 transition-colors">
+                <a href="mailto:sales@az-tech.ae" className="hover:text-[var(--canvas-text)] transition-colors">
                   sales@az-tech.ae
                 </a>
               </li>
@@ -123,7 +122,7 @@ export function Footer() {
         </div>
 
         {/* Footer Base Copy */}
-        <div className="border-t border-[var(--canvas-border)] pt-8 flex flex-col sm:flex-row justify-between items-center text-[10px] tracking-wider font-mono text-neutral-500 gap-4 uppercase">
+        <div className="border-t border-[var(--canvas-border)] pt-8 flex flex-col sm:flex-row justify-between items-center text-[10px] tracking-wider font-mono text-[var(--canvas-text-muted)] gap-4 uppercase">
           <p>© {currentYear} Aztech LED Screens Pvt Ltd. All Rights Reserved.</p>
           <p>Dubai Engineering · India Operations</p>
         </div>

@@ -493,7 +493,7 @@
 }
 
   /* ── Z-INDEX FIX FOR ALL EXISTING CONTENT ── */
-nav, header, footer, section, .section-base, .surface-content, .hero-section, .card, .container-max, [class*="section"] {
+section, .section-base, .surface-content, .hero-section, .card, .container-max, [class*="section"] {
   position: relative;
   z-index: 1;
 }

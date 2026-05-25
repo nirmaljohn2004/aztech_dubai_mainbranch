@@ -43,15 +43,25 @@ export function HeroSection() {
         {/* Ambient purple glow behind the portrait */}
         <div className="absolute top-[45%] left-1/2 z-[1] h-[45rem] w-[45rem] -translate-x-1/2 -translate-y-1/2 rounded-full bg-purple-600/15 blur-[120px]" />
 
+        {/* Hidden SVG Filter to choke the edges of the poorly-masked PNG */}
+        <svg width="0" height="0" className="absolute pointer-events-none">
+          <filter id="choke-edge" colorInterpolationFilters="sRGB">
+            <feMorphology in="SourceAlpha" operator="erode" radius="2" result="eroded" />
+            <feGaussianBlur in="eroded" stdDeviation="0.5" result="blurred" />
+            <feComposite in="SourceGraphic" in2="blurred" operator="in" />
+          </filter>
+        </svg>
+
         {/* The portrait — Huge, centered, touching the very top navbar */}
-        <div className="relative w-full h-[105vh] max-w-[85rem] z-[2]">
+        <div className="relative w-full h-[105vh] max-w-[85rem] z-[2] drop-shadow-[0_0_80px_rgba(168,85,247,0.2)]">
           <Image
             src="/images/hero_boy_hd.png"
             alt="Smiling child — Aztech LED"
             fill
             priority
             sizes="100vw"
-            className="object-cover object-top md:object-contain md:object-top drop-shadow-[0_0_60px_rgba(168,85,247,0.15)] drop-shadow-[0_0_12px_rgba(0,0,0,0.9)]"
+            className="object-cover object-top md:object-contain md:object-top"
+            style={{ filter: 'url(#choke-edge)' }}
           />
         </div>
         
