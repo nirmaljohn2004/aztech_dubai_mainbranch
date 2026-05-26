@@ -39,7 +39,7 @@ export function ProductsSection() {
   return (
     <section
       id="products"
-      className="relative z-10 border-b border-white/5 px-6 py-32 md:px-12 md:py-40"
+      className="relative z-10 border-b border-white/5 px-4 py-20 md:px-12 md:py-40"
       style={{ backgroundColor: 'transparent' }}
     >
       <div className="mx-auto max-w-[1200px]">
@@ -64,7 +64,7 @@ export function ProductsSection() {
               <button
                 key={cat}
                 onClick={() => setActiveCategory(cat)}
-                className={`px-6 py-2.5 rounded-full text-xs md:text-sm font-mono tracking-widest uppercase transition-all duration-300 ${activeCategory === cat
+                className={`px-4 py-2 md:px-6 md:py-2.5 rounded-full text-[10px] md:text-sm font-mono tracking-widest uppercase transition-all duration-300 ${activeCategory === cat
                     ? 'bg-purple-500/20 text-purple-300 border border-purple-500/30 shadow-[0_0_15px_rgba(168,85,247,0.15)]'
                     : 'bg-transparent text-[var(--canvas-text-muted)] hover:text-[var(--canvas-text)] border border-transparent'
                   }`}
@@ -78,7 +78,7 @@ export function ProductsSection() {
         {/* Minimal Product Grid */}
         <motion.div
           layout
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 md:gap-16 lg:gap-20"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-16 lg:gap-20"
         >
           <AnimatePresence mode="popLayout">
             {filteredProducts.map((product) => (

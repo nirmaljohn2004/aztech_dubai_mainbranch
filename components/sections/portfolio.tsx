@@ -126,7 +126,7 @@ export function PortfolioSection() {
         </div>
       </div>
 
-      <div className="relative z-10 w-full max-w-[1600px] mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-12 gap-8 h-full pt-40 pb-24 items-end">
+      <div className="relative z-10 w-full max-w-[1600px] mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8 h-full pt-32 md:pt-40 pb-12 md:pb-24 items-end">
         
         {/* Left Side: Typography & Info */}
         <div className="col-span-1 md:col-span-8 lg:col-span-9 h-full flex flex-col justify-end">
@@ -143,7 +143,7 @@ export function PortfolioSection() {
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.6, ease: "easeOut" }}
               >
-                <h2 className="font-serif text-5xl md:text-7xl lg:text-[6rem] font-medium tracking-tight leading-[1.05] text-white mb-8 drop-shadow-xl">
+                <h2 className="font-serif text-4xl md:text-7xl lg:text-[6rem] font-medium tracking-tight leading-[1.05] text-white mb-6 md:mb-8 drop-shadow-xl">
                   {projects[activeIndex].name}
                 </h2>
                 <div className="flex flex-wrap gap-3 font-mono text-[10px] tracking-wider uppercase text-white/80">

@@ -49,7 +49,7 @@ export function CompanyProcess() {
       <div className="relative z-10 w-full max-w-[1600px] mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-12 gap-8 items-center h-full">
         
         {/* Left Side: Giant Number */}
-        <div className="col-span-1 md:col-span-5 lg:col-span-6 relative h-full flex items-center justify-center md:justify-start">
+        <div className="col-span-1 md:col-span-5 lg:col-span-6 relative h-[15rem] md:h-full flex items-center justify-center md:justify-start">
           <AnimatePresence mode="wait">
             <motion.div
               key={`num-${activeIndex}`}
@@ -57,9 +57,9 @@ export function CompanyProcess() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -30 }}
               transition={{ duration: 0.6, ease: "easeOut" }}
-              className="absolute left-0 md:left-10 lg:left-20 font-sans font-bold text-[#e5e5e5]"
+              className="absolute left-1/2 -translate-x-1/2 md:translate-x-0 md:left-10 lg:left-20 font-sans font-bold text-[#e5e5e5]"
             >
-              <span className="text-[12rem] md:text-[18rem] lg:text-[24rem] leading-none tracking-tighter opacity-90 drop-shadow-[0_0_40px_rgba(168,85,247,0.15)]">
+              <span className="text-[10rem] md:text-[18rem] lg:text-[24rem] leading-none tracking-tighter opacity-90 drop-shadow-[0_0_40px_rgba(168,85,247,0.15)]">
                 {steps[activeIndex].num}
               </span>
             </motion.div>
@@ -67,7 +67,7 @@ export function CompanyProcess() {
         </div>
 
         {/* Right Side: Text Content */}
-        <div className="col-span-1 md:col-span-7 lg:col-span-6 relative h-[25rem] flex items-center">
+        <div className="col-span-1 md:col-span-7 lg:col-span-6 relative h-auto md:h-[25rem] flex items-center pb-12 md:pb-0">
           <AnimatePresence mode="wait">
             <motion.div
               key={`text-${activeIndex}`}

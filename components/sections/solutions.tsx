@@ -118,7 +118,7 @@ export function SolutionsSection() {
             <span className="block font-mono text-[10px] uppercase tracking-[0.24em] text-purple-600/80 mb-6 drop-shadow-sm">
               // CORE DEPLOYMENT MARKETS
             </span>
-            <h2 className="max-w-3xl font-sans text-4xl md:text-5xl lg:text-6xl font-medium leading-[1.05] text-[var(--canvas-text)] tracking-tight">
+            <h2 className="max-w-3xl font-sans text-3xl md:text-5xl lg:text-6xl font-medium leading-[1.05] text-[var(--canvas-text)] tracking-tight">
               Every Sector. <br className="hidden md:block"/>Custom Engineered.
             </h2>
           </div>
@@ -128,7 +128,7 @@ export function SolutionsSection() {
         </div>
 
         {/* Premium Grid Layout */}
-        <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 relative mt-16 md:mt-24">
+        <div className="flex flex-col-reverse lg:flex-row gap-12 lg:gap-20 relative mt-16 md:mt-24">
           
           {/* Left Column: Interactive List */}
           <div className="w-full lg:w-5/12 flex flex-col gap-8 lg:gap-10">
@@ -141,7 +141,7 @@ export function SolutionsSection() {
                   onClick={() => setActiveTab(industry.id)}
                   className={`group cursor-pointer transition-all duration-500 flex items-center gap-6 ${isActive ? 'opacity-100 pl-4 lg:pl-6 border-l border-purple-500' : 'opacity-30 hover:opacity-70 border-l border-transparent'}`}
                 >
-                  <h3 className={`font-serif text-3xl md:text-4xl lg:text-[3.5rem] font-medium leading-[1] transition-transform duration-500 ${isActive ? 'text-[var(--canvas-text)]' : 'text-[var(--canvas-text-muted)] group-hover:translate-x-2'}`}>
+                  <h3 className={`font-serif text-2xl md:text-4xl lg:text-[3.5rem] font-medium leading-[1] transition-transform duration-500 ${isActive ? 'text-[var(--canvas-text)]' : 'text-[var(--canvas-text-muted)] group-hover:translate-x-2'}`}>
                     {industry.name}
                   </h3>
                   <div className={`hidden md:flex flex-col transition-all duration-500 ${isActive ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-4'}`}>

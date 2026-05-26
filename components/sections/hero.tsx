@@ -35,13 +35,23 @@ export function HeroSection() {
         style={{ opacity: bgOpacity, scale: bgScale }}
         className="fixed inset-0 z-[-1] w-full h-full pointer-events-none"
       >
+        {/* Desktop Image */}
         <Image
           src="/images/hero_bg_new.jpg"
-          alt="Hero Background"
+          alt="Hero Background Desktop"
           fill
           priority
           sizes="100vw"
-          className="object-cover object-center"
+          className="hidden md:block object-cover object-center"
+        />
+        {/* Mobile Image */}
+        <Image
+          src="/images/hero_mobile_custom.jpg"
+          alt="Hero Background Mobile"
+          fill
+          priority
+          sizes="100vw"
+          className="block md:hidden object-cover object-center"
         />
 
         {/* Subtle dark overlay for overall text legibility, without blacking out the bottom */}
@@ -57,7 +67,7 @@ export function HeroSection() {
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="relative z-10 flex flex-col md:flex-row h-full items-end justify-between px-6 md:px-14 lg:px-20 xl:px-28 w-full max-w-[1800px] mx-auto gap-8"
+          className="relative z-10 flex flex-col md:flex-row h-full items-start md:items-end justify-end md:justify-between px-4 md:px-14 lg:px-20 xl:px-28 w-full max-w-[1800px] mx-auto gap-8 md:gap-8"
         >
           {/* LEFT — Minimal Headline */}
           <div className="flex flex-col justify-end w-full max-w-[45rem]">
@@ -65,7 +75,7 @@ export function HeroSection() {
             <motion.h1
               variants={itemVariants}
               className="font-serif font-medium uppercase leading-[0.92] text-white drop-shadow-md"
-              style={{ fontSize: 'clamp(3rem, 6vw, 6.5rem)' }}
+              style={{ fontSize: 'clamp(2.5rem, 10vw, 6.5rem)' }}
             >
               ADVANCED{' '}
               <br className="hidden md:block" />
