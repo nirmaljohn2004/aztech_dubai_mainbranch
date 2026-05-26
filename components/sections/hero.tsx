@@ -46,7 +46,7 @@ export function HeroSection() {
         />
         {/* Mobile Image */}
         <Image
-          src="/images/new_hero_image.jpg"
+          src="/images/new_hero_mobile.jpg"
           alt="Hero Background Mobile"
           fill
           priority
