@@ -29,18 +29,14 @@ export function Navbar() {
   return (
     <>
       <nav
-        className={`fixed left-0 right-0 top-0 z-50 transition-all duration-300 ${
-          isScrolled
-            ? 'bg-[var(--nav-bg)] border-b border-[var(--canvas-border)] backdrop-blur-md'
-            : 'bg-transparent'
-        }`}
+        className="fixed left-0 right-0 top-0 z-50 transition-all duration-300 bg-transparent"
         role="navigation"
         aria-label="Main navigation"
         style={{ color: 'var(--canvas-text)' }}
       >
         <div className="mx-auto flex h-24 max-w-7xl items-center justify-between px-6 md:px-12">
-          <Link href="/" className="flex items-center gap-3 transition-opacity hover:opacity-85">
-            <span className="flex h-20 w-20 items-center justify-center rounded-none border border-[var(--canvas-border)] bg-transparent p-0 overflow-hidden">
+          <Link href="/" className="flex items-center transition-opacity hover:opacity-85">
+            <span className="flex h-20 w-20 items-center justify-center bg-transparent p-0 overflow-hidden">
               <Image
                 src="/images/1.jpg__2_-removebg-preview.png"
                 alt="Aztech LED"

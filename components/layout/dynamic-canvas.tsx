@@ -10,7 +10,7 @@ export function DynamicCanvasWrapper({ children }: { children: React.ReactNode }
   const canvasBg = useTransform(
     scrollYProgress,
     [0, 0.15, 0.3, 0.4, 0.45, 0.70, 0.75, 0.85, 0.88, 0.90, 1],
-    ["#05020A", "#0b0617", "#140b2e", "#241352", "#F9F9FB", "#F9F9FB", "#05020A", "#090514", "#F9F9FB", "#F9F9FB", "#F9F9FB"]
+    ["#05020A", "#0b0617", "#140b2e", "#241352", "#F9F9FB", "#F9F9FB", "#05020A", "#090514", "#0c061a", "#0f0822", "#170b33"]
   )
 
   const navBg = useTransform(
@@ -25,22 +25,22 @@ export function DynamicCanvasWrapper({ children }: { children: React.ReactNode }
       "rgba(249, 249, 251, 0.15)",
       "rgba(5, 2, 10, 0.05)",
       "rgba(9, 5, 20, 0.05)",
-      "rgba(249, 249, 251, 0.15)",
-      "rgba(249, 249, 251, 0.15)",
-      "rgba(249, 249, 251, 0.15)"
+      "rgba(9, 5, 20, 0.05)",
+      "rgba(9, 5, 20, 0.05)",
+      "rgba(9, 5, 20, 0.05)"
     ]
   )
 
   const canvasText = useTransform(
     scrollYProgress,
     [0, 0.15, 0.3, 0.4, 0.45, 0.70, 0.75, 0.85, 0.88, 0.90, 1],
-    ["#F3F4F6", "#F3F4F6", "#F3F4F6", "#F3F4F6", "#0B0B0C", "#0B0B0C", "#F3F4F6", "#F3F4F6", "#0B0B0C", "#0B0B0C", "#0B0B0C"]
+    ["#F3F4F6", "#F3F4F6", "#F3F4F6", "#F3F4F6", "#0B0B0C", "#0B0B0C", "#F3F4F6", "#F3F4F6", "#F3F4F6", "#F3F4F6", "#F3F4F6"]
   )
 
   const canvasTextMuted = useTransform(
     scrollYProgress,
     [0, 0.15, 0.3, 0.4, 0.45, 0.70, 0.75, 0.85, 0.88, 0.90, 1],
-    ["#d7cdea", "#d7cdea", "#d7cdea", "#d7cdea", "#51515A", "#51515A", "#d7cdea", "#d7cdea", "#51515A", "#51515A", "#51515A"]
+    ["#d7cdea", "#d7cdea", "#d7cdea", "#d7cdea", "#51515A", "#51515A", "#d7cdea", "#d7cdea", "#d7cdea", "#d7cdea", "#d7cdea"]
   )
 
   const canvasBorder = useTransform(
@@ -55,9 +55,9 @@ export function DynamicCanvasWrapper({ children }: { children: React.ReactNode }
       "rgba(11, 11, 12, 0.08)",
       "rgba(255, 255, 255, 0.08)",
       "rgba(255, 255, 255, 0.08)",
-      "rgba(11, 11, 12, 0.08)",
-      "rgba(11, 11, 12, 0.08)",
-      "rgba(11, 11, 12, 0.08)"
+      "rgba(255, 255, 255, 0.08)",
+      "rgba(255, 255, 255, 0.08)",
+      "rgba(255, 255, 255, 0.08)"
     ]
   )
 
@@ -166,15 +166,7 @@ export function DynamicCanvasWrapper({ children }: { children: React.ReactNode }
           background: "radial-gradient(circle at 76% 16%, rgba(216,180,254,0.38), transparent 34%), radial-gradient(circle at 18% 80%, rgba(124,58,237,0.2), transparent 42%), linear-gradient(120deg, rgba(255,255,255,0.10), transparent 46%)" 
         }} 
       />
-      <div
-        className="fixed inset-0 z-0 pointer-events-none opacity-[0.045]"
-        style={{
-          backgroundImage:
-            'radial-gradient(circle at 1px 1px, currentColor 1px, transparent 0)',
-          backgroundSize: '4px 4px',
-          color: 'var(--canvas-text)',
-        }}
-      />
+      {/* Grainy dot-grid overlay removed for a clean, glassy aesthetic */}
 
       <div className="absolute inset-0 z-[5] pointer-events-none">
         <CenterSpine />

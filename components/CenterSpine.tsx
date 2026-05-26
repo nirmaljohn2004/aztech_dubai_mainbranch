@@ -54,12 +54,7 @@ export const CenterSpine: React.FC = () => {
         </linearGradient>
       </defs>
 
-      <path
-        d={spinePath}
-        stroke="rgba(168, 85, 247, 0.22)"
-        strokeWidth="1.4"
-        strokeLinecap="round"
-      />
+      {/* Background track removed for cleaner single-shade look */}
 
       <motion.path
         d={spinePath}

@@ -92,7 +92,7 @@ export function PortfolioSection() {
   return (
     <section 
       id="projects" 
-      className="relative h-screen min-h-[700px] w-full flex items-center bg-[#090514] -mt-24 z-30"
+      className="relative h-screen min-h-[700px] w-full flex items-center bg-transparent -mt-24 z-30"
       style={{
         clipPath: 'inset(0 0 0 0 round 50% 50% 0 0 / 80px 80px 0 0)'
       }}
@@ -100,8 +100,6 @@ export function PortfolioSection() {
       {/* Background Images Cross-Fade Backdrop */}
       <div className="absolute inset-0 z-0 pointer-events-none">
         <div className="absolute inset-0 w-full h-full overflow-hidden">
-          {/* Base dark layer */}
-          <div className="absolute inset-0 bg-[#090514]" />
           
           <AnimatePresence>
             <motion.div

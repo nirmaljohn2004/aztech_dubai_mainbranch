@@ -175,43 +175,41 @@ export function SolutionsSection() {
                     className="object-cover transition-transform duration-[2s] ease-out group-hover:scale-105"
                     priority
                   />
-                  {/* Elegant Gradient Scrim */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#090514] via-[#090514]/40 to-transparent opacity-90" />
                 </motion.div>
               </AnimatePresence>
+            </div>
 
-              {/* Dynamic Content Overlay */}
-              <div className="absolute bottom-0 left-0 w-full p-8 lg:p-12 z-10 flex flex-col justify-end pointer-events-none">
-                <AnimatePresence mode="wait">
-                  <motion.div
-                    key={`content-${activeIndustry.id}`}
-                    initial={{ opacity: 0, y: 15 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -10 }}
-                    transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
-                  >
-                    <div className="flex items-center gap-4 mb-4">
-                      <div className="w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center backdrop-blur-md">
-                        <activeIndustry.icon className="w-5 h-5 text-purple-400" />
-                      </div>
-                      <h4 className="font-sans text-2xl md:text-3xl font-medium text-white/90">
-                        {activeIndustry.title}
-                      </h4>
+            {/* Dynamic Content Placard (Below Image) */}
+            <div className="mt-8 flex flex-col">
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={`content-${activeIndustry.id}`}
+                  initial={{ opacity: 0, y: 15 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -10 }}
+                  transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
+                >
+                  <div className="flex items-center gap-4 mb-4">
+                    <div className="w-10 h-10 rounded-full border border-[var(--canvas-border)] flex items-center justify-center">
+                      <activeIndustry.icon className="w-4 h-4 text-purple-600" />
                     </div>
-                    
-                    <p className="text-sm md:text-base leading-[1.8] text-white/60 font-light max-w-xl mb-6">
-                      {activeIndustry.description}
+                    <h4 className="font-sans text-2xl font-medium text-[var(--canvas-text)]">
+                      {activeIndustry.title}
+                    </h4>
+                  </div>
+                  
+                  <p className="text-sm md:text-base leading-[1.8] text-[var(--canvas-text-muted)] font-light max-w-2xl mb-6">
+                    {activeIndustry.description}
+                  </p>
+
+                  <div className="flex flex-col gap-2 pt-6 border-t border-[var(--canvas-border)]">
+                    <span className="text-[9px] uppercase tracking-[0.2em] font-mono text-purple-600">Selected Deployments</span>
+                    <p className="text-xs text-[var(--canvas-text-muted)] font-light leading-relaxed max-w-2xl">
+                      {activeIndustry.clients}
                     </p>
-
-                    <div className="flex flex-col gap-2 pt-6 border-t border-white/10">
-                      <span className="text-[9px] uppercase tracking-[0.2em] font-mono text-purple-400">Selected Deployments</span>
-                      <p className="text-xs text-white/40 font-light leading-relaxed max-w-xl">
-                        {activeIndustry.clients}
-                      </p>
-                    </div>
-                  </motion.div>
-                </AnimatePresence>
-              </div>
+                  </div>
+                </motion.div>
+              </AnimatePresence>
             </div>
           </div>
 

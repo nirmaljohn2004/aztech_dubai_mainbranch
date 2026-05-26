@@ -7,6 +7,7 @@ import { ClientMarquee } from "@/components/sections/client-marquee"
 import { ProductsSection } from "@/components/sections/products"
 import { SolutionsSection } from "@/components/sections/solutions"
 import { PortfolioSection } from "@/components/sections/portfolio"
+import { BrandingSection } from "@/components/sections/branding"
 import { BlogSection } from "@/components/sections/blog"
 import { ContactSection } from "@/components/sections/contact"
 import { DynamicCanvasWrapper } from "@/components/layout/dynamic-canvas"
@@ -15,7 +16,7 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <main id="main" role="main" className="min-h-screen bg-transparent">
+      <main id="main" role="main" className="min-h-screen bg-transparent overflow-x-hidden">
         <DynamicCanvasWrapper>
           <HeroSection />
           <CompanyProcess />
@@ -23,6 +24,7 @@ export default function Home() {
           <ProductsSection />
           <SolutionsSection />
           <PortfolioSection />
+          <BrandingSection />
           <BlogSection />
           <ContactSection />
         </DynamicCanvasWrapper>

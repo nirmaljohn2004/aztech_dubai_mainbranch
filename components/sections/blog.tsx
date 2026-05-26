@@ -36,8 +36,7 @@ export function BlogSection() {
   return (
     <section 
       id="blog" 
-      className="pt-40 pb-24 md:pt-56 md:pb-32 px-6 md:px-12 border-t border-white/10 transition-colors duration-300"
-      style={{ background: 'linear-gradient(to bottom, #090514 0%, #25104d 60%, #090514 100%)' }}
+      className="pt-40 pb-24 md:pt-56 md:pb-32 px-6 md:px-12 border-t border-white/10 transition-colors duration-300 bg-transparent"
       aria-label="LED Screen Buying Guides and Industry Insights"
     >
       <div className="max-w-[1200px] mx-auto">
@@ -63,7 +62,7 @@ export function BlogSection() {
           {posts.map((post, idx) => (
             <article 
               key={idx}
-              className="group relative h-[24rem] lg:h-[28rem] flex flex-col justify-between p-6 lg:p-8 overflow-hidden bg-[#05020a] border border-white/[0.03] hover:border-white/10 transition-colors duration-500"
+              className="group relative h-[20rem] lg:h-[22rem] flex flex-col justify-between p-6 lg:p-8 overflow-hidden bg-[#05020a] border border-white/[0.03] hover:border-white/10 transition-colors duration-500"
             >
               {/* Background Image Layer */}
               <div className="absolute inset-0 z-0">
@@ -71,13 +70,13 @@ export function BlogSection() {
                   src={post.image} 
                   alt={post.title} 
                   fill
-                  className="object-cover transition-transform duration-[1.5s] ease-out group-hover:scale-110 opacity-50 group-hover:opacity-70"
+                  className="object-cover transition-transform duration-[1.5s] ease-out group-hover:scale-110 opacity-70 group-hover:opacity-100"
                   sizes="(max-width: 768px) 100vw, 33vw"
                   loading="lazy"
                 />
                 {/* Gradient overlays to ensure text readability */}
-                <div className="absolute inset-0 bg-gradient-to-b from-[#05020a]/70 via-transparent to-[#05020a]/80" />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#05020a]/80 via-[#05020a]/20 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-b from-[#05020a]/50 via-transparent to-[#05020a]/60" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#05020a]/60 via-transparent to-transparent" />
               </div>
 
               {/* Content Container (Z-10) */}
@@ -85,7 +84,7 @@ export function BlogSection() {
                 
                 {/* Top Section: Title */}
                 <div>
-                  <h3 className="font-serif text-2xl lg:text-3xl font-medium tracking-tight text-white leading-[1.15] mb-2 drop-shadow-md">
+                  <h3 className="font-serif text-xl lg:text-2xl font-medium tracking-tight text-white leading-[1.15] mb-2 drop-shadow-md">
                     {post.title}
                   </h3>
                 </div>

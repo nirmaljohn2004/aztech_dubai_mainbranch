@@ -38,7 +38,7 @@ export function CompanyProcess() {
   }, [])
 
   return (
-    <section id="about" className="relative h-screen min-h-[600px] w-full flex items-center overflow-hidden bg-[#090514]">
+    <section id="about" className="relative h-screen min-h-[600px] w-full flex items-center bg-transparent">
       {/* Background Swirls (Sereniche Style) */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute left-[10%] top-[20%] h-[60rem] w-[60rem] -translate-x-1/2 -translate-y-1/2 rounded-full border border-purple-500/10 opacity-50 blur-[1px]" />
