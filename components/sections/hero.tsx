@@ -37,7 +37,7 @@ export function HeroSection() {
       >
         {/* Desktop Image */}
         <Image
-          src="/images/hero_bg_new.jpg"
+          src="/images/new_hero_image.jpg"
           alt="Hero Background Desktop"
           fill
           priority
@@ -46,7 +46,7 @@ export function HeroSection() {
         />
         {/* Mobile Image */}
         <Image
-          src="/images/hero_mobile_custom.jpg"
+          src="/images/new_hero_image.jpg"
           alt="Hero Background Mobile"
           fill
           priority
@@ -74,7 +74,7 @@ export function HeroSection() {
             {/* Headline */}
             <motion.h1
               variants={itemVariants}
-              className="font-serif font-medium uppercase leading-[0.92] text-white drop-shadow-md"
+              className="font-serif font-medium uppercase leading-[0.92] text-white drop-shadow-[0_5px_15px_rgba(0,0,0,0.8)]"
               style={{ fontSize: 'clamp(2.5rem, 10vw, 6.5rem)' }}
             >
               ADVANCED{' '}
