@@ -29,11 +29,11 @@ const steps = [
 export function CompanyProcess() {
   const [activeIndex, setActiveIndex] = useState(0)
 
-  // Auto-slide every 3 seconds
+  // Auto-slide every 2 seconds
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveIndex((current) => (current + 1) % steps.length)
-    }, 3000)
+    }, 2000)
     return () => clearInterval(interval)
   }, [])
 

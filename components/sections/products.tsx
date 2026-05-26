@@ -9,20 +9,20 @@ import { ArrowRight } from 'lucide-react'
 const allProducts = [
   { id: '1', category: 'Indoor', title: 'HD LED Display', metric: 'P1.2', image: '/images/prod_1.webp' },
   { id: '2', category: 'Indoor', title: 'Indoor LED Display', metric: 'Vibrant Colors', image: '/images/prod_2.webp' },
-  { id: '3', category: 'Outdoor', title: 'Outdoor DIP LED Display', metric: '5000 nits', image: '/images/prod_3.webp' },
+  { id: '3', category: 'Outdoor', title: 'Outdoor DIP LED Display', metric: '5000 nits', image: '/images/studio_outdoor_dip.png' },
   { id: '4', category: 'Outdoor', title: 'Outdoor SMD LED Display', metric: 'Wide View', image: '/images/prod_4.webp' },
   { id: '5', category: 'Outdoor', title: 'Die-Cast Aluminum LED', metric: 'IP65', image: '/images/prod_5.webp' },
   { id: '6', category: 'Specialty', title: 'Curtain / Mesh LED', metric: 'Semi-transparent', image: '/images/prod_6.webp' },
   { id: '7', category: 'Indoor', title: 'Front Service LED', metric: 'Front-access', image: '/images/prod_7.webp' },
-  { id: '8', category: 'Specialty', title: 'Floor LED Display', metric: '1000kg/m²', image: '/images/prod_8.webp' },
+  { id: '8', category: 'Specialty', title: 'Floor LED Display', metric: '1000kg/m²', image: '/images/studio_floor_led.png' },
   { id: '9', category: 'Indoor', title: 'Poster LED Display', metric: 'Standalone', image: '/images/prod_9.webp' },
   { id: '10', category: 'Specialty', title: 'Transparent Glass LED', metric: 'See-through', image: '/images/prod_10.webp' },
   { id: '11', category: 'Outdoor', title: 'Perimeter LED Display', metric: 'Stadium', image: '/images/prod_11.webp' },
-  { id: '12', category: 'Specialty', title: 'Curve LED Display', metric: 'Flexible', image: '/images/prod_12.webp' },
-  { id: '13', category: 'Specialty', title: 'Spherical LED Display', metric: '360° Globe', image: '/images/prod_13.webp' },
-  { id: '14', category: 'Specialty', title: 'Creative Shape LED', metric: 'Irregular', image: '/images/prod_14.webp' },
+  { id: '12', category: 'Specialty', title: 'Curve LED Display', metric: 'Flexible', image: '/images/studio_curved_led.png' },
+  { id: '13', category: 'Specialty', title: 'Spherical LED Display', metric: '360° Globe', image: '/images/spherical_custom.jpg' },
+  { id: '14', category: 'Specialty', title: 'Creative Shape LED', metric: 'Irregular', image: '/images/studio_creative_led.png' },
   { id: '15', category: 'Niche', title: 'Gas Price LED Display', metric: 'RTA Compliant', image: '/images/prod_15.webp' },
-  { id: '16', category: 'Niche', title: 'Taxi Rooftop LED', metric: 'Taxi Ads', image: '/images/prod_16.webp' },
+  { id: '16', category: 'Niche', title: 'Taxi Rooftop LED', metric: 'Taxi Ads', image: '/images/taxi_rooftop_custom.jpg' },
   { id: '17', category: 'Niche', title: 'Traffic LED Display', metric: 'VMS', image: '/images/prod_17.webp' },
   { id: '18', category: 'Indoor', title: 'LCD Video Wall', metric: 'Seamless', image: '/images/prod_18.webp' },
 ]
@@ -32,8 +32,8 @@ const categories = ['All', 'Indoor', 'Outdoor', 'Specialty', 'Niche']
 export function ProductsSection() {
   const [activeCategory, setActiveCategory] = useState('All')
 
-  const filteredProducts = activeCategory === 'All' 
-    ? allProducts 
+  const filteredProducts = activeCategory === 'All'
+    ? allProducts
     : allProducts.filter(p => p.category === activeCategory)
 
   return (
@@ -49,11 +49,11 @@ export function ProductsSection() {
             <span className="uppercase tracking-[0.35em] text-[11px] font-mono text-purple-300/70">Hardware Portfolio</span>
             <div className="w-12 h-[1px] bg-purple-500/30"></div>
           </div>
-          
+
           <h2 className="max-w-5xl font-sans text-5xl md:text-7xl font-medium leading-[1.1] text-[var(--canvas-text)] tracking-[-0.02em] mb-8">
-            Precision display <br className="hidden md:block"/>systems.
+            Precision display <br className="hidden md:block" />systems.
           </h2>
-          
+
           <p className="max-w-2xl text-base md:text-lg leading-[1.8] text-[var(--canvas-text-muted)] font-light mb-16">
             Engineered for absolute clarity across any architectural scale or viewing distance. Explore our comprehensive 18-product lineup.
           </p>
@@ -64,11 +64,10 @@ export function ProductsSection() {
               <button
                 key={cat}
                 onClick={() => setActiveCategory(cat)}
-                className={`px-6 py-2.5 rounded-full text-xs md:text-sm font-mono tracking-widest uppercase transition-all duration-300 ${
-                  activeCategory === cat 
-                    ? 'bg-purple-500/20 text-purple-300 border border-purple-500/30 shadow-[0_0_15px_rgba(168,85,247,0.15)]' 
+                className={`px-6 py-2.5 rounded-full text-xs md:text-sm font-mono tracking-widest uppercase transition-all duration-300 ${activeCategory === cat
+                    ? 'bg-purple-500/20 text-purple-300 border border-purple-500/30 shadow-[0_0_15px_rgba(168,85,247,0.15)]'
                     : 'bg-transparent text-[var(--canvas-text-muted)] hover:text-[var(--canvas-text)] border border-transparent'
-                }`}
+                  }`}
               >
                 {cat}
               </button>
@@ -77,7 +76,7 @@ export function ProductsSection() {
         </div>
 
         {/* Minimal Product Grid */}
-        <motion.div 
+        <motion.div
           layout
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 md:gap-16 lg:gap-20"
         >

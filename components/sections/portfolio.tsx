@@ -81,11 +81,11 @@ const projects = [
 export function PortfolioSection() {
   const [activeIndex, setActiveIndex] = useState(0)
 
-  // Auto-slide every 4 seconds
+  // Auto-slide every 2.5 seconds
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveIndex((current) => (current + 1) % projects.length)
-    }, 4000)
+    }, 2500)
     return () => clearInterval(interval)
   }, [])
 
