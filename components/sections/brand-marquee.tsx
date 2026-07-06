@@ -2,38 +2,37 @@
 
 import { motion } from 'framer-motion'
 
-const clients = [
-  'CARREFOUR UAE',
-  'ZULEKHA HOSPITAL',
-  'ROVE HOTELS',
-  'GEMS SCHOOLS',
-  'OBEROI HOTEL',
-  'ADNOC HQ',
-  'RTA DUBAI',
-  'UNION COOP',
-  'IBM ABU DHABI',
-  'PARLIAMENT PALACE ABU DHABI',
-  'AJMAN MUNICIPALITY',
-  'FUJAIRAH AVIATION CLUB',
+const brands = [
+  'HIKVISION',
+  'DAHUA',
+  'ABSEN',
+  'UNILUMIN',
+  'SAMSUNG',
+  'LG',
+  'NOVASTAR',
+  'COLORLIGHT',
+  'AMX',
+  'MEANWELL',
+  'CRESTON',
+  'LEDMAN',
 ]
 
-export function ClientMarquee() {
+export function BrandMarquee() {
   // We need enough copies so that half the track fills the screen.
-  const track = [...clients, ...clients, ...clients, ...clients]
+  const track = [...brands, ...brands, ...brands, ...brands]
 
   return (
     <section
-      id="trust"
-      className="relative z-10 border-b border-[var(--canvas-border)] py-16 md:py-24 overflow-hidden"
-      aria-label="Strategic partnerships"
+      className="relative z-10 border-b border-[var(--canvas-border)] py-12 md:py-16 overflow-hidden"
       style={{ backgroundColor: 'transparent' }}
+      aria-label="Hardware Brands"
     >
-      <div className="mx-auto max-w-[1800px] flex flex-col lg:flex-row items-center gap-10 px-6 md:px-12">
+      <div className="mx-auto max-w-[1800px] flex flex-col lg:flex-row items-center gap-8 px-6 md:px-12">
         
         {/* Label */}
         <div className="shrink-0 w-full lg:w-auto flex justify-center lg:justify-start">
-          <span className="inline-block font-mono text-[10px] uppercase tracking-[0.3em] text-[var(--canvas-text-muted)] border border-[var(--canvas-border)] px-4 py-2 rounded-full">
-            Strategic Partners
+          <span className="inline-block font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-[var(--canvas-text-muted)] border border-[var(--canvas-border)] px-4 py-2 rounded-full">
+            Trusted Hardware
           </span>
         </div>
         
@@ -44,13 +43,13 @@ export function ClientMarquee() {
         >
           <motion.div
             animate={{ x: ["0%", "-50%"] }}
-            transition={{ repeat: Infinity, ease: "linear", duration: 50 }}
+            transition={{ repeat: Infinity, ease: "linear", duration: 40 }}
             className="flex whitespace-nowrap items-center w-max"
           >
-            {track.map((client, index) => (
+            {track.map((brand, index) => (
               <div key={`track-${index}`} className="flex items-center">
                 <span className="text-2xl md:text-3xl font-sans font-bold tracking-widest text-white uppercase px-8 md:px-14">
-                  {client}
+                  {brand}
                 </span>
                 {/* Elegant Minimal Separator */}
                 <span className="w-[2px] h-8 bg-white/20" />

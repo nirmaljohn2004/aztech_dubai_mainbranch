@@ -1,132 +1,248 @@
-'use client'
+"use client"
 
-import { useState } from 'react'
-import Image from 'next/image'
-import { motion, AnimatePresence } from 'framer-motion'
-import { ArrowRight } from 'lucide-react'
+import { useRef, useState, useEffect } from "react"
+import Image from "next/image"
+import { motion, AnimatePresence, useInView } from "framer-motion"
+import { ArrowRight } from "lucide-react"
+import { useSearchParams } from "next/navigation"
+import { ProductModal } from "@/components/ui/product-modal"
+import { productDetails, categories } from "@/lib/product-data"
+import { Suspense } from "react"
 
-// Real 18 LED products from user specifications
-const allProducts = [
-  { id: '1', category: 'Indoor', title: 'HD LED Display', metric: 'P1.2', image: '/images/prod_1.webp' },
-  { id: '2', category: 'Indoor', title: 'Indoor LED Display', metric: 'Vibrant Colors', image: '/images/prod_2.webp' },
-  { id: '3', category: 'Outdoor', title: 'Outdoor DIP LED Display', metric: '5000 nits', image: '/images/studio_outdoor_dip.png' },
-  { id: '4', category: 'Outdoor', title: 'Outdoor SMD LED Display', metric: 'Wide View', image: '/images/prod_4.webp' },
-  { id: '5', category: 'Outdoor', title: 'Die-Cast Aluminum LED', metric: 'IP65', image: '/images/prod_5.webp' },
-  { id: '6', category: 'Specialty', title: 'Curtain / Mesh LED', metric: 'Semi-transparent', image: '/images/prod_6.webp' },
-  { id: '7', category: 'Indoor', title: 'Front Service LED', metric: 'Front-access', image: '/images/prod_7.webp' },
-  { id: '8', category: 'Specialty', title: 'Floor LED Display', metric: '1000kg/m²', image: '/images/studio_floor_led.png' },
-  { id: '9', category: 'Indoor', title: 'Poster LED Display', metric: 'Standalone', image: '/images/prod_9.webp' },
-  { id: '10', category: 'Specialty', title: 'Transparent Glass LED', metric: 'See-through', image: '/images/prod_10.webp' },
-  { id: '11', category: 'Outdoor', title: 'Perimeter LED Display', metric: 'Stadium', image: '/images/prod_11.webp' },
-  { id: '12', category: 'Specialty', title: 'Curve LED Display', metric: 'Flexible', image: '/images/studio_curved_led.png' },
-  { id: '13', category: 'Specialty', title: 'Spherical LED Display', metric: '360° Globe', image: '/images/spherical_custom.jpg' },
-  { id: '14', category: 'Specialty', title: 'Creative Shape LED', metric: 'Irregular', image: '/images/studio_creative_led.png' },
-  { id: '15', category: 'Niche', title: 'Gas Price LED Display', metric: 'RTA Compliant', image: '/images/prod_15.webp' },
-  { id: '16', category: 'Niche', title: 'Taxi Rooftop LED', metric: 'Taxi Ads', image: '/images/taxi_rooftop_custom.jpg' },
-  { id: '17', category: 'Niche', title: 'Traffic LED Display', metric: 'VMS', image: '/images/prod_17.webp' },
-  { id: '18', category: 'Indoor', title: 'LCD Video Wall', metric: 'Seamless', image: '/images/prod_18.webp' },
-]
+function ProductsSectionInner() {
+  const sectionRef = useRef<HTMLElement>(null)
+  const isInView = useInView(sectionRef, { once: true, margin: "-10% 0px" })
+  const searchParams = useSearchParams()
+  const initialCategory = searchParams.get("category") || categories[0].id
+  const initialSubcategory = searchParams.get("subcategory") || categories[0].subcategories[0].id
 
-const categories = ['All', 'Indoor', 'Outdoor', 'Specialty', 'Niche']
+  const [activeTab, setActiveTab] = useState(initialCategory)
+  const [activeSubTab, setActiveSubTab] = useState(initialSubcategory)
+  const [currentPage, setCurrentPage] = useState(1)
 
-export function ProductsSection() {
-  const [activeCategory, setActiveCategory] = useState('All')
+  const [selectedProduct, setSelectedProduct] = useState<{name: string, subtitle: string, image: string} | null>(null)
 
-  const filteredProducts = activeCategory === 'All'
-    ? allProducts
-    : allProducts.filter(p => p.category === activeCategory)
+  // Update tabs if URL search params change
+  useEffect(() => {
+    const category = searchParams.get("category")
+    const subcategory = searchParams.get("subcategory")
+    if (category && categories.some(c => c.id === category)) {
+      setActiveTab(category)
+      const targetCat = categories.find(c => c.id === category)!
+      if (subcategory && targetCat.subcategories.some(s => s.id === subcategory)) {
+        setActiveSubTab(subcategory)
+      } else {
+        setActiveSubTab(targetCat.subcategories[0].id)
+      }
+      setCurrentPage(1)
+    }
+  }, [searchParams])
+
+  const activeCategory = categories.find(c => c.id === activeTab) || categories[0]
+  const activeSubcategory = activeCategory.subcategories.find(s => s.id === activeSubTab) || activeCategory.subcategories[0]
+
+  const itemsPerPage = 6;
+  const totalPages = Math.max(1, Math.ceil(activeSubcategory.products.length / itemsPerPage));
+  const paginatedProducts = activeSubcategory.products.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage);
 
   return (
-    <section
-      id="products"
-      className="relative z-10 border-b border-white/5 px-4 py-20 md:px-12 md:py-40"
-      style={{ backgroundColor: 'transparent' }}
+    <section 
+      ref={sectionRef}
+      id="products" 
+      className="bg-white relative overflow-hidden flex flex-col justify-center py-24 lg:py-40 scroll-mt-24"
     >
-      <div className="mx-auto max-w-[1200px]">
-        {/* Header */}
-        <div className="flex flex-col items-center justify-center text-center pb-20 mb-16 relative z-10">
-          <div className="mb-10 flex items-center gap-4 opacity-80">
-            <span className="uppercase tracking-[0.35em] text-[11px] font-mono text-purple-300/70">Hardware Portfolio</span>
-            <div className="w-12 h-[1px] bg-purple-500/30"></div>
-          </div>
-
-          <h2 className="max-w-5xl font-sans text-5xl md:text-7xl font-medium leading-[1.1] text-[var(--canvas-text)] tracking-[-0.02em] mb-8">
-            Precision display <br className="hidden md:block" />systems.
-          </h2>
-
-          <p className="max-w-2xl text-base md:text-lg leading-[1.8] text-[var(--canvas-text-muted)] font-light mb-16">
-            Engineered for absolute clarity across any architectural scale or viewing distance. Explore our comprehensive 18-product lineup.
-          </p>
-
-          {/* Category Tabs */}
-          <div className="flex flex-wrap items-center justify-center gap-2 md:gap-4 p-2 bg-white/5 backdrop-blur-sm rounded-full border border-white/10">
-            {categories.map((cat) => (
-              <button
-                key={cat}
-                onClick={() => setActiveCategory(cat)}
-                className={`px-4 py-2 md:px-6 md:py-2.5 rounded-full text-[10px] md:text-sm font-mono tracking-widest uppercase transition-all duration-300 ${activeCategory === cat
-                    ? 'bg-purple-500/20 text-purple-300 border border-purple-500/30 shadow-[0_0_15px_rgba(168,85,247,0.15)]'
-                    : 'bg-transparent text-[var(--canvas-text-muted)] hover:text-[var(--canvas-text)] border border-transparent'
-                  }`}
-              >
-                {cat}
-              </button>
-            ))}
-          </div>
-        </div>
-
-        {/* Minimal Product Grid */}
-        <motion.div
-          layout
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-16 lg:gap-20"
+      <div className="max-w-[var(--container-max)] mx-auto px-[var(--section-pad-x)] relative z-10 w-full">
+        
+        {/* Massive Centered Header with plenty of space */}
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+          className="mb-20 lg:mb-28 text-center flex flex-col items-center"
         >
-          <AnimatePresence mode="popLayout">
-            {filteredProducts.map((product) => (
-              <motion.div
-                key={product.id}
-                layout
-                initial={{ opacity: 0, scale: 0.95 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.95 }}
-                transition={{ duration: 0.4, ease: "easeInOut" }}
-                className="group relative flex flex-col cursor-pointer"
-              >
-                {/* Premium Image Frame */}
-                <div className="relative aspect-[4/3] overflow-hidden bg-[#05020a] border border-[var(--canvas-border)] rounded-sm mb-6">
-                  <Image
-                    src={product.image}
-                    alt={product.title}
-                    fill
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    className="object-cover transition-transform duration-1000 group-hover:scale-105 opacity-80 group-hover:opacity-100"
-                  />
-                  {/* Hover Overlay */}
-                  <div className="absolute inset-0 bg-purple-900/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
-                </div>
-
-                {/* Minimal Content */}
-                <div className="flex flex-col gap-3">
-                  <div className="flex items-center justify-between">
-                    <span className="font-mono text-[9px] text-purple-500 tracking-[0.2em] uppercase">
-                      {product.category}
-                    </span>
-                    <span className="font-mono text-[10px] text-[var(--canvas-text-muted)] tracking-wider">
-                      {product.metric}
-                    </span>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <h3 className="font-serif text-lg md:text-xl font-medium text-[var(--canvas-text)] transition-colors group-hover:text-purple-500">
-                      {product.title}
-                    </h3>
-                    <ArrowRight className="w-4 h-4 text-[var(--canvas-text-muted)] opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300" />
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </AnimatePresence>
+          <p className="font-sans text-[0.65rem] font-bold tracking-[0.25em] text-[var(--accent)] uppercase mb-6">
+            Our Technologies
+          </p>
+          <h2 className="font-serif text-[clamp(2.5rem,5vw,4.5rem)] font-medium text-[var(--text-primary)] leading-[1.1] tracking-tight max-w-4xl">
+            Engineered to <span className="text-[var(--text-muted)] italic">captivate.</span>
+          </h2>
+          <p className="font-sans text-sm text-[var(--text-secondary)] max-w-2xl mt-8 leading-relaxed">
+            {activeCategory.description}
+          </p>
         </motion.div>
 
+        {/* Clean Horizontal Filtering */}
+        <div className="flex flex-col items-center mb-16 lg:mb-24 gap-8">
+          
+          {/* Main Categories (Minimalist text links) */}
+          <div className="flex flex-wrap justify-center gap-6 md:gap-12 pb-4 border-b border-black/5 w-full max-w-4xl">
+            {categories.map((category) => {
+              const isActive = activeTab === category.id
+              return (
+                <button
+                  key={category.id}
+                  onClick={() => {
+                    setActiveTab(category.id)
+                    setActiveSubTab(category.subcategories[0].id)
+                    setCurrentPage(1)
+                  }}
+                  className={`relative pb-4 font-sans text-xs md:text-sm tracking-widest uppercase transition-colors duration-300
+                    ${isActive ? 'text-black font-bold' : 'text-black/40 font-medium hover:text-black/70'}
+                  `}
+                >
+                  {category.name}
+                  {isActive && (
+                    <motion.div 
+                      layoutId="activeCategory"
+                      className="absolute bottom-[-1px] left-0 right-0 h-[2px] bg-black"
+                    />
+                  )}
+                </button>
+              )
+            })}
+          </div>
+
+          {/* Subcategories (Elegant Pills) */}
+          {activeCategory.subcategories.length > 1 && (
+            <motion.div 
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="flex flex-wrap justify-center gap-3"
+            >
+              {activeCategory.subcategories.map((sub) => (
+                <button
+                  key={sub.id}
+                  onClick={() => {
+                    setActiveSubTab(sub.id)
+                    setCurrentPage(1)
+                  }}
+                  className={`
+                    px-5 py-2.5 rounded-full font-sans text-[0.75rem] tracking-wider uppercase transition-all duration-300 font-bold
+                    ${activeSubTab === sub.id 
+                      ? 'bg-black text-white shadow-lg' 
+                      : 'bg-black/5 text-black/60 hover:bg-black/10 hover:text-black'}
+                  `}
+                >
+                  {sub.name}
+                </button>
+              ))}
+            </motion.div>
+          )}
+        </div>
+
+        {/* Spacious 3-Column Grid */}
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={activeSubTab}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+            className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 lg:gap-12"
+          >
+            {paginatedProducts.map((prod, idx) => (
+              <div 
+                key={`${prod.name}-${idx}`} 
+                className="group cursor-pointer flex flex-col"
+                onClick={() => setSelectedProduct({ name: prod.name, subtitle: prod.subtitle || "", image: prod.image })}
+              >
+                {/* Image Container */}
+                <div className="relative aspect-[4/3] w-full bg-[#f8f9fa] rounded-2xl overflow-hidden mb-6 flex items-center justify-center p-8 transition-colors duration-500 group-hover:bg-black/[0.03]">
+                  {prod.image ? (
+                    <Image 
+                      src={prod.image}
+                      alt={prod.name}
+                      fill
+                      className="object-contain p-8 transition-transform duration-700 ease-[0.16,1,0.3,1] group-hover:scale-110"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    />
+                  ) : (
+                    <div className="w-20 h-20 rounded-full bg-black/10 flex items-center justify-center">
+                      <span className="font-mono text-sm tracking-widest uppercase font-bold text-black/40">
+                        {prod.name.split('-')[1] || "LED"}
+                      </span>
+                    </div>
+                  )}
+                  
+                  {/* Subtle View Button Overlay */}
+                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-white/40 backdrop-blur-[2px]">
+                    <div className="bg-black text-white text-xs font-bold uppercase tracking-widest px-6 py-3 rounded-full flex items-center gap-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                      View Details
+                      <ArrowRight className="w-4 h-4" />
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Text Content */}
+                <div className="flex flex-col items-center text-center px-4">
+                  <h4 className="font-sans text-lg font-bold text-black tracking-tight mb-2">
+                    {prod.name}
+                  </h4>
+                  {prod.subtitle && (
+                    <p className="font-sans text-xs text-black/50 uppercase tracking-widest leading-relaxed">
+                      {prod.subtitle}
+                    </p>
+                  )}
+                </div>
+              </div>
+            ))}
+          </motion.div>
+        </AnimatePresence>
+
+        {/* Minimalist Pagination */}
+        {totalPages > 1 && (
+          <div className="flex items-center justify-center gap-6 mt-20">
+            <button 
+              onClick={() => setCurrentPage(p => Math.max(1, p - 1))}
+              disabled={currentPage === 1}
+              className="text-black/40 hover:text-black disabled:opacity-30 disabled:pointer-events-none transition-colors p-2"
+            >
+              <ArrowRight className="w-5 h-5 rotate-180" />
+            </button>
+            
+            <div className="flex items-center gap-3">
+              {Array.from({ length: totalPages }).map((_, i) => (
+                <button
+                  key={i}
+                  onClick={() => setCurrentPage(i + 1)}
+                  className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                    currentPage === i + 1 
+                      ? 'bg-black w-6' 
+                      : 'bg-black/20 hover:bg-black/40'
+                  }`}
+                  aria-label={`Page ${i + 1}`}
+                />
+              ))}
+            </div>
+
+            <button 
+              onClick={() => setCurrentPage(p => Math.min(totalPages, p + 1))}
+              disabled={currentPage === totalPages}
+              className="text-black/40 hover:text-black disabled:opacity-30 disabled:pointer-events-none transition-colors p-2"
+            >
+              <ArrowRight className="w-5 h-5" />
+            </button>
+          </div>
+        )}
       </div>
+
+      {/* Product Modal */}
+      <ProductModal 
+        product={selectedProduct ? (productDetails[selectedProduct.name] || null) : null}
+        fallbackName={selectedProduct?.name}
+        fallbackSubtitle={selectedProduct?.subtitle}
+        imageSrc={selectedProduct?.image || ""}
+        isOpen={!!selectedProduct}
+        onClose={() => setSelectedProduct(null)}
+      />
     </section>
+  )
+}
+
+export function ProductsSection() {
+  return (
+    <Suspense fallback={<div className="min-h-[100svh] bg-white flex items-center justify-center">Loading products...</div>}>
+      <ProductsSectionInner />
+    </Suspense>
   )
 }
