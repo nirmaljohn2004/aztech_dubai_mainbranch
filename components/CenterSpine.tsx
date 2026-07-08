@@ -27,7 +27,7 @@ export const CenterSpine: React.FC = () => {
   )
 
   const spinePath =
-    'M 720 0 C 720 400, 1020 600, 720 1000 S 420 1400, 720 1800 C 1120 2200, 1120 2600, 720 2900 S 320 3200, 720 3700 C 620 4100, 820 4500, 720 5000'
+    'M 720 0 C 720 400, 1020 600, 720 1000 S 420 1400, 720 1800 C 1120 2200, 1120 2600, 720 2900 S 320 3200, 720 3700 C 1200 4100, 240 4600, 720 5000'
 
   return (
     <svg
@@ -47,10 +47,10 @@ export const CenterSpine: React.FC = () => {
           x2="0%"
           y2="100%"
         >
-          <stop offset="0%" stopColor="#D8B4FE" stopOpacity="0.55" />
-          <stop offset="25%" stopColor="#A855F7" stopOpacity="1" />
-          <stop offset="65%" stopColor="#818CF8" stopOpacity="1" />
-          <stop offset="100%" stopColor="#4F46E5" stopOpacity="0.5" />
+          <stop offset="0%" stopColor="#a78bfa" stopOpacity="0.8" />
+          <stop offset="35%" stopColor="#c084fc" stopOpacity="1" />
+          <stop offset="70%" stopColor="#f472b6" stopOpacity="1" />
+          <stop offset="100%" stopColor="#38bdf8" stopOpacity="1" />
         </linearGradient>
       </defs>
 
@@ -59,14 +59,14 @@ export const CenterSpine: React.FC = () => {
       <motion.path
         d={spinePath}
         stroke="url(#editorialSpineGradient)"
-        strokeWidth="3.2"
+        strokeWidth="4"
         strokeLinecap="round"
         pathLength={referencePathLength}
         strokeDasharray={referencePathLength}
         style={{
           opacity: activeOpacity,
           strokeDashoffset: synchronizedOffset,
-          filter: 'drop-shadow(0 0 8px rgba(168, 85, 247, 0.75))',
+          filter: 'drop-shadow(0 0 12px rgba(192, 132, 252, 0.9))',
         }}
       />
     </svg>

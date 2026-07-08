@@ -49,7 +49,6 @@ export function ContactSection() {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [errorMsg, setErrorMsg] = useState<string | null>(null)
   
-  // State to track field focus and value changes for premium floating label transitions
   const [focusedField, setFocusedField] = useState<Record<string, boolean>>({})
   const [fieldValues, setFieldValues] = useState<Record<string, string>>({
     name: "",
@@ -123,140 +122,125 @@ export function ContactSection() {
   return (
     <section 
       id="contact" 
-      className="py-24 md:py-32 px-6 md:px-12 border-b border-[var(--canvas-border)] transition-colors duration-300 bg-transparent"
+      className="py-24 md:py-32 px-6 md:px-12 bg-transparent text-[var(--canvas-text)] border-t border-[var(--canvas-border)] transition-colors duration-500"
       aria-label="Contact Aztech LED — Get a Free Quote"
     >
-      <div className="max-w-7xl mx-auto animate-fade-in-up">
+      <div className="max-w-7xl mx-auto">
         
-        {/* Asymmetric Header */}
+        {/* Header */}
         <div className="grid grid-cols-12 gap-6 border-b border-[var(--canvas-border)] pb-12 mb-16">
           <div className="col-span-12 md:col-span-4 lg:col-span-3">
-            <span className="text-[10px] tracking-widest uppercase font-mono text-purple-500/80 block">
-              GET IN TOUCH // INQUIRIES
+            <span className="text-[10px] tracking-widest uppercase font-mono text-[var(--canvas-text)] opacity-80 block font-bold">
+              GET IN TOUCH // CONTACT
             </span>
           </div>
           <div className="col-span-12 md:col-span-8 lg:col-span-9">
-            <h2 className="font-serif text-[6vw] md:text-[5vw] font-medium tracking-[-0.04em] leading-[0.95] mb-6 text-[var(--canvas-text)]">
-              Request a Technical Consultation.
+            <h2 className="font-serif text-[6vw] md:text-[5vw] font-bold tracking-[-0.04em] leading-[0.95] mb-6 text-[var(--canvas-text)]">
+              Request a Consultation.
             </h2>
-            <p className="text-xs md:text-sm tracking-normal leading-relaxed text-[var(--canvas-text-muted)] max-w-xl">
-              Tell us about your display targets, and we will formulate a full spec layout with quotation details within 24 hours.
+            <p className="text-sm md:text-base tracking-normal leading-relaxed text-[var(--canvas-text-muted)] max-w-2xl font-medium">
+              Tell us about your display requirements, and our team will formulate a comprehensive proposal and quotation tailored to your project.
             </p>
           </div>
         </div>
 
-        {/* Form & Info Asymmetric 12-Column split */}
+        {/* Layout */}
         <div className="grid grid-cols-12 gap-8 lg:gap-16 items-start">
           
-          {/* Info - Left Column (Span 5) */}
+          {/* Left Column: Info */}
           <div className="col-span-12 lg:col-span-5 space-y-8">
-            <div className="flex flex-col items-start gap-4 w-full">
-              <span className="text-[10px] tracking-widest uppercase font-mono text-[var(--canvas-text-muted)]">
-                // OFFICE DIRECTORIES
+            <div className="bg-[var(--canvas-text)]/[0.03] border border-[var(--canvas-border)] p-8 space-y-8 w-full relative">
+              <span className="text-[10px] tracking-widest uppercase font-mono text-[var(--canvas-text)] block font-bold">
+                // OUR OFFICES
               </span>
               
-              <div className="grid grid-cols-1 gap-4 w-full">
+              <div className="grid grid-cols-1 gap-6 w-full">
                 <a 
                   href="https://www.google.com/maps/search/?api=1&query=CHAMMANY+COMPLEX,+SHOP+NO+65%2F869,+SEBASTIAN+ROAD,+KALOOR,+KOCHIN+682017" 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  className="flex items-start gap-4 p-5 bg-[var(--canvas-text)]/[0.02] border border-[var(--canvas-border)] hover:border-purple-500/30 transition-all duration-300 group relative overflow-hidden"
+                  className="flex flex-col gap-2 group relative overflow-hidden"
                 >
-                  <div className="p-2.5 bg-purple-500/10 text-purple-500 group-hover:bg-purple-500/20 group-hover:text-purple-600 transition-colors">
-                    <MapPin className="w-4 h-4 shrink-0" />
-                  </div>
-                  <address className="text-xs text-[var(--canvas-text-muted)] not-italic leading-relaxed">
-                    <strong className="text-[var(--canvas-text)] block font-sans text-xs tracking-wider uppercase font-semibold mb-1 group-hover:text-purple-500 transition-colors">INDIA OFFICE</strong>
+                  <address className="text-sm text-[var(--canvas-text-muted)] not-italic leading-relaxed font-medium">
+                    <strong className="text-[var(--canvas-text)] block font-sans text-sm tracking-wider uppercase font-bold mb-2 opacity-90 group-hover:opacity-100 transition-opacity flex items-center gap-2">
+                      <MapPin className="w-4 h-4" /> INDIA OFFICE
+                    </strong>
                     CHAMMANY COMPLEX, SHOP NO 65/869,<br />
                     SEBASTIAN ROAD, KALOOR, KOCHIN 682017
                   </address>
                 </a>
                 
+                <div className="h-px w-full bg-[var(--canvas-border)]" />
+
                 <a 
                   href="https://maps.google.com/?q=Warehouse+55,+Al+Quoz+Industrial+Area+3,+Dubai" 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  className="flex items-start gap-4 p-5 bg-[var(--canvas-text)]/[0.02] border border-[var(--canvas-border)] hover:border-purple-500/30 transition-all duration-300 group relative overflow-hidden"
+                  className="flex flex-col gap-2 group relative overflow-hidden"
                 >
-                  <div className="p-2.5 bg-purple-500/10 text-purple-500 group-hover:bg-purple-500/20 group-hover:text-purple-600 transition-colors">
-                    <MapPin className="w-4 h-4 shrink-0" />
-                  </div>
-                  <address className="text-xs text-[var(--canvas-text-muted)] not-italic leading-relaxed">
-                    <strong className="text-[var(--canvas-text)] block font-sans text-xs tracking-wider uppercase font-semibold mb-1 group-hover:text-purple-500 transition-colors">DUBAI MAIN OFFICE</strong>
-                    Warehouse 55, Al Quoz Industrial Area 3, Dubai, UAE
+                  <address className="text-sm text-[var(--canvas-text-muted)] not-italic leading-relaxed font-medium">
+                    <strong className="text-[var(--canvas-text)] block font-sans text-sm tracking-wider uppercase font-bold mb-2 opacity-90 group-hover:opacity-100 transition-opacity flex items-center gap-2">
+                      <MapPin className="w-4 h-4" /> DUBAI MAIN OFFICE
+                    </strong>
+                    Warehouse 55, Al Quoz Industrial Area 3,<br />Dubai, UAE
                   </address>
                 </a>
               </div>
             </div>
 
-            <div className="bg-[var(--canvas-text)]/[0.02] border border-[var(--canvas-border)] p-6 backdrop-blur-md space-y-4 w-full relative overflow-hidden group">
-              <span className="text-[10px] tracking-widest uppercase font-mono text-[var(--canvas-text-muted)] block">
+            <div className="bg-[var(--canvas-text)]/[0.03] border border-[var(--canvas-border)] p-8 space-y-6 w-full relative">
+              <span className="text-[10px] tracking-widest uppercase font-mono text-[var(--canvas-text)] block font-bold">
                 // DIRECT HOTLINES
               </span>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-3 font-mono text-xs">
-                <a href="tel:+917356780866" className="flex items-center gap-3 p-3 bg-[var(--canvas-text)]/[0.01] border border-[var(--canvas-border)] hover:border-purple-500/20 text-[var(--canvas-text-muted)] hover:text-[var(--canvas-text)] transition-all">
-                  <Phone className="w-3.5 h-3.5 text-purple-500" />
+              <div className="grid grid-cols-1 gap-4 text-sm font-semibold text-[var(--canvas-text)] opacity-90">
+                <a href="tel:+917356780866" className="flex items-center gap-3 hover:opacity-100 transition-all">
+                  <Phone className="w-4 h-4" />
                   <span>+91 73567 80866 (IN)</span>
                 </a>
-                <a href="https://wa.me/971561425339" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 p-3 bg-[var(--canvas-text)]/[0.01] border border-[var(--canvas-border)] hover:border-purple-500/20 text-[var(--canvas-text-muted)] hover:text-[var(--canvas-text)] transition-all">
-                  <Phone className="w-3.5 h-3.5 text-purple-500" />
+                <a href="https://wa.me/971561425339" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 hover:opacity-100 transition-all">
+                  <Phone className="w-4 h-4" />
                   <span>+971 56 142 5339 (UAE)</span>
                 </a>
-                <a href="mailto:sales@az-tech.ae" className="flex items-center gap-3 p-3 bg-[var(--canvas-text)]/[0.01] border border-[var(--canvas-border)] hover:border-purple-500/20 text-[var(--canvas-text-muted)] hover:text-[var(--canvas-text)] transition-all sm:col-span-2 lg:col-span-1">
-                  <Mail className="w-3.5 h-3.5 text-purple-500" />
+                <a href="mailto:sales@az-tech.ae" className="flex items-center gap-3 hover:opacity-100 transition-all">
+                  <Mail className="w-4 h-4" />
                   <span>sales@az-tech.ae</span>
                 </a>
               </div>
-              <div className="flex items-center gap-2 pt-2 border-t border-[var(--canvas-border)] text-[9px] text-[var(--canvas-text-muted)] font-mono uppercase tracking-wider">
-                <Clock className="w-3 h-3 text-purple-500/60" />
-                <span>RESPONSE PROTOCOL: MON–SAT (8AM–6PM)</span>
+              <div className="flex items-center gap-2 pt-6 border-t border-[var(--canvas-border)] text-[10px] text-[var(--canvas-text-muted)] font-mono uppercase tracking-wider font-bold">
+                <Clock className="w-3.5 h-3.5" />
+                <span>BUSINESS HOURS: MON–SAT (8AM–6PM)</span>
               </div>
-            </div>
-
-            {/* Map Frame - High Tech Console */}
-            <div className="relative aspect-[16/10] w-full overflow-hidden border border-[var(--canvas-border)] group">
-              <div className="absolute top-3 left-3 bg-[#090514]/90 border border-purple-500/20 text-purple-400 font-mono text-[9px] tracking-widest uppercase px-2.5 py-1 backdrop-blur-md z-10 flex items-center gap-1.5">
-                <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
-                <span>GPS // KOCHI_LAB_VERIFIED</span>
-              </div>
-              <iframe
-                title="Aztech LED office location map"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.139446059174!2d76.29227567484307!3d9.996924872922797!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b080d38101683cb%3A0x86811d6199f3d53a!2sSebastian%20Rd%2C%20Kaloor%2C%20Kochi%2C%20Kerala%20682017!5e0!3m2!1sen!2sin!4v1715841445791!5m2!1sen!2sin"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                className="group-hover:scale-[1.02] transition-transform duration-700 mix-blend-luminosity opacity-80"
-              />
             </div>
           </div>
 
-          {/* Form - Right Column (Span 7) */}
+          {/* Right Column: Application Form */}
           <div className="col-span-12 lg:col-span-7">
             {isSubmitted ? (
               <div className="flex flex-col items-start py-12">
-                <div className="text-purple-500 mb-6">
-                  <CheckCircle className="w-12 h-12 stroke-[1.2]" />
+                <div className="text-[var(--canvas-text)] mb-6">
+                  <CheckCircle className="w-12 h-12 stroke-[1.5]" />
                 </div>
-                <h3 className="font-serif text-2xl font-medium tracking-tight mb-4 text-[var(--canvas-text)]">
+                <h3 className="font-serif text-3xl font-bold tracking-tight mb-4 text-[var(--canvas-text)]">
                   Request Initiated.
                 </h3>
-                <p className="text-xs md:text-xs text-[var(--canvas-text-muted)] leading-relaxed max-w-md mb-8">
+                <p className="text-sm text-[var(--canvas-text-muted)] leading-relaxed max-w-md mb-8 font-medium">
                   A Gmail composition window has been prepared with your inquiry data. Please complete the transmission via your mail client. Our sales desk will verify specifications and respond shortly.
                 </p>
-                <a 
-                  href="#projects" 
-                  className="inline-flex items-center gap-2 font-mono text-[10px] tracking-widest uppercase text-purple-600 hover:text-purple-500"
+                <button 
+                  onClick={() => {
+                    setIsSubmitted(false)
+                    setFieldValues({ name: "", company: "", email: "", phone: "", service: "", location: "", budget: "", source: "", message: "" })
+                  }}
+                  className="inline-flex items-center gap-2 font-mono text-xs tracking-widest uppercase text-[var(--canvas-text)] opacity-80 hover:opacity-100 bg-transparent border-none cursor-pointer p-0 font-bold transition-opacity"
                 >
-                  Explore Project Blueprints
-                  <ArrowRight className="w-3.5 h-3.5" />
-                </a>
+                  Submit Another Inquiry
+                  <ArrowRight className="w-4 h-4" />
+                </button>
               </div>
             ) : (
               <form ref={formRef} onSubmit={handleSubmit} className="space-y-10" noValidate>
-                <span className="text-[10px] tracking-widest uppercase font-mono text-[var(--canvas-text-muted)] block border-b border-[var(--canvas-border)] pb-4">
-                  // PROJECT SPECIFICATIONS SHEET
+                <span className="text-[10px] tracking-widest uppercase font-mono text-[var(--canvas-text)] block border-b border-[var(--canvas-border)] pb-4 font-bold">
+                  // PROJECT INQUIRY DETAILS
                 </span>
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-8">
@@ -271,13 +255,13 @@ export function ContactSection() {
                       onFocus={() => handleFocus('name')}
                       onBlur={() => handleBlur('name')}
                       onChange={(e) => handleChange('name', e.target.value)}
-                      className="bg-transparent border-b border-[var(--canvas-border)] focus:border-purple-500 text-sm py-2 px-0 focus:outline-none transition-colors rounded-none w-full text-[var(--canvas-text)]"
+                      className="bg-transparent border-b border-[var(--canvas-border)] focus:border-[var(--canvas-text)] text-sm py-2 px-0 focus:outline-none transition-colors rounded-none w-full text-[var(--canvas-text)] font-semibold"
                     />
                     <label 
                       htmlFor="name" 
-                      className={`absolute left-0 transition-all duration-300 origin-left pointer-events-none font-mono uppercase tracking-wider
+                      className={`absolute left-0 transition-all duration-300 origin-left pointer-events-none font-mono uppercase tracking-wider font-bold
                         ${isFieldActive('name') 
-                          ? 'top-[-8px] text-[9px] text-purple-500' 
+                          ? 'top-[-8px] text-[10px] text-[var(--canvas-text)]' 
                           : 'top-[16px] text-xs text-[var(--canvas-text-muted)]'}`}
                     >
                       Full Name *
@@ -294,13 +278,13 @@ export function ContactSection() {
                       onFocus={() => handleFocus('company')}
                       onBlur={() => handleBlur('company')}
                       onChange={(e) => handleChange('company', e.target.value)}
-                      className="bg-transparent border-b border-[var(--canvas-border)] focus:border-purple-500 text-sm py-2 px-0 focus:outline-none transition-colors rounded-none w-full text-[var(--canvas-text)]"
+                      className="bg-transparent border-b border-[var(--canvas-border)] focus:border-[var(--canvas-text)] text-sm py-2 px-0 focus:outline-none transition-colors rounded-none w-full text-[var(--canvas-text)] font-semibold"
                     />
                     <label 
                       htmlFor="company" 
-                      className={`absolute left-0 transition-all duration-300 origin-left pointer-events-none font-mono uppercase tracking-wider
+                      className={`absolute left-0 transition-all duration-300 origin-left pointer-events-none font-mono uppercase tracking-wider font-bold
                         ${isFieldActive('company') 
-                          ? 'top-[-8px] text-[9px] text-purple-500' 
+                          ? 'top-[-8px] text-[10px] text-[var(--canvas-text)]' 
                           : 'top-[16px] text-xs text-[var(--canvas-text-muted)]'}`}
                     >
                       Company Name
@@ -318,13 +302,13 @@ export function ContactSection() {
                       onFocus={() => handleFocus('email')}
                       onBlur={() => handleBlur('email')}
                       onChange={(e) => handleChange('email', e.target.value)}
-                      className="bg-transparent border-b border-[var(--canvas-border)] focus:border-purple-500 text-sm py-2 px-0 focus:outline-none transition-colors rounded-none w-full text-[var(--canvas-text)]"
+                      className="bg-transparent border-b border-[var(--canvas-border)] focus:border-[var(--canvas-text)] text-sm py-2 px-0 focus:outline-none transition-colors rounded-none w-full text-[var(--canvas-text)] font-semibold"
                     />
                     <label 
                       htmlFor="email" 
-                      className={`absolute left-0 transition-all duration-300 origin-left pointer-events-none font-mono uppercase tracking-wider
+                      className={`absolute left-0 transition-all duration-300 origin-left pointer-events-none font-mono uppercase tracking-wider font-bold
                         ${isFieldActive('email') 
-                          ? 'top-[-8px] text-[9px] text-purple-500' 
+                          ? 'top-[-8px] text-[10px] text-[var(--canvas-text)]' 
                           : 'top-[16px] text-xs text-[var(--canvas-text-muted)]'}`}
                     >
                       Email Address *
@@ -342,13 +326,13 @@ export function ContactSection() {
                       onFocus={() => handleFocus('phone')}
                       onBlur={() => handleBlur('phone')}
                       onChange={(e) => handleChange('phone', e.target.value)}
-                      className="bg-transparent border-b border-[var(--canvas-border)] focus:border-purple-500 text-sm py-2 px-0 focus:outline-none transition-colors rounded-none w-full text-[var(--canvas-text)]"
+                      className="bg-transparent border-b border-[var(--canvas-border)] focus:border-[var(--canvas-text)] text-sm py-2 px-0 focus:outline-none transition-colors rounded-none w-full text-[var(--canvas-text)] font-semibold"
                     />
                     <label 
                       htmlFor="phone" 
-                      className={`absolute left-0 transition-all duration-300 origin-left pointer-events-none font-mono uppercase tracking-wider
+                      className={`absolute left-0 transition-all duration-300 origin-left pointer-events-none font-mono uppercase tracking-wider font-bold
                         ${isFieldActive('phone') 
-                          ? 'top-[-8px] text-[9px] text-purple-500' 
+                          ? 'top-[-8px] text-[10px] text-[var(--canvas-text)]' 
                           : 'top-[16px] text-xs text-[var(--canvas-text-muted)]'}`}
                     >
                       Phone / WhatsApp *
@@ -365,19 +349,19 @@ export function ContactSection() {
                       onFocus={() => handleFocus('service')}
                       onBlur={() => handleBlur('service')}
                       onChange={(e) => handleChange('service', e.target.value)}
-                      className="bg-transparent border-b border-[var(--canvas-border)] focus:border-purple-500 text-sm py-2 px-0 focus:outline-none transition-colors rounded-none appearance-none cursor-pointer w-full text-[var(--canvas-text)]"
+                      className="bg-transparent border-b border-[var(--canvas-border)] focus:border-[var(--canvas-text)] text-sm py-2 px-0 focus:outline-none transition-colors rounded-none appearance-none cursor-pointer w-full text-[var(--canvas-text)] font-semibold [&>option]:bg-white [&>option]:text-black"
                     >
                       {serviceOptions.map((opt) => (
-                        <option key={opt} value={opt} className="bg-[var(--canvas-bg)] text-[var(--canvas-text)] text-xs">
+                        <option key={opt} value={opt} className="text-xs font-medium">
                           {opt || ""}
                         </option>
                       ))}
                     </select>
                     <label 
                       htmlFor="service" 
-                      className={`absolute left-0 transition-all duration-300 origin-left pointer-events-none font-mono uppercase tracking-wider
+                      className={`absolute left-0 transition-all duration-300 origin-left pointer-events-none font-mono uppercase tracking-wider font-bold
                         ${isFieldActive('service') 
-                          ? 'top-[-8px] text-[9px] text-purple-500' 
+                          ? 'top-[-8px] text-[10px] text-[var(--canvas-text)]' 
                           : 'top-[16px] text-xs text-[var(--canvas-text-muted)]'}`}
                     >
                       Hardware Required *
@@ -393,19 +377,19 @@ export function ContactSection() {
                       onFocus={() => handleFocus('location')}
                       onBlur={() => handleBlur('location')}
                       onChange={(e) => handleChange('location', e.target.value)}
-                      className="bg-transparent border-b border-[var(--canvas-border)] focus:border-purple-500 text-sm py-2 px-0 focus:outline-none transition-colors rounded-none appearance-none cursor-pointer w-full text-[var(--canvas-text)]"
+                      className="bg-transparent border-b border-[var(--canvas-border)] focus:border-[var(--canvas-text)] text-sm py-2 px-0 focus:outline-none transition-colors rounded-none appearance-none cursor-pointer w-full text-[var(--canvas-text)] font-semibold [&>option]:bg-white [&>option]:text-black"
                     >
                       {locationOptions.map((opt) => (
-                        <option key={opt} value={opt} className="bg-[var(--canvas-bg)] text-[var(--canvas-text)] text-xs">
+                        <option key={opt} value={opt} className="text-xs font-medium">
                           {opt || ""}
                         </option>
                       ))}
                     </select>
                     <label 
                       htmlFor="location" 
-                      className={`absolute left-0 transition-all duration-300 origin-left pointer-events-none font-mono uppercase tracking-wider
+                      className={`absolute left-0 transition-all duration-300 origin-left pointer-events-none font-mono uppercase tracking-wider font-bold
                         ${isFieldActive('location') 
-                          ? 'top-[-8px] text-[9px] text-purple-500' 
+                          ? 'top-[-8px] text-[10px] text-[var(--canvas-text)]' 
                           : 'top-[16px] text-xs text-[var(--canvas-text-muted)]'}`}
                     >
                       Project Location
@@ -421,19 +405,19 @@ export function ContactSection() {
                       onFocus={() => handleFocus('budget')}
                       onBlur={() => handleBlur('budget')}
                       onChange={(e) => handleChange('budget', e.target.value)}
-                      className="bg-transparent border-b border-[var(--canvas-border)] focus:border-purple-500 text-sm py-2 px-0 focus:outline-none transition-colors rounded-none appearance-none cursor-pointer w-full text-[var(--canvas-text)]"
+                      className="bg-transparent border-b border-[var(--canvas-border)] focus:border-[var(--canvas-text)] text-sm py-2 px-0 focus:outline-none transition-colors rounded-none appearance-none cursor-pointer w-full text-[var(--canvas-text)] font-semibold [&>option]:bg-white [&>option]:text-black"
                     >
                       {budgetOptions.map((opt) => (
-                        <option key={opt} value={opt} className="bg-[var(--canvas-bg)] text-[var(--canvas-text)] text-xs">
+                        <option key={opt} value={opt} className="text-xs font-medium">
                           {opt || ""}
                         </option>
                       ))}
                     </select>
                     <label 
                       htmlFor="budget" 
-                      className={`absolute left-0 transition-all duration-300 origin-left pointer-events-none font-mono uppercase tracking-wider
+                      className={`absolute left-0 transition-all duration-300 origin-left pointer-events-none font-mono uppercase tracking-wider font-bold
                         ${isFieldActive('budget') 
-                          ? 'top-[-8px] text-[9px] text-purple-500' 
+                          ? 'top-[-8px] text-[10px] text-[var(--canvas-text)]' 
                           : 'top-[16px] text-xs text-[var(--canvas-text-muted)]'}`}
                     >
                       Budget Scale
@@ -449,19 +433,19 @@ export function ContactSection() {
                       onFocus={() => handleFocus('source')}
                       onBlur={() => handleBlur('source')}
                       onChange={(e) => handleChange('source', e.target.value)}
-                      className="bg-transparent border-b border-[var(--canvas-border)] focus:border-purple-500 text-sm py-2 px-0 focus:outline-none transition-colors rounded-none appearance-none cursor-pointer w-full text-[var(--canvas-text)]"
+                      className="bg-transparent border-b border-[var(--canvas-border)] focus:border-[var(--canvas-text)] text-sm py-2 px-0 focus:outline-none transition-colors rounded-none appearance-none cursor-pointer w-full text-[var(--canvas-text)] font-semibold [&>option]:bg-white [&>option]:text-black"
                     >
                       {sourceOptions.map((opt) => (
-                        <option key={opt} value={opt} className="bg-[var(--canvas-bg)] text-[var(--canvas-text)] text-xs">
+                        <option key={opt} value={opt} className="text-xs font-medium">
                           {opt || ""}
                         </option>
                       ))}
                     </select>
                     <label 
                       htmlFor="source" 
-                      className={`absolute left-0 transition-all duration-300 origin-left pointer-events-none font-mono uppercase tracking-wider
+                      className={`absolute left-0 transition-all duration-300 origin-left pointer-events-none font-mono uppercase tracking-wider font-bold
                         ${isFieldActive('source') 
-                          ? 'top-[-8px] text-[9px] text-purple-500' 
+                          ? 'top-[-8px] text-[10px] text-[var(--canvas-text)]' 
                           : 'top-[16px] text-xs text-[var(--canvas-text-muted)]'}`}
                     >
                       Reference Channel
@@ -479,22 +463,22 @@ export function ContactSection() {
                     onFocus={() => handleFocus('message')}
                     onBlur={() => handleBlur('message')}
                     onChange={(e) => handleChange('message', e.target.value)}
-                    className="bg-transparent border-b border-[var(--canvas-border)] focus:border-purple-500 text-sm py-2 px-0 focus:outline-none transition-colors resize-none rounded-none w-full text-[var(--canvas-text)]"
+                    className="bg-transparent border-b border-[var(--canvas-border)] focus:border-[var(--canvas-text)] text-sm py-2 px-0 focus:outline-none transition-colors resize-none rounded-none w-full text-[var(--canvas-text)] font-semibold"
                   />
                   <label 
                     htmlFor="message" 
-                    className={`absolute left-0 transition-all duration-300 origin-left pointer-events-none font-mono uppercase tracking-wider
+                    className={`absolute left-0 transition-all duration-300 origin-left pointer-events-none font-mono uppercase tracking-wider font-bold
                       ${isFieldActive('message') 
-                        ? 'top-[-8px] text-[9px] text-purple-500' 
+                        ? 'top-[-8px] text-[10px] text-[var(--canvas-text)]' 
                         : 'top-[22px] text-xs text-[var(--canvas-text-muted)]'}`}
                   >
-                    Project Details / Parameters
+                    Project Details / Additional Info
                   </label>
                 </div>
 
                 {errorMsg && (
-                  <div className="flex items-start gap-2 text-xs text-red-500 font-mono">
-                    <AlertCircle className="w-3.5 h-3.5 mt-0.5 shrink-0" />
+                  <div className="flex items-start gap-2 text-sm text-red-600 font-medium">
+                    <AlertCircle className="w-4 h-4 mt-0.5 shrink-0" />
                     <p>{errorMsg}</p>
                   </div>
                 )}
@@ -503,32 +487,32 @@ export function ContactSection() {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full py-4 border border-[var(--canvas-border)] hover:border-purple-500 bg-transparent text-[10px] tracking-widest uppercase font-mono text-[var(--canvas-text)] transition-all duration-300 hover:bg-purple-500/10 disabled:opacity-50 rounded-none cursor-pointer"
+                  className="w-full py-4 border-2 border-[var(--canvas-text)] text-[var(--canvas-bg)] bg-[var(--canvas-text)] text-[11px] tracking-widest uppercase font-mono font-bold transition-all duration-300 hover:bg-transparent hover:text-[var(--canvas-text)] disabled:opacity-50 rounded-none cursor-pointer"
                 >
-                  {isSubmitting ? "TRANSMITTING..." : "SUBMIT SPEC SHEET"}
+                  {isSubmitting ? "PREPARING..." : "SUBMIT INQUIRY"}
                 </button>
                 
-                <p className="text-[9px] font-mono text-[var(--canvas-text-muted)] text-center uppercase tracking-wider">
-                  24-Hour response guaranteed // privacy encryption active
+                <p className="text-[10px] font-mono text-[var(--canvas-text-muted)] text-center uppercase tracking-wider font-semibold">
+                  all data is kept confidential // guaranteed 24-hour response
                 </p>
               </form>
             )}
 
-            {/* Premium WhatsApp Hotline block */}
-            <div className={`mt-12 pt-8 border-t border-[var(--canvas-border)] ${isSubmitted ? 'hidden' : ''} flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4`}>
-              <div className="flex flex-col gap-1">
-                <span className="text-[10px] tracking-widest uppercase font-mono text-purple-500">
-                  INSTANT HOTLINE CHANNEL
+            {/* WhatsApp CTA */}
+            <div className={`mt-12 pt-8 border-t border-[var(--canvas-border)] ${isSubmitted ? 'hidden' : ''} flex flex-col sm:flex-row justify-between items-start sm:items-center gap-6`}>
+              <div className="flex flex-col gap-2 max-w-sm">
+                <span className="text-[10px] tracking-widest uppercase font-mono text-[var(--canvas-text)] font-bold">
+                  PREFER INSTANT MESSAGING?
                 </span>
-                <span className="text-xs text-[var(--canvas-text-muted)]">
-                  Prefer instant messaging? Connect directly via our secure WhatsApp hotline.
+                <span className="text-sm text-[var(--canvas-text-muted)] font-medium">
+                  Connect with our team directly via WhatsApp for quicker assistance and quotes.
                 </span>
               </div>
               <a 
                 href="https://wa.me/971561425339?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20LED%20screens."
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex h-11 px-6 items-center justify-center border border-[var(--canvas-border)] hover:border-purple-500 bg-transparent text-[10px] tracking-widest uppercase font-mono text-[var(--canvas-text)] transition-all duration-300 whitespace-nowrap rounded-none w-full sm:w-auto"
+                className="inline-flex h-12 px-8 items-center justify-center border-2 border-[var(--canvas-border)] hover:border-[var(--canvas-text)] bg-transparent text-[11px] tracking-widest uppercase font-mono text-[var(--canvas-text)] font-bold transition-all duration-300 whitespace-nowrap rounded-none w-full sm:w-auto"
               >
                 Launch WhatsApp Chat
               </a>

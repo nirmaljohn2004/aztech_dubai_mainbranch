@@ -49,7 +49,7 @@ function ProductsSectionInner() {
     <section 
       ref={sectionRef}
       id="products" 
-      className="bg-white relative overflow-hidden flex flex-col justify-center py-24 lg:py-40 scroll-mt-24"
+      className="bg-transparent relative overflow-hidden flex flex-col justify-center py-24 lg:py-40 scroll-mt-24 transition-colors duration-500"
     >
       <div className="max-w-[var(--container-max)] mx-auto px-[var(--section-pad-x)] relative z-10 w-full">
         
@@ -63,10 +63,10 @@ function ProductsSectionInner() {
           <p className="font-sans text-[0.65rem] font-bold tracking-[0.25em] text-[var(--accent)] uppercase mb-6">
             Our Technologies
           </p>
-          <h2 className="font-serif text-[clamp(2.5rem,5vw,4.5rem)] font-medium text-[var(--text-primary)] leading-[1.1] tracking-tight max-w-4xl">
-            Engineered to <span className="text-[var(--text-muted)] italic">captivate.</span>
+          <h2 className="font-serif text-[clamp(2.5rem,5vw,4.5rem)] font-medium text-[var(--canvas-text)] leading-[1.1] tracking-tight max-w-4xl">
+            Engineered to <span className="opacity-70 italic">captivate.</span>
           </h2>
-          <p className="font-sans text-sm text-[var(--text-secondary)] max-w-2xl mt-8 leading-relaxed">
+          <p className="font-sans text-sm text-[var(--canvas-text-muted)] max-w-2xl mt-8 leading-relaxed">
             {activeCategory.description}
           </p>
         </motion.div>
@@ -75,7 +75,7 @@ function ProductsSectionInner() {
         <div className="flex flex-col items-center mb-16 lg:mb-24 gap-8">
           
           {/* Main Categories (Minimalist text links) */}
-          <div className="flex flex-wrap justify-center gap-6 md:gap-12 pb-4 border-b border-black/5 w-full max-w-4xl">
+          <div className="flex flex-wrap justify-center gap-6 md:gap-12 pb-4 border-b border-[var(--canvas-border)] w-full max-w-4xl">
             {categories.map((category) => {
               const isActive = activeTab === category.id
               return (
@@ -87,14 +87,14 @@ function ProductsSectionInner() {
                     setCurrentPage(1)
                   }}
                   className={`relative pb-4 font-sans text-xs md:text-sm tracking-widest uppercase transition-colors duration-300
-                    ${isActive ? 'text-black font-bold' : 'text-black/40 font-medium hover:text-black/70'}
+                    ${isActive ? 'text-[var(--canvas-text)] font-bold' : 'text-[var(--canvas-text-muted)] font-medium hover:text-[var(--canvas-text)]'}
                   `}
                 >
                   {category.name}
                   {isActive && (
                     <motion.div 
                       layoutId="activeCategory"
-                      className="absolute bottom-[-1px] left-0 right-0 h-[2px] bg-black"
+                      className="absolute bottom-[-1px] left-0 right-0 h-[2px] bg-[var(--canvas-text)]"
                     />
                   )}
                 </button>
@@ -117,10 +117,10 @@ function ProductsSectionInner() {
                     setCurrentPage(1)
                   }}
                   className={`
-                    px-5 py-2.5 rounded-full font-sans text-[0.75rem] tracking-wider uppercase transition-all duration-300 font-bold
+                    px-5 py-2.5 rounded-full font-sans text-[0.75rem] tracking-wider uppercase transition-all duration-300 font-bold border border-transparent
                     ${activeSubTab === sub.id 
-                      ? 'bg-black text-white shadow-lg' 
-                      : 'bg-black/5 text-black/60 hover:bg-black/10 hover:text-black'}
+                      ? 'bg-[var(--canvas-text)] text-[var(--canvas-bg)] shadow-lg' 
+                      : 'bg-[var(--canvas-text)]/[0.05] text-[var(--canvas-text-muted)] hover:bg-[var(--canvas-text)]/[0.1] hover:text-[var(--canvas-text)] border-[var(--canvas-border)]'}
                   `}
                 >
                   {sub.name}
@@ -147,7 +147,7 @@ function ProductsSectionInner() {
                 onClick={() => setSelectedProduct({ name: prod.name, subtitle: prod.subtitle || "", image: prod.image })}
               >
                 {/* Image Container */}
-                <div className="relative aspect-[4/3] w-full bg-[#f8f9fa] rounded-2xl overflow-hidden mb-6 flex items-center justify-center p-8 transition-colors duration-500 group-hover:bg-black/[0.03]">
+                <div className="relative aspect-[4/3] w-full bg-[var(--canvas-text)]/[0.03] border border-[var(--canvas-border)] rounded-2xl overflow-hidden mb-6 flex items-center justify-center p-8 transition-colors duration-500 group-hover:bg-[var(--canvas-text)]/[0.06]">
                   {prod.image ? (
                     <Image 
                       src={prod.image}
@@ -157,16 +157,16 @@ function ProductsSectionInner() {
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     />
                   ) : (
-                    <div className="w-20 h-20 rounded-full bg-black/10 flex items-center justify-center">
-                      <span className="font-mono text-sm tracking-widest uppercase font-bold text-black/40">
+                    <div className="w-20 h-20 rounded-full bg-[var(--canvas-text)]/[0.1] flex items-center justify-center">
+                      <span className="font-mono text-sm tracking-widest uppercase font-bold text-[var(--canvas-text-muted)]">
                         {prod.name.split('-')[1] || "LED"}
                       </span>
                     </div>
                   )}
                   
                   {/* Subtle View Button Overlay */}
-                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-white/40 backdrop-blur-[2px]">
-                    <div className="bg-black text-white text-xs font-bold uppercase tracking-widest px-6 py-3 rounded-full flex items-center gap-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-[var(--canvas-bg)]/60 backdrop-blur-sm">
+                    <div className="bg-[var(--canvas-text)] text-[var(--canvas-bg)] text-xs font-bold uppercase tracking-widest px-6 py-3 rounded-full flex items-center gap-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
                       View Details
                       <ArrowRight className="w-4 h-4" />
                     </div>
@@ -175,11 +175,11 @@ function ProductsSectionInner() {
                 
                 {/* Text Content */}
                 <div className="flex flex-col items-center text-center px-4">
-                  <h4 className="font-sans text-lg font-bold text-black tracking-tight mb-2">
+                  <h4 className="font-sans text-lg font-bold text-[var(--canvas-text)] tracking-tight mb-2">
                     {prod.name}
                   </h4>
                   {prod.subtitle && (
-                    <p className="font-sans text-xs text-black/50 uppercase tracking-widest leading-relaxed">
+                    <p className="font-sans text-xs text-[var(--canvas-text-muted)] uppercase tracking-widest leading-relaxed">
                       {prod.subtitle}
                     </p>
                   )}
@@ -195,7 +195,7 @@ function ProductsSectionInner() {
             <button 
               onClick={() => setCurrentPage(p => Math.max(1, p - 1))}
               disabled={currentPage === 1}
-              className="text-black/40 hover:text-black disabled:opacity-30 disabled:pointer-events-none transition-colors p-2"
+              className="text-[var(--canvas-text-muted)] hover:text-[var(--canvas-text)] disabled:opacity-30 disabled:pointer-events-none transition-colors p-2"
             >
               <ArrowRight className="w-5 h-5 rotate-180" />
             </button>
@@ -207,8 +207,8 @@ function ProductsSectionInner() {
                   onClick={() => setCurrentPage(i + 1)}
                   className={`w-2 h-2 rounded-full transition-all duration-300 ${
                     currentPage === i + 1 
-                      ? 'bg-black w-6' 
-                      : 'bg-black/20 hover:bg-black/40'
+                      ? 'bg-[var(--canvas-text)] w-6' 
+                      : 'bg-[var(--canvas-text)]/[0.2] hover:bg-[var(--canvas-text)]/[0.4]'
                   }`}
                   aria-label={`Page ${i + 1}`}
                 />
@@ -218,7 +218,7 @@ function ProductsSectionInner() {
             <button 
               onClick={() => setCurrentPage(p => Math.min(totalPages, p + 1))}
               disabled={currentPage === totalPages}
-              className="text-black/40 hover:text-black disabled:opacity-30 disabled:pointer-events-none transition-colors p-2"
+              className="text-[var(--canvas-text-muted)] hover:text-[var(--canvas-text)] disabled:opacity-30 disabled:pointer-events-none transition-colors p-2"
             >
               <ArrowRight className="w-5 h-5" />
             </button>
@@ -241,7 +241,7 @@ function ProductsSectionInner() {
 
 export function ProductsSection() {
   return (
-    <Suspense fallback={<div className="min-h-[100svh] bg-white flex items-center justify-center">Loading products...</div>}>
+    <Suspense fallback={<div className="min-h-[100svh] bg-transparent flex items-center justify-center text-[var(--canvas-text)]">Loading products...</div>}>
       <ProductsSectionInner />
     </Suspense>
   )

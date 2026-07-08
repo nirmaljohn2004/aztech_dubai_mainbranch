@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 
 export function BrandingSection() {
   return (
-    <section className="relative w-full overflow-hidden bg-white py-32 md:py-64">
+    <section className="relative w-full overflow-hidden bg-transparent py-32 md:py-64">
       <div className="mx-auto w-full max-w-[1200px] px-4 md:px-12">
         
         {/* Minimalist Text Header */}

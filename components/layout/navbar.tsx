@@ -17,30 +17,12 @@ const navLinks = [
 ]
 
 export function Navbar() {
-  const [isLightMode, setIsLightMode] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const productsSection = document.getElementById('products')
-      if (productsSection) {
-        const rect = productsSection.getBoundingClientRect()
-        // If the products section overlaps with the navbar (top 100px of screen)
-        if (rect.top <= 80 && rect.bottom >= 50) {
-          setIsLightMode(true)
-        } else {
-          setIsLightMode(false)
-        }
-      }
-    }
-    window.addEventListener('scroll', handleScroll, { passive: true })
-    handleScroll() // check initial state
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
-
-  const textColorClass = isLightMode ? 'text-black' : 'text-white'
-  const borderColorClass = isLightMode ? 'border-black/20' : 'border-white/20'
-  const hoverBgClass = isLightMode ? 'hover:bg-black/5' : 'hover:bg-white/10'
+  // Use dynamic canvas variables for colors
+  const textColorClass = 'text-[var(--canvas-text)]'
+  const borderColorClass = 'border-[var(--canvas-border)]'
+  const hoverBgClass = 'hover:bg-[var(--canvas-text)]/[0.05]'
 
   return (
     <>
@@ -58,6 +40,7 @@ export function Navbar() {
                 width={80}
                 height={80}
                 className="h-full w-full object-contain transition-all duration-300 scale-[1.7]"
+                style={{ filter: 'var(--logo-filter)', height: 'auto' }}
                 priority
               />
             </span>

@@ -17,7 +17,7 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <main id="main" role="main" className="min-h-screen bg-transparent overflow-x-hidden">
+      <main id="main" role="main" className="min-h-screen bg-transparent overflow-x-clip">
         <DynamicCanvasWrapper>
           <HeroSection />
           <CompanyProcess />
