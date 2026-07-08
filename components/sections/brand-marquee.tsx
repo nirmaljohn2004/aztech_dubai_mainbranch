@@ -1,25 +1,32 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 
-const brands = [
-  'HIKVISION',
-  'DAHUA',
-  'ABSEN',
-  'UNILUMIN',
-  'SAMSUNG',
-  'LG',
-  'NOVASTAR',
-  'COLORLIGHT',
-  'AMX',
-  'MEANWELL',
-  'CRESTON',
-  'LEDMAN',
+const brandImages = [
+  '/images/trusted_hardware/IMG_9435.PNG',
+  '/images/trusted_hardware/IMG_9436.PNG',
+  '/images/trusted_hardware/IMG_9437.PNG',
+  '/images/trusted_hardware/IMG_9438.JPG.jpeg',
+  '/images/trusted_hardware/IMG_9439.PNG',
+  '/images/trusted_hardware/IMG_9440.PNG',
+  '/images/trusted_hardware/IMG_9441.PNG',
+  '/images/trusted_hardware/IMG_9442.PNG',
+  '/images/trusted_hardware/IMG_9443.PNG',
+  '/images/trusted_hardware/IMG_9444.PNG',
+  '/images/trusted_hardware/IMG_9445.PNG',
+  '/images/trusted_hardware/IMG_9446.PNG',
+  '/images/trusted_hardware/IMG_9447.PNG',
+  '/images/trusted_hardware/IMG_9448.PNG',
+  '/images/trusted_hardware/IMG_9449.JPG.jpeg',
+  '/images/trusted_hardware/IMG_9450.PNG',
+  '/images/trusted_hardware/IMG_9451.JPG.jpeg',
+  '/images/trusted_hardware/IMG_9452.PNG',
 ]
 
 export function BrandMarquee() {
   // We need enough copies so that half the track fills the screen.
-  const track = [...brands, ...brands, ...brands, ...brands]
+  const track = [...brandImages, ...brandImages, ...brandImages, ...brandImages]
 
   return (
     <section
@@ -43,16 +50,21 @@ export function BrandMarquee() {
         >
           <motion.div
             animate={{ x: ["0%", "-50%"] }}
-            transition={{ repeat: Infinity, ease: "linear", duration: 40 }}
+            transition={{ repeat: Infinity, ease: "linear", duration: 80 }}
             className="flex whitespace-nowrap items-center w-max"
           >
-            {track.map((brand, index) => (
-              <div key={`track-${index}`} className="flex items-center">
-                <span className="text-2xl md:text-3xl font-sans font-bold tracking-widest text-white uppercase px-8 md:px-14">
-                  {brand}
-                </span>
+            {track.map((imageSrc, index) => (
+              <div key={`track-${index}`} className="flex items-center px-4 md:px-8">
+                <div className="relative h-10 w-28 md:h-14 md:w-36">
+                  <Image 
+                    src={imageSrc} 
+                    alt={`Trusted Hardware Logo ${index}`} 
+                    fill
+                    className="object-contain" 
+                  />
+                </div>
                 {/* Elegant Minimal Separator */}
-                <span className="w-[2px] h-8 bg-white/20" />
+                <span className="w-[2px] h-8 bg-white/20 ml-4 md:ml-8" />
               </div>
             ))}
           </motion.div>
