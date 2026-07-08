@@ -50,7 +50,7 @@ export function HeroSection() {
           alt="Hero Background Mobile"
           fill
           priority
-          sizes="100vw"
+          sizes="(max-width: 768px) 100vw, 0vw"
           className="block md:hidden object-cover object-center"
         />
 

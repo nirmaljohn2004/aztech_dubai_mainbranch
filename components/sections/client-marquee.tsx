@@ -115,6 +115,7 @@ export function ClientMarquee() {
                     src={imageSrc} 
                     alt={`Strategic Partner Logo ${index}`} 
                     fill
+                    sizes="(max-width: 768px) 112px, 144px"
                     className="object-contain" 
                   />
                 </div>

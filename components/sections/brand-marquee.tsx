@@ -60,6 +60,7 @@ export function BrandMarquee() {
                     src={imageSrc} 
                     alt={`Trusted Hardware Logo ${index}`} 
                     fill
+                    sizes="(max-width: 768px) 112px, 144px"
                     className="object-contain" 
                   />
                 </div>

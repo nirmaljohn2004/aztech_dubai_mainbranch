@@ -62,7 +62,7 @@ export function Footer() {
               {["Indoor LED Screens", "Outdoor Displays", "Transparent Film LED", "Fine Pitch Video Walls"].map((item, idx) => (
                 <li key={idx}>
                   <Link
-                    href="#products"
+                    href="/#products"
                     className="text-xs text-slate-600 hover:text-purple-600 transition-colors"
                   >
                     {item}
@@ -79,10 +79,10 @@ export function Footer() {
             </span>
             <ul className="space-y-2.5">
               {[
-                { href: "#about", label: "About Us" },
-                { href: "#projects", label: "Projects" },
-                { href: "#blog", label: "Insights" },
-                { href: "#contact", label: "Contact" }
+                { href: "/#about", label: "About Us" },
+                { href: "/#projects", label: "Projects" },
+                { href: "/careers", label: "Careers" },
+                { href: "/#contact", label: "Contact" }
               ].map((link, idx) => (
                 <li key={idx}>
                   <Link
