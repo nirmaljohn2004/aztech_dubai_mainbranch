@@ -21,9 +21,9 @@ export default function Home() {
         <DynamicCanvasWrapper>
           <HeroSection />
           <CompanyProcess />
-          <ClientMarquee />
-          <ProductsSection />
           <BrandMarquee />
+          <ProductsSection />
+          <ClientMarquee />
           <SolutionsSection />
           <PortfolioSection />
           <BrandingSection />
