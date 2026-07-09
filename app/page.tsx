@@ -1,5 +1,5 @@
 import { Navbar } from "@/components/layout/navbar"
-import { Footer } from "@/components/layout/footer"
+import { Footer } from "@/components/sections/footer"
 import { WhatsAppFAB } from "@/components/layout/whatsapp-fab"
 import { HeroSection } from "@/components/sections/hero"
 import { CompanyProcess } from "@/components/sections/company-process"

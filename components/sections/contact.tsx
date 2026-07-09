@@ -130,8 +130,8 @@ export function ContactSection() {
         {/* Header */}
         <div className="grid grid-cols-12 gap-6 border-b border-[var(--canvas-border)] pb-12 mb-16">
           <div className="col-span-12 md:col-span-4 lg:col-span-3">
-            <span className="text-[10px] tracking-widest uppercase font-mono text-[var(--canvas-text)] opacity-80 block font-bold">
-              GET IN TOUCH // CONTACT
+            <span className="text-[10px] tracking-widest uppercase font-sans text-[var(--canvas-text)] opacity-80 block font-bold">
+              GET IN TOUCH
             </span>
           </div>
           <div className="col-span-12 md:col-span-8 lg:col-span-9">
@@ -150,28 +150,12 @@ export function ContactSection() {
           {/* Left Column: Info */}
           <div className="col-span-12 lg:col-span-5 space-y-8">
             <div className="bg-[var(--canvas-text)]/[0.03] border border-[var(--canvas-border)] p-8 space-y-8 w-full relative">
-              <span className="text-[10px] tracking-widest uppercase font-mono text-[var(--canvas-text)] block font-bold">
-                // OUR OFFICES
+              <span className="text-[10px] tracking-widest uppercase font-sans text-[var(--canvas-text)] block font-bold">
+                OUR OFFICES
               </span>
               
               <div className="grid grid-cols-1 gap-6 w-full">
-                <a 
-                  href="https://www.google.com/maps/search/?api=1&query=CHAMMANY+COMPLEX,+SHOP+NO+65%2F869,+SEBASTIAN+ROAD,+KALOOR,+KOCHIN+682017" 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className="flex flex-col gap-2 group relative overflow-hidden"
-                >
-                  <address className="text-sm text-[var(--canvas-text-muted)] not-italic leading-relaxed font-medium">
-                    <strong className="text-[var(--canvas-text)] block font-sans text-sm tracking-wider uppercase font-bold mb-2 opacity-90 group-hover:opacity-100 transition-opacity flex items-center gap-2">
-                      <MapPin className="w-4 h-4" /> INDIA OFFICE
-                    </strong>
-                    CHAMMANY COMPLEX, SHOP NO 65/869,<br />
-                    SEBASTIAN ROAD, KALOOR, KOCHIN 682017
-                  </address>
-                </a>
-                
-                <div className="h-px w-full bg-[var(--canvas-border)]" />
-
+                {/* Aztech Head Quarters */}
                 <a 
                   href="https://maps.google.com/?q=Warehouse+55,+Al+Quoz+Industrial+Area+3,+Dubai" 
                   target="_blank" 
@@ -180,17 +164,96 @@ export function ContactSection() {
                 >
                   <address className="text-sm text-[var(--canvas-text-muted)] not-italic leading-relaxed font-medium">
                     <strong className="text-[var(--canvas-text)] block font-sans text-sm tracking-wider uppercase font-bold mb-2 opacity-90 group-hover:opacity-100 transition-opacity flex items-center gap-2">
-                      <MapPin className="w-4 h-4" /> DUBAI MAIN OFFICE
+                      <MapPin className="w-4 h-4" /> AZTECH HEAD QUARTERS
                     </strong>
                     Warehouse 55, Al Quoz Industrial Area 3,<br />Dubai, UAE
+                  </address>
+                </a>
+                
+                <div className="h-px w-full bg-[var(--canvas-border)]" />
+
+                {/* Sister Concern */}
+                <a 
+                  href="#" 
+                  className="flex flex-col gap-2 group relative overflow-hidden"
+                >
+                  <address className="text-sm text-[var(--canvas-text-muted)] not-italic leading-relaxed font-medium">
+                    <strong className="text-[var(--canvas-text)] block font-sans text-sm tracking-wider uppercase font-bold mb-2 opacity-90 group-hover:opacity-100 transition-opacity flex items-center gap-2">
+                      <MapPin className="w-4 h-4" /> SISTER CONCERN
+                    </strong>
+                    Lamps Plus
+                  </address>
+                </a>
+
+                <div className="h-px w-full bg-[var(--canvas-border)]" />
+
+                {/* Oman */}
+                <a 
+                  href="#" 
+                  className="flex flex-col gap-2 group relative overflow-hidden"
+                >
+                  <address className="text-sm text-[var(--canvas-text-muted)] not-italic leading-relaxed font-medium">
+                    <strong className="text-[var(--canvas-text)] block font-sans text-sm tracking-wider uppercase font-bold mb-2 opacity-90 group-hover:opacity-100 transition-opacity flex items-center gap-2">
+                      <MapPin className="w-4 h-4" /> AZTECH LED SCREEN
+                    </strong>
+                    Muscat, Oman
+                  </address>
+                </a>
+
+                <div className="h-px w-full bg-[var(--canvas-border)]" />
+
+                {/* Saudi */}
+                <a 
+                  href="#" 
+                  className="flex flex-col gap-2 group relative overflow-hidden"
+                >
+                  <address className="text-sm text-[var(--canvas-text-muted)] not-italic leading-relaxed font-medium">
+                    <strong className="text-[var(--canvas-text)] block font-sans text-sm tracking-wider uppercase font-bold mb-2 opacity-90 group-hover:opacity-100 transition-opacity flex items-center gap-2">
+                      <MapPin className="w-4 h-4" /> AZTECH LED SCREEN
+                    </strong>
+                    Riyadh, Saudi Arabia
+                  </address>
+                </a>
+
+                <div className="h-px w-full bg-[var(--canvas-border)]" />
+
+                {/* Abu Dhabi */}
+                <a 
+                  href="#" 
+                  className="flex flex-col gap-2 group relative overflow-hidden"
+                >
+                  <address className="text-sm text-[var(--canvas-text-muted)] not-italic leading-relaxed font-medium">
+                    <strong className="text-[var(--canvas-text)] block font-sans text-sm tracking-wider uppercase font-bold mb-2 opacity-90 group-hover:opacity-100 transition-opacity flex items-center gap-2">
+                      <MapPin className="w-4 h-4" /> AZTECH LED SCREEN
+                    </strong>
+                    Abu Dhabi, UAE
+                  </address>
+                </a>
+
+                <div className="h-px w-full bg-[var(--canvas-border)]" />
+
+                {/* Kerala */}
+                <a 
+                  href="https://www.google.com/maps/search/?api=1&query=CHAMMANY+COMPLEX,+SHOP+NO+65%2F869,+SEBASTIAN+ROAD,+KALOOR,+KOCHIN+682017" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="flex flex-col gap-2 group relative overflow-hidden"
+                >
+                  <address className="text-sm text-[var(--canvas-text-muted)] not-italic leading-relaxed font-medium">
+                    <strong className="text-[var(--canvas-text)] block font-sans text-sm tracking-wider uppercase font-bold mb-2 opacity-90 group-hover:opacity-100 transition-opacity flex items-center gap-2">
+                      <MapPin className="w-4 h-4" /> AZTECH LED SCREEN
+                    </strong>
+                    CHAMMANY COMPLEX, SHOP NO 65/869,<br />
+                    SEBASTIAN ROAD, KALOOR, KOCHIN 682017<br />
+                    Kerala, India
                   </address>
                 </a>
               </div>
             </div>
 
             <div className="bg-[var(--canvas-text)]/[0.03] border border-[var(--canvas-border)] p-8 space-y-6 w-full relative">
-              <span className="text-[10px] tracking-widest uppercase font-mono text-[var(--canvas-text)] block font-bold">
-                // DIRECT HOTLINES
+              <span className="text-[10px] tracking-widest uppercase font-sans text-[var(--canvas-text)] block font-bold">
+                DIRECT HOTLINES
               </span>
               <div className="grid grid-cols-1 gap-4 text-sm font-semibold text-[var(--canvas-text)] opacity-90">
                 <a href="tel:+917356780866" className="flex items-center gap-3 hover:opacity-100 transition-all">
@@ -206,7 +269,7 @@ export function ContactSection() {
                   <span>sales@az-tech.ae</span>
                 </a>
               </div>
-              <div className="flex items-center gap-2 pt-6 border-t border-[var(--canvas-border)] text-[10px] text-[var(--canvas-text-muted)] font-mono uppercase tracking-wider font-bold">
+              <div className="flex items-center gap-2 pt-6 border-t border-[var(--canvas-border)] text-[10px] text-[var(--canvas-text-muted)] font-sans uppercase tracking-wider font-bold">
                 <Clock className="w-3.5 h-3.5" />
                 <span>BUSINESS HOURS: MON–SAT (8AM–6PM)</span>
               </div>
@@ -239,8 +302,8 @@ export function ContactSection() {
               </div>
             ) : (
               <form ref={formRef} onSubmit={handleSubmit} className="space-y-10" noValidate>
-                <span className="text-[10px] tracking-widest uppercase font-mono text-[var(--canvas-text)] block border-b border-[var(--canvas-border)] pb-4 font-bold">
-                  // PROJECT INQUIRY DETAILS
+                <span className="text-[10px] tracking-widest uppercase font-sans text-[var(--canvas-text)] block border-b border-[var(--canvas-border)] pb-4 font-bold">
+                  PROJECT INQUIRY DETAILS
                 </span>
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-8">
@@ -492,8 +555,8 @@ export function ContactSection() {
                   {isSubmitting ? "PREPARING..." : "SUBMIT INQUIRY"}
                 </button>
                 
-                <p className="text-[10px] font-mono text-[var(--canvas-text-muted)] text-center uppercase tracking-wider font-semibold">
-                  all data is kept confidential // guaranteed 24-hour response
+                <p className="text-[10px] font-sans text-[var(--canvas-text-muted)] text-center uppercase tracking-wider font-semibold">
+                  All data is kept confidential | Guaranteed 24-hour response
                 </p>
               </form>
             )}

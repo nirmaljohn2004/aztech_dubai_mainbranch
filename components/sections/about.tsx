@@ -45,7 +45,7 @@ export function AboutSection() {
             {/* Corporate Structure - Hairline divider list */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full border-t border-[var(--canvas-border)] pt-8 mt-8">
               <div className="flex flex-col gap-1">
-                <span className="text-[9px] tracking-wider uppercase font-mono text-purple-500/80">HEAD OFFICE</span>
+                <span className="text-[9px] tracking-wider uppercase font-mono text-purple-500/80">HEAD QUARTERS</span>
                 <span className="text-sm font-medium tracking-tight">Aztech General Trading LLC</span>
                 <span className="text-xs text-neutral-500">Dubai, UAE</span>
               </div>
