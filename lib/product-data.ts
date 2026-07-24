@@ -10430,31 +10430,26 @@ export const categories = [
         id: "essential",
         name: "Essential Series",
         products: [
-          { name: "AZ-LS490UCM-EF", subtitle: "49\" FHD Video Wall Display Unit (Ultra Narrow Bezel 3.5mm)", image: "/images/lcd_video_wall_1.png" },
-          { name: "AZ-LS550UEM-EF", subtitle: "55\" FHD Video Wall Display Unit (Ultra Narrow Bezel 0.88mm)", image: "/images/lcd_video_wall_1.png" },
-          { name: "AZ-LS550UEH-EF", subtitle: "55\" FHD Video Wall Display Unit (Ultra Narrow Bezel 0.88mm)", image: "/images/lcd_video_wall_1.png" },
-          { name: "AZ-LS550UCM-EF", subtitle: "55\" FHD Video Wall Display Unit (Ultra Narrow Bezel 3.5mm)", image: "/images/lcd_video_wall_1.png" },
+          { name: "AZ-LS490UCM-EF", subtitle: "49\" FHD Video Wall Display Unit (Ultra Narrow Bezel 3.5mm)", image: "/images/lcd_videowall.png" },
+          { name: "AZ-LS550UEM-EF", subtitle: "55\" FHD Video Wall Display Unit (Ultra Narrow Bezel 0.88mm)", image: "/images/lcd_videowall.png" },
+          { name: "AZ-LS550UEH-EF", subtitle: "55\" FHD Video Wall Display Unit (Ultra Narrow Bezel 0.88mm)", image: "/images/lcd_videowall.png" },
+          { name: "AZ-LS550UCM-EF", subtitle: "55\" FHD Video Wall Display Unit (Ultra Narrow Bezel 3.5mm)", image: "/images/lcd_videowall.png" },
         ]
-      },
-      {
-        id: "basic",
-        name: "Basic Series",
-        products: []
       },
       {
         id: "ultra",
         name: "Ultra Series",
         products: [
-          { name: "AZ-LS650KCM-UF", subtitle: "Aztech 65 inch 3.5mm LCD Display Wall Unit (LCD DISPLAY)", image: "/images/gen_hires_led_4_1783344964877.png" },
-          { name: "AZ-LS550UEM-UF", subtitle: "Aztech 55 inch 0.88mm LCD Display Wall Unit (LCD DISPLAY)", image: "/images/gen_hires_led_5_1783344976320.png" },
-          { name: "AZ-LS550UEH-UF", subtitle: "Aztech 55 inch 0.88mm LCD Display Wall Unit (LCD DISPLAY)", image: "/images/gen_hires_led_6_1783344987071.png" },
-          { name: "AZ-LS550KDM-UF", subtitle: "55\" UHD Video Wall Display Unit (Ultra Narrow Bezel 1.7mm)", image: "/images/lcd_video_wall_2.png" },
-          { name: "AZ-LS550KDH-UF", subtitle: "55\" UHD Video Wall Display Unit (Ultra Narrow Bezel 1.7mm)", image: "/images/lcd_video_wall_2.png" },
-          { name: "AZ-LS460UDM-UF", subtitle: "46\" FHD Video Wall Display Unit (Ultra Narrow Bezel 1.7mm)", image: "/images/lcd_video_wall_2.png" },
-          { name: "AZ-LS550UDM-UF", subtitle: "55\" FHD Video Wall Display Unit (Ultra Narrow Bezel 1.7mm)", image: "/images/lcd_video_wall_2.png" },
-          { name: "AZ-LS550UEH-UG", subtitle: "55\" FHD Video Wall Display Unit (Ultra Narrow Bezel 0.88mm)", image: "/images/lcd_video_wall_2.png" },
-          { name: "AZ-LS550UCM-UF", subtitle: "55\" FHD Video Wall Display Unit (Ultra Narrow Bezel 3.5mm)", image: "/images/lcd_video_wall_2.png" },
-          { name: "AZ-LS490UCM-UF", subtitle: "49\" FHD Video Wall Display Unit (Ultra Narrow Bezel 3.5mm)", image: "/images/lcd_video_wall_2.png" },
+          { name: "AZ-LS650KCM-UF", subtitle: "Aztech 65 inch 3.5mm LCD Display Wall Unit (LCD DISPLAY)", image: "/images/lcd_videowall.png" },
+          { name: "AZ-LS550UEM-UF", subtitle: "Aztech 55 inch 0.88mm LCD Display Wall Unit (LCD DISPLAY)", image: "/images/lcd_videowall.png" },
+          { name: "AZ-LS550UEH-UF", subtitle: "Aztech 55 inch 0.88mm LCD Display Wall Unit (LCD DISPLAY)", image: "/images/lcd_videowall.png" },
+          { name: "AZ-LS550KDM-UF", subtitle: "55\" UHD Video Wall Display Unit (Ultra Narrow Bezel 1.7mm)", image: "/images/lcd_videowall.png" },
+          { name: "AZ-LS550KDH-UF", subtitle: "55\" UHD Video Wall Display Unit (Ultra Narrow Bezel 1.7mm)", image: "/images/lcd_videowall.png" },
+          { name: "AZ-LS460UDM-UF", subtitle: "46\" FHD Video Wall Display Unit (Ultra Narrow Bezel 1.7mm)", image: "/images/lcd_videowall.png" },
+          { name: "AZ-LS550UDM-UF", subtitle: "55\" FHD Video Wall Display Unit (Ultra Narrow Bezel 1.7mm)", image: "/images/lcd_videowall.png" },
+          { name: "AZ-LS550UEH-UG", subtitle: "55\" FHD Video Wall Display Unit (Ultra Narrow Bezel 0.88mm)", image: "/images/lcd_videowall.png" },
+          { name: "AZ-LS550UCM-UF", subtitle: "55\" FHD Video Wall Display Unit (Ultra Narrow Bezel 3.5mm)", image: "/images/lcd_videowall.png" },
+          { name: "AZ-LS490UCM-UF", subtitle: "49\" FHD Video Wall Display Unit (Ultra Narrow Bezel 3.5mm)", image: "/images/lcd_videowall.png" },
         ]
       }
     ]
