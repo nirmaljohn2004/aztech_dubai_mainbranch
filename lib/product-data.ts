@@ -30,7 +30,6 @@ export const productDetails: Record<string, ProductDetail> = {
       {
         category: "Parameters",
         specs: [
-          { label: "Model", value: "DHI-PHRIA1.95-RE" },
           { label: "Pixel Pitch", value: "1.953mm" },
           { label: "Pixel Configuration", value: "1R1G1B" },
           { label: "LED Type", value: "SMD1515" },
@@ -77,7 +76,6 @@ export const productDetails: Record<string, ProductDetail> = {
       {
         category: "Parameters",
         specs: [
-          { label: "Model", value: "DHI-PHRIA2.61-RE" },
           { label: "Pixel Pitch", value: "2.604mm" },
           { label: "Pixel Type", value: "1R1G1B" },
           { label: "Pixel Configuration", value: "SMD1515" },
@@ -124,7 +122,6 @@ export const productDetails: Record<string, ProductDetail> = {
       {
         category: "Parameters",
         specs: [
-          { label: "Model", value: "DHI-PHRIA2.97-RE" },
           { label: "Pixel Pitch", value: "2.976mm" },
           { label: "Pixel Type", value: "1R1G1B" },
           { label: "Pixel Configuration", value: "SMD2020" },
@@ -171,7 +168,6 @@ export const productDetails: Record<string, ProductDetail> = {
       {
         category: "Parameters",
         specs: [
-          { label: "Model", value: "DHI-PHRIA3.91-RE" },
           { label: "Pixel Pitch", value: "3.91mm" },
           { label: "Pixel Type", value: "1R1G1B" },
           { label: "Pixel Configuration", value: "SMD2020" },
@@ -218,7 +214,6 @@ export const productDetails: Record<string, ProductDetail> = {
       {
         category: "Parameters",
         specs: [
-          { label: "Model", value: "DHI-PHROA3.91-REL" },
           { label: "Pixel Pitch", value: "3.91mm" },
           { label: "Pixel Type", value: "1R1G1B" },
           { label: "Pixel Configuration", value: "SMD1921" },
@@ -264,7 +259,6 @@ export const productDetails: Record<string, ProductDetail> = {
       {
         category: "Parameters",
         specs: [
-          { label: "Model", value: "DHI-PHRIA2.97-RC" },
           { label: "Pixel Pitch", value: "2.976mm" },
           { label: "Pixel Configuration", value: "1R1G1B" },
           { label: "LED Type", value: "SMD2121" },
@@ -311,7 +305,6 @@ export const productDetails: Record<string, ProductDetail> = {
       {
         category: "Parameters",
         specs: [
-          { label: "Model", value: "DHI-PHROA4.81-REL" },
           { label: "Pixel Pitch", value: "4.81mm" },
           { label: "Pixel Type", value: "1R1G1B" },
           { label: "Pixel Configuration", value: "SMD1921" },
@@ -357,7 +350,6 @@ export const productDetails: Record<string, ProductDetail> = {
       {
         category: "Parameters",
         specs: [
-          { label: "Model", value: "DHI-PHRIA1.95-RC" },
           { label: "Pixel Pitch", value: "1.953mm" },
           { label: "Pixel Configuration", value: "1R1G1B" },
           { label: "LED Type", value: "SMD1515" },
@@ -403,7 +395,6 @@ export const productDetails: Record<string, ProductDetail> = {
       {
         category: "Parameters",
         specs: [
-          { label: "Model", value: "DHI-PHRIA2.61-RC" },
           { label: "Pixel Pitch", value: "2.604mm" },
           { label: "Pixel Configuration", value: "1R1G1B" },
           { label: "LED Type", value: "SMD1515" },
@@ -450,7 +441,6 @@ export const productDetails: Record<string, ProductDetail> = {
       {
         category: "Parameters",
         specs: [
-          { label: "Model", value: "DHI-PHRIA3.91-RC" },
           { label: "Pixel Pitch", value: "3.91mm" },
           { label: "Pixel Configuration", value: "1R1G1B" },
           { label: "LED Type", value: "SMD2121" },
@@ -497,7 +487,6 @@ export const productDetails: Record<string, ProductDetail> = {
       {
         category: "Parameters",
         specs: [
-          { label: "Model", value: "DHI-PHRIA1.95-RE-G-V2" },
           { label: "Pixel Pitch", value: "1.953mm" },
           { label: "Pixel Configuration", value: "1R1G1B" },
           { label: "LED Type", value: "SMD1415 (GOB)" },
@@ -544,7 +533,6 @@ export const productDetails: Record<string, ProductDetail> = {
       {
         category: "Parameters",
         specs: [
-          { label: "Model", value: "DHI-PHRIA2.61-RE-V2" },
           { label: "Pixel Pitch", value: "2.604mm" },
           { label: "Pixel Configuration", value: "1R1G1B" },
           { label: "LED Type", value: "SMD1415" },
@@ -591,7 +579,6 @@ export const productDetails: Record<string, ProductDetail> = {
       {
         category: "Parameters",
         specs: [
-          { label: "Model", value: "DHI-PHRIA2.97-RE-V2" },
           { label: "Pixel Pitch", value: "2.976mm" },
           { label: "Pixel Configuration", value: "1R1G1B" },
           { label: "LED Type", value: "SMD2020" },
@@ -638,7 +625,6 @@ export const productDetails: Record<string, ProductDetail> = {
       {
         category: "Parameters",
         specs: [
-          { label: "Model", value: "DHI-PHRIA3.91-RE-V2" },
           { label: "Pixel Pitch", value: "3.906mm" },
           { label: "Pixel Configuration", value: "1R1G1B" },
           { label: "LED Type", value: "SMD2020" },
@@ -685,7 +671,6 @@ export const productDetails: Record<string, ProductDetail> = {
       {
         category: "Parameters",
         specs: [
-          { label: "Model", value: "DHI-PHROA2.97-REL-V2" },
           { label: "Pixel Pitch", value: "2.976mm" },
           { label: "Pixel Configuration", value: "1R1G1B" },
           { label: "LED Type", value: "SMD1515" },
@@ -732,7 +717,6 @@ export const productDetails: Record<string, ProductDetail> = {
       {
         category: "Parameters",
         specs: [
-          { label: "Model", value: "DHI-PHROA3.91-REL-V2" },
           { label: "Pixel Pitch", value: "3.906mm" },
           { label: "Pixel Configuration", value: "1R1G1B" },
           { label: "LED Type", value: "SMD1921" },
@@ -778,7 +762,6 @@ export const productDetails: Record<string, ProductDetail> = {
       {
         category: "Parameters",
         specs: [
-          { label: "Model", value: "DHI-PHRIA1.95-RF" },
           { label: "Pixel Pitch", value: "1.953mm" },
           { label: "Pixel Configuration", value: "1R1G1B" },
           { label: "LED Type", value: "SMD1415" },
@@ -1245,7 +1228,6 @@ export const productDetails: Record<string, ProductDetail> = {
       {
         category: "Parameters",
         specs: [
-          { label: "Model", value: "DHI-PHMIA108-EH" },
           { label: "Pixel Pitch", value: "1.25mm" },
           { label: "Operating system", value: "Android 8.0" },
           { label: "Core configuration", value: "Quad-core CPU/Mali Y811 (GPU) / 4G memory / 32G storage (expandable)" },
@@ -1290,7 +1272,6 @@ export const productDetails: Record<string, ProductDetail> = {
       {
         category: "Parameters",
         specs: [
-          { label: "Model", value: "DHI-PHMIA135-EH" },
           { label: "Pixel Pitch", value: "1.5625mm" },
           { label: "Operating system", value: "Android 8.0" },
           { label: "Core configuration", value: "Quad-core CPU/Mali Y811 (GPU) / 4G memory / 32G storage (expandable)" },
@@ -1335,7 +1316,6 @@ export const productDetails: Record<string, ProductDetail> = {
       {
         category: "Parameters",
         specs: [
-          { label: "Model", value: "DHI-PHMIA163-EH" },
           { label: "Pixel Pitch", value: "1.875mm" },
           { label: "Operating system", value: "Android 8.0" },
           { label: "Core configuration", value: "Quad-core CPU/Mali Y811 (GPU) / 4G memory / 32G storage (expandable)" },
@@ -1380,7 +1360,6 @@ export const productDetails: Record<string, ProductDetail> = {
       {
         category: "Parameters",
         specs: [
-          { label: "Model", value: "DHI-PHMIA216-EH" },
           { label: "Pixel Pitch", value: "2.5mm" },
           { label: "Operating system", value: "Android 8.0" },
           { label: "Core configuration", value: "Quad-core CPU/Mali Y811 (GPU) / 4G memory / 32G storage (expandable)" },
@@ -1425,7 +1404,6 @@ export const productDetails: Record<string, ProductDetail> = {
       {
         category: "Parameters",
         specs: [
-          { label: "Model", value: "DHI-PHMIA135-AC" },
           { label: "Pixel Pitch", value: "1.56mm" },
           { label: "Pixel Configuration", value: "1R1G1B" },
           { label: "LED Type", value: "SMD 3 IN 1" },
@@ -1475,7 +1453,6 @@ export const productDetails: Record<string, ProductDetail> = {
       {
         category: "Parameters",
         specs: [
-          { label: "Model", value: "DHI-PHVOA10-EH" },
           { label: "Pixel Pitch", value: "10mm" },
           { label: "Pixel Configuration", value: "1R1G1B" },
           { label: "LED Type", value: "SMD3535" },
@@ -1521,7 +1498,6 @@ export const productDetails: Record<string, ProductDetail> = {
       {
         category: "Parameters",
         specs: [
-          { label: "Model", value: "DHI-PHROA3.91-MH" },
           { label: "Pixel Pitch", value: "3.91mm" },
           { label: "Pixel Configuration", value: "1R1G1B" },
           { label: "LED Type", value: "SMD1921" },
@@ -1568,7 +1544,6 @@ export const productDetails: Record<string, ProductDetail> = {
       {
         category: "Parameters",
         specs: [
-          { label: "Model", value: "DHI-PHROA4.81-MH" },
           { label: "Pixel Pitch", value: "4.81mm" },
           { label: "Pixel Configuration", value: "1R1G1B" },
           { label: "LED Type", value: "SMD1921" },
@@ -1616,7 +1591,6 @@ export const productDetails: Record<string, ProductDetail> = {
       {
         category: "Parameters",
         specs: [
-          { label: "Model", value: "DHI-PHRIA2.97-SH" },
           { label: "Pixel Pitch", value: "2.976mm" },
           { label: "Pixel Configuration", value: "1R1G1B" },
           { label: "LED Type", value: "SMD2020" },
@@ -1663,7 +1637,6 @@ export const productDetails: Record<string, ProductDetail> = {
       {
         category: "Parameters",
         specs: [
-          { label: "Model", value: "DHI-PHRIA3.91-SH" },
           { label: "Pixel Pitch", value: "3.91mm" },
           { label: "Pixel Configuration", value: "1R1G1B" },
           { label: "LED Type", value: "SMD2020" },
@@ -1710,7 +1683,6 @@ export const productDetails: Record<string, ProductDetail> = {
       {
         category: "Parameters",
         specs: [
-          { label: "Model", value: "DHI-PHRIA1.95-SH" },
           { label: "Pixel Pitch", value: "1.953mm" },
           { label: "Pixel Configuration", value: "1R1G1B" },
           { label: "LED Type", value: "Mini 4 IN 1" },
@@ -1757,7 +1729,6 @@ export const productDetails: Record<string, ProductDetail> = {
       {
         category: "Parameters",
         specs: [
-          { label: "Model", value: "DHI-PHRIA2.61-SH" },
           { label: "Pixel Pitch", value: "2.604mm" },
           { label: "Pixel Configuration", value: "1R1G1B" },
           { label: "LED Type", value: "SMD2020" },
@@ -1789,9 +1760,9 @@ export const productDetails: Record<string, ProductDetail> = {
       }
     ]
   },
-  "AZ-GOA2.97-PH": {
-    id: "AZ-GOA2.97-PH",
-    name: "AZ-GOA2.97-PH",
+  "AZ-OR2.97-CS": {
+    id: "AZ-OR2.97-CS",
+    name: "AZ-OR2.97-CS",
     title: "General Outdoor Fixed LED",
     description: [
       "Super thin and light design, 77mm and 36kg/㎡.",
@@ -1806,7 +1777,6 @@ export const productDetails: Record<string, ProductDetail> = {
       {
         category: "Parameters",
         specs: [
-          { label: "Model", value: "DHI-PHGOA2.97-PH" },
           { label: "Pixel Pitch", value: "2.97mm" },
           { label: "Pixel Configuration", value: "1R1G1B" },
           { label: "LED Type", value: "SMD1515" },
@@ -1837,9 +1807,9 @@ export const productDetails: Record<string, ProductDetail> = {
       }
     ]
   },
-  "AZ-GOA3.91-PH": {
-    id: "AZ-GOA3.91-PH",
-    name: "AZ-GOA3.91-PH",
+  "AZ-OR3.91-CS": {
+    id: "AZ-OR3.91-CS",
+    name: "AZ-OR3.91-CS",
     title: "General Outdoor Fixed LED",
     description: [
       "Super thin and light design, 77mm and 34kg/㎡.",
@@ -1854,7 +1824,6 @@ export const productDetails: Record<string, ProductDetail> = {
       {
         category: "Parameters",
         specs: [
-          { label: "Model", value: "DHI-PHGOA3.91-PH" },
           { label: "Pixel Pitch", value: "3.91mm" },
           { label: "Pixel Configuration", value: "1R1G1B" },
           { label: "LED Type", value: "SMD1921" },
@@ -1886,9 +1855,9 @@ export const productDetails: Record<string, ProductDetail> = {
       }
     ]
   },
-  "AZ-GOA4.81-PH": {
-    id: "AZ-GOA4.81-PH",
-    name: "AZ-GOA4.81-PH",
+  "AZ-OR4.81-CS": {
+    id: "AZ-OR4.81-CS",
+    name: "AZ-OR4.81-CS",
     title: "General Outdoor Fixed LED",
     description: [
       "Super thin and light design, 77mm and 34kg/㎡.",
@@ -1903,7 +1872,6 @@ export const productDetails: Record<string, ProductDetail> = {
       {
         category: "Parameters",
         specs: [
-          { label: "Model", value: "DHI-PHGOA4.81-PH" },
           { label: "Pixel Pitch", value: "4.81mm" },
           { label: "Pixel Configuration", value: "1R1G1B" },
           { label: "LED Type", value: "SMD1921" },
@@ -1952,7 +1920,6 @@ export const productDetails: Record<string, ProductDetail> = {
       {
         category: "Parameters",
         specs: [
-          { label: "Model", value: "DHI-PHGOA5-PH" },
           { label: "Pixel Pitch", value: "5.71mm" },
           { label: "Pixel Configuration", value: "1R1G1B" },
           { label: "LED Type", value: "SMD2727" },
@@ -2001,7 +1968,6 @@ export const productDetails: Record<string, ProductDetail> = {
       {
         category: "Parameters",
         specs: [
-          { label: "Model", value: "DHI-PHGOA6-PH" },
           { label: "Pixel Pitch", value: "6.67mm" },
           { label: "Pixel Configuration", value: "1R1G1B" },
           { label: "LED Type", value: "SMD2727" },
@@ -2050,7 +2016,6 @@ export const productDetails: Record<string, ProductDetail> = {
       {
         category: "Parameters",
         specs: [
-          { label: "Model", value: "DHI-PHGOA8-PH" },
           { label: "Pixel Pitch", value: "8mm" },
           { label: "Pixel Configuration", value: "1R1G1B" },
           { label: "LED Type", value: "SMD3535" },
@@ -2099,7 +2064,6 @@ export const productDetails: Record<string, ProductDetail> = {
       {
         category: "Parameters",
         specs: [
-          { label: "Model", value: "DHI-PHGOA10-PH" },
           { label: "Pixel Pitch", value: "10mm" },
           { label: "Pixel Configuration", value: "1R1G1B" },
           { label: "LED Type", value: "SMD3535" },
@@ -2146,7 +2110,6 @@ export const productDetails: Record<string, ProductDetail> = {
       {
         category: "Parameters",
         specs: [
-          { label: "Model", value: "DHI-PHGIA1.95-SH" },
           { label: "Pixel Pitch", value: "1.95mm" },
           { label: "Pixel Configuration", value: "1R1G1B" },
           { label: "LED Type", value: "SMD 1212" },
@@ -2193,7 +2156,6 @@ export const productDetails: Record<string, ProductDetail> = {
       {
         category: "Parameters",
         specs: [
-          { label: "Model", value: "DHI-PHGIA2.61-SH" },
           { label: "Pixel Pitch", value: "2.61mm" },
           { label: "Pixel Configuration", value: "1R1G1B" },
           { label: "LED Type", value: "SMD 1515" },
@@ -2240,7 +2202,6 @@ export const productDetails: Record<string, ProductDetail> = {
       {
         category: "Parameters",
         specs: [
-          { label: "Model", value: "DHI-PHGIA2.97-SH" },
           { label: "Pixel Pitch", value: "2.97mm" },
           { label: "Pixel Configuration", value: "1R1G1B" },
           { label: "LED Type", value: "SMD 2121" },
@@ -2287,7 +2248,6 @@ export const productDetails: Record<string, ProductDetail> = {
       {
         category: "Parameters",
         specs: [
-          { label: "Model", value: "DHI-PHGIA3.91-SH" },
           { label: "Pixel Pitch", value: "3.91mm" },
           { label: "Pixel Configuration", value: "1R1G1B" },
           { label: "LED Type", value: "SMD 2121" },
@@ -2334,7 +2294,6 @@ export const productDetails: Record<string, ProductDetail> = {
       {
         category: "Parameters",
         specs: [
-          { label: "Model", value: "DHI-PHGIA4.81-SH" },
           { label: "Pixel Pitch", value: "4.81mm" },
           { label: "Pixel Configuration", value: "1R1G1B" },
           { label: "LED Type", value: "SMD 2121" },
@@ -2366,9 +2325,9 @@ export const productDetails: Record<string, ProductDetail> = {
       }
     ]
   },
-  "AZ-MIA135-CF": {
-    id: "AZ-MIA135-CF",
-    name: "AZ-MIA135-CF",
+  "AZ-AIO135-F": {
+    id: "AZ-AIO135-F",
+    name: "AZ-AIO135-F",
     title: "COB Foldable All-In-One LED",
     description: [
       "Fully flip COB module, bumping and moisture-proof.",
@@ -2382,7 +2341,6 @@ export const productDetails: Record<string, ProductDetail> = {
       {
         category: "Parameters",
         specs: [
-          { label: "Model", value: "DHI-PHMIA135-CF" },
           { label: "Pixel Pitch", value: "1.56mm" },
           { label: "Pixel Configuration", value: "1R1G1B" },
           { label: "LED Type", value: "Flip COB 3 in 1" },
@@ -2423,9 +2381,9 @@ export const productDetails: Record<string, ProductDetail> = {
       }
     ]
   },
-  "AZ-MIA135-CC": {
-    id: "AZ-MIA135-CC",
-    name: "AZ-MIA135-CC",
+  "AZ-AIO135-NF": {
+    id: "AZ-AIO135-NF",
+    name: "AZ-AIO135-NF",
     title: "Commercial All-In-One LED",
     description: [
       "Compatible with video conferencing software such as Teams and Zoom.",
@@ -2438,7 +2396,6 @@ export const productDetails: Record<string, ProductDetail> = {
       {
         category: "Parameters",
         specs: [
-          { label: "Model", value: "DHI-PHMIA135-CC" },
           { label: "Pixel Pitch", value: "1.56mm" },
           { label: "Pixel Configuration", value: "1R1G1B" },
           { label: "LED Type", value: "Flip COB 3 in 1" },
@@ -2479,9 +2436,9 @@ export const productDetails: Record<string, ProductDetail> = {
       }
     ]
   },
-  "AZ-MIA163-CC": {
-    id: "AZ-MIA163-CC",
-    name: "AZ-MIA163-CC",
+  "AZ-AIO163-NF": {
+    id: "AZ-AIO163-NF",
+    name: "AZ-AIO163-NF",
     title: "Commercial All-In-One LED",
     description: [
       "Compatible with video conferencing software such as Teams and Zoom.",
@@ -2494,7 +2451,6 @@ export const productDetails: Record<string, ProductDetail> = {
       {
         category: "Parameters",
         specs: [
-          { label: "Model", value: "DHI-PHMIA163-CC" },
           { label: "Pixel Pitch", value: "0.9375mm" },
           { label: "Pixel Configuration", value: "1R1G1B" },
           { label: "LED Type", value: "Flip COB 3 in 1" },
@@ -2535,9 +2491,9 @@ export const productDetails: Record<string, ProductDetail> = {
       }
     ]
   },
-  "AZ-MIA108-CC": {
-    id: "AZ-MIA108-CC",
-    name: "AZ-MIA108-CC",
+  "AZ-AIO108-NF": {
+    id: "AZ-AIO108-NF",
+    name: "AZ-AIO108-NF",
     title: "Commercial All-In-One LED",
     description: [
       "Compatible with video conferencing software such as Teams and Zoom.",
@@ -2550,7 +2506,6 @@ export const productDetails: Record<string, ProductDetail> = {
       {
         category: "Parameters",
         specs: [
-          { label: "Model", value: "DHI-PHMIA108-CC" },
           { label: "Pixel Pitch", value: "1.25mm" },
           { label: "Pixel Configuration", value: "1R1G1B" },
           { label: "LED Type", value: "Flip COB 3 in 1" },
@@ -2606,7 +2561,6 @@ export const productDetails: Record<string, ProductDetail> = {
       {
         category: "Parameters",
         specs: [
-          { label: "Model", value: "DHI-PHSIA1.2-LS" },
           { label: "Pixel Pitch", value: "1.25mm" },
           { label: "Pixel Configuration", value: "1R1G1B" },
           { label: "LED Type", value: "SMD1010" },
@@ -2653,7 +2607,6 @@ export const productDetails: Record<string, ProductDetail> = {
       {
         category: "Parameters",
         specs: [
-          { label: "Model", value: "DHI-PHSIA1.5-LS" },
           { label: "Pixel Pitch", value: "1.5625mm" },
           { label: "Pixel Configuration", value: "1R1G1B" },
           { label: "LED Type", value: "SMD 1212" },
@@ -2701,7 +2654,6 @@ export const productDetails: Record<string, ProductDetail> = {
       {
         category: "Parameters",
         specs: [
-          { label: "Model", value: "DHI-PHSIA0.9-SS" },
           { label: "Pixel Pitch", value: "0.9375mm" },
           { label: "Pixel Configuration", value: "1R1G1B" },
           { label: "LED Type", value: "IMD 4in1" },
@@ -2749,7 +2701,6 @@ export const productDetails: Record<string, ProductDetail> = {
       {
         category: "Parameters",
         specs: [
-          { label: "Model", value: "DHI-PHSIA1.2-SS" },
           { label: "Pixel Pitch", value: "1.25mm" },
           { label: "Pixel Configuration", value: "1R1G1B" },
           { label: "LED Type", value: "SMD1010" },
@@ -2797,7 +2748,6 @@ export const productDetails: Record<string, ProductDetail> = {
       {
         category: "Parameters",
         specs: [
-          { label: "Model", value: "DHI-PHSIA1.5-SS" },
           { label: "Pixel Pitch", value: "1.5625mm" },
           { label: "Pixel Configuration", value: "1R1G1B" },
           { label: "LED Type", value: "SMD1010/SMD1212" },
@@ -2845,7 +2795,6 @@ export const productDetails: Record<string, ProductDetail> = {
       {
         category: "Parameters",
         specs: [
-          { label: "Model", value: "DHI-PHSIA1.8-SS" },
           { label: "Pixel Pitch", value: "1.875mm" },
           { label: "Pixel Configuration", value: "1R1G1B" },
           { label: "LED Type", value: "SMD1515" },
@@ -2894,7 +2843,6 @@ export const productDetails: Record<string, ProductDetail> = {
       {
         category: "Parameters",
         specs: [
-          { label: "Model", value: "DHI-PHSIA0.9-CH" },
           { label: "Pixel Pitch", value: "0.9375mm" },
           { label: "Pixel Configuration", value: "1R1G1B" },
           { label: "LED Type", value: "Flip COB Chip" },
@@ -2943,7 +2891,6 @@ export const productDetails: Record<string, ProductDetail> = {
       {
         category: "Parameters",
         specs: [
-          { label: "Model", value: "DHI-PHSIA1.2-CH" },
           { label: "Pixel Pitch", value: "1.25mm" },
           { label: "Pixel Configuration", value: "1R1G1B" },
           { label: "LED Type", value: "Flip COB Chip" },
@@ -2992,7 +2939,6 @@ export const productDetails: Record<string, ProductDetail> = {
       {
         category: "Parameters",
         specs: [
-          { label: "Model", value: "DHI-PHSIA1.5-CH" },
           { label: "Pixel Pitch", value: "1.5625mm" },
           { label: "Pixel Configuration", value: "1R1G1B" },
           { label: "LED Type", value: "Flip COB Chip" },
@@ -3041,7 +2987,6 @@ export const productDetails: Record<string, ProductDetail> = {
       {
         category: "Parameters",
         specs: [
-          { label: "Model", value: "DHI-PHSIA0.9-AH" },
           { label: "Pixel Pitch", value: "0.9375mm" },
           { label: "Pixel Configuration", value: "1R1G1B" },
           { label: "LED Type", value: "Flip COB Chip" },
@@ -3090,7 +3035,6 @@ export const productDetails: Record<string, ProductDetail> = {
       {
         category: "Parameters",
         specs: [
-          { label: "Model", value: "DHI-PHSIA1.2-AH" },
           { label: "Pixel Pitch", value: "1.25mm" },
           { label: "Pixel Configuration", value: "1R1G1B" },
           { label: "LED Type", value: "Flip COB Chip" },
@@ -3139,7 +3083,6 @@ export const productDetails: Record<string, ProductDetail> = {
       {
         category: "Parameters",
         specs: [
-          { label: "Model", value: "DHI-PHSIA1.5-AH" },
           { label: "Pixel Pitch", value: "1.5625mm" },
           { label: "Pixel Configuration", value: "1R1G1B" },
           { label: "LED Type", value: "Flip COB Chip" },
@@ -3171,10 +3114,10 @@ export const productDetails: Record<string, ProductDetail> = {
       }
     ]
   },
-  "AZ-GIA3.91-SE": {
-    id: "AZ-GIA3.91-SE",
-    name: "AZ-GIA3.91-SE",
-    title: "Overseas Dahua indoor Front Maintenance fixed screen LED_P3.91_DHI-PHGIA3.91-SE",
+  "AZ-RT3.91-CS": {
+    id: "AZ-RT3.91-CS",
+    name: "AZ-RT3.91-CS",
+    title: "Aztech indoor Front Maintenance fixed screen LED_P3.91",
     description: [
       "Offers a diversity of installation methods, such as it can be used as a canopy screen. It supports floor to ceiling, and wall to wall installation, as well as right angle assembly to meet the needs of various environments.",
       "Ultra-light and ultra-thin, saving you transportation costs and installation space.",
@@ -3238,10 +3181,10 @@ export const productDetails: Record<string, ProductDetail> = {
       }
     ]
   },
-  "AZ-SIA1.5-SC": {
-    id: "AZ-SIA1.5-SC",
-    name: "AZ-SIA1.5-SC",
-    title: "Overseas Dahua indoor 640 x 480 Front Maintenance fixed screen LED_P1.5_DHI-PHSIA1.5-SC",
+  "AZ-BF1.53-CS": {
+    id: "AZ-BF1.53-CS",
+    name: "AZ-BF1.53-CS",
+    title: "Aztech indoor 640 x 480 Front Maintenance fixed screen LED_P1.5",
     description: [
       "Power system integrated circuit board (power HUB all in one design), with wireless hard connection.",
       "Module with no plastic bottom shell, ultra-light and ultra-thin, mounted in the enclosure.",
@@ -3306,10 +3249,10 @@ export const productDetails: Record<string, ProductDetail> = {
       }
     ]
   },
-  "AZ-SIA1.8-SC": {
-    id: "AZ-SIA1.8-SC",
-    name: "AZ-SIA1.8-SC",
-    title: "Overseas Dahua indoor 640 x 480 Front Maintenance fixed screen LED_P1.8_DHI-PHSIA1.8-SC",
+  "AZ-BF1.86-CS": {
+    id: "AZ-BF1.86-CS",
+    name: "AZ-BF1.86-CS",
+    title: "Aztech indoor 640 x 480 Front Maintenance fixed screen LED_P1.8",
     description: [
       "Power system integrated circuit board (power HUB all in one design), with wireless hard connection.",
       "Module with no plastic bottom shell, ultra-light and ultra-thin, mounted in the enclosure.",
@@ -3374,10 +3317,10 @@ export const productDetails: Record<string, ProductDetail> = {
       }
     ]
   },
-  "AZ-SIA2-SC": {
-    id: "AZ-SIA2-SC",
-    name: "AZ-SIA2-SC",
-    title: "Overseas Dahua indoor 640 x 480 Front Maintenance fixed screen LED_P2_DHI-PHSIA2-SC",
+  "AZ-BF2-CS": {
+    id: "AZ-BF2-CS",
+    name: "AZ-BF2-CS",
+    title: "Aztech indoor 640 x 480 Front Maintenance fixed screen LED_P2",
     description: [
       "Power system integrated circuit board (power HUB all in one design), with wireless hard connection.",
       "Module with no plastic bottom shell, ultra-light and ultra-thin, mounted in the enclosure.",
@@ -3442,10 +3385,10 @@ export const productDetails: Record<string, ProductDetail> = {
       }
     ]
   },
-  "AZ-SIA2.5-SC": {
-    id: "AZ-SIA2.5-SC",
-    name: "AZ-SIA2.5-SC",
-    title: "Overseas Dahua indoor 640 x 480 Front Maintenance fixed screen LED_P2.5_DHI-PHSIA2.5-SC",
+  "AZ-BF2.5-CS": {
+    id: "AZ-BF2.5-CS",
+    name: "AZ-BF2.5-CS",
+    title: "Aztech indoor 640 x 480 Front Maintenance fixed screen LED_P2.5",
     description: [
       "Power system integrated circuit board (power HUB all in one design), with wireless hard connection.",
       "Module with no plastic bottom shell, ultra-light and ultra-thin, mounted in the enclosure.",
@@ -3510,10 +3453,10 @@ export const productDetails: Record<string, ProductDetail> = {
       }
     ]
   },
-  "AZ-SIA3-SC": {
-    id: "AZ-SIA3-SC",
-    name: "AZ-SIA3-SC",
-    title: "Overseas Dahua indoor 640 x 480 Front Maintenance fixed screen LED_P3_DHI-PHSIA3-SC",
+  "AZ-BF3-CS": {
+    id: "AZ-BF3-CS",
+    name: "AZ-BF3-CS",
+    title: "Aztech indoor 640 x 480 Front Maintenance fixed screen LED_P3",
     description: [
       "Power system integrated circuit board (power HUB all in one design), with wireless hard connection.",
       "Module with no plastic bottom shell, ultra-light and ultra-thin, mounted in the enclosure.",
@@ -3578,10 +3521,10 @@ export const productDetails: Record<string, ProductDetail> = {
       }
     ]
   },
-  "AZ-SIA4-SC": {
-    id: "AZ-SIA4-SC",
-    name: "AZ-SIA4-SC",
-    title: "Overseas Dahua indoor 640 x 480 Front Maintenance fixed screen LED_P4_DHI-PHSIA4-SC",
+  "AZ-BF4-CS": {
+    id: "AZ-BF4-CS",
+    name: "AZ-BF4-CS",
+    title: "Aztech indoor 640 x 480 Front Maintenance fixed screen LED_P4",
     description: [
       "Power system integrated circuit board (power HUB all in one design), with wireless hard connection.",
       "Module with no plastic bottom shell, ultra-light and ultra-thin, mounted in the enclosure.",
@@ -3646,10 +3589,10 @@ export const productDetails: Record<string, ProductDetail> = {
       }
     ]
   },
-  "AZ-SIA1.2-CK": {
-    id: "AZ-SIA1.2-CK",
-    name: "AZ-SIA1.2-CK",
-    title: "Overseas Dahua indoor 640 x 480 Front Maintenance fixed screen LED_P1.2_DHI-PHSIA1.2-CK",
+  "AZ-BF1.25-CS": {
+    id: "AZ-BF1.25-CS",
+    name: "AZ-BF1.25-CS",
+    title: "Aztech indoor 640 x 480 Front Maintenance fixed screen LED_P1.2",
     description: [
       "Mini Flip COB(Chips on Board) technology.",
       "Ultra-thin 20mm and super-light 4.5kg design.",
@@ -6249,7 +6192,6 @@ export const productDetails: Record<string, ProductDetail> = {
       {
         category: "Display",
         specs: [
-          { label: "Model", value: "DHI-LDH43-SWI200" },
           { label: "Backlight", value: "LED" },
           { label: "Screen Size", value: "43\"" },
           { label: "Aspect Ratio", value: "16:9" },
@@ -7226,7 +7168,6 @@ export const productDetails: Record<string, ProductDetail> = {
       {
         category: "Model",
         specs: [
-          { label: "Model", value: "DHI-LS490UCM-UF" }
         ]
       },
       {
@@ -7299,7 +7240,6 @@ export const productDetails: Record<string, ProductDetail> = {
       {
         category: "Model",
         specs: [
-          { label: "Model", value: "DHI-LS550UCM-UF" }
         ]
       },
       {
@@ -7372,7 +7312,6 @@ export const productDetails: Record<string, ProductDetail> = {
       {
         category: "Model",
         specs: [
-          { label: "Model", value: "DHI-LS550UEH-UG" }
         ]
       },
       {
@@ -7445,7 +7384,6 @@ export const productDetails: Record<string, ProductDetail> = {
       {
         category: "Model",
         specs: [
-          { label: "Model", value: "DHI-LS550UDM-UF" }
         ]
       },
       {
@@ -7518,7 +7456,6 @@ export const productDetails: Record<string, ProductDetail> = {
       {
         category: "Model",
         specs: [
-          { label: "Model", value: "DHI-LS460UDM-UF" }
         ]
       },
       {
@@ -7591,7 +7528,6 @@ export const productDetails: Record<string, ProductDetail> = {
       {
         category: "Model",
         specs: [
-          { label: "Model", value: "DHI-LS550KDH-UF" }
         ]
       },
       {
@@ -7664,7 +7600,6 @@ export const productDetails: Record<string, ProductDetail> = {
       {
         category: "Model",
         specs: [
-          { label: "Model", value: "DHI-LS550KDM-UF" }
         ]
       },
       {
@@ -7737,7 +7672,6 @@ export const productDetails: Record<string, ProductDetail> = {
       {
         category: "Display",
         specs: [
-          { label: "Model", value: "DHI-LS550UEH-UF" },
           { label: "Screen Size", value: "55 inch" },
           { label: "Viewing Size", value: "1210.48 (H) × 681.28 (V) mm" },
           { label: "Lifespan", value: "50,000 hrs" },
@@ -7813,7 +7747,6 @@ export const productDetails: Record<string, ProductDetail> = {
       {
         category: "Display",
         specs: [
-          { label: "Model", value: "DHI-LS550UEM-UF" },
           { label: "Screen Size", value: "55 inch" },
           { label: "Viewing Size", value: "1210.48 (H) × 681.28 (V) mm" },
           { label: "Lifespan", value: "50,000 hrs" },
@@ -7889,7 +7822,6 @@ export const productDetails: Record<string, ProductDetail> = {
       {
         category: "Display",
         specs: [
-          { label: "Model", value: "DHI-LS650KCM-UF" },
           { label: "Screen Size", value: "65 inch" },
           { label: "Viewing Size", value: "1428.48 (H) × 803.52 (V) mm" },
           { label: "Lifespan", value: "50,000 hrs" },
@@ -7964,7 +7896,6 @@ export const productDetails: Record<string, ProductDetail> = {
       {
         category: "Model",
         specs: [
-          { label: "Model", value: "DHI-LS550UCM-EF" }
         ]
       },
       {
@@ -8036,7 +7967,6 @@ export const productDetails: Record<string, ProductDetail> = {
       {
         category: "Model",
         specs: [
-          { label: "Model", value: "DHI-LS550UEH-EF" }
         ]
       },
       {
@@ -8108,7 +8038,6 @@ export const productDetails: Record<string, ProductDetail> = {
       {
         category: "Model",
         specs: [
-          { label: "Model", value: "DHI-LS550UEM-EF" }
         ]
       },
       {
@@ -8180,7 +8109,6 @@ export const productDetails: Record<string, ProductDetail> = {
       {
         category: "Model",
         specs: [
-          { label: "Model", value: "DHI-LS490UCM-EF" }
         ]
       },
       {
@@ -10269,14 +10197,13 @@ export const categories = [
         id: "indoor-fine-pixel",
         name: "Indoor Fine Pixel",
         products: [
-          { name: "AZ-SIA1.2-CK", subtitle: "Aztech indoor 640x480 Front Maintenance fixed screen LED_P1.2", image: "/images/gen_hires_led_1_1783344922186.png" },
-          { name: "AZ-SIA4-SC", subtitle: "Aztech indoor 640x480 Front Maintenance fixed screen LED_P4", image: "/images/gen_hires_led_2_1783344932247.png" },
-          { name: "AZ-SIA3-SC", subtitle: "Aztech indoor 640x480 Front Maintenance fixed screen LED_P3", image: "/images/gen_hires_led_3_1783344943959.png" },
-          { name: "AZ-SIA2.5-SC", subtitle: "Aztech indoor 640x480 Front Maintenance fixed screen LED_P2.5", image: "/images/gen_led_wall_indoor_1783343577831.png" },
-          { name: "AZ-SIA2-SC", subtitle: "Aztech indoor 640x480 Front Maintenance fixed screen LED_P2", image: "/images/gen_hires_led_5_1783344976320.png" },
-          { name: "AZ-SIA1.8-SC", subtitle: "Aztech indoor 640x480 Front Maintenance fixed screen LED_P1.8", image: "/images/gen_hires_led_6_1783344987071.png" },
-          { name: "AZ-SIA1.5-SC", subtitle: "Aztech indoor 640x480 Front Maintenance fixed screen LED_P1.5", image: "/images/gen_hires_led_7_1783345616576.png" },
-          { name: "AZ-GIA3.91-SE", subtitle: "Aztech Indoor Front Maintenance fixed screen LED_P3.91", image: "/images/gen_hires_led_8_1783345640777.png" },
+          { name: "AZ-BF1.25-CS", subtitle: "Aztech indoor 640x480 Front Maintenance fixed screen LED_P1.2", image: "/images/IMG_1484.PNG" },
+          { name: "AZ-BF4-CS", subtitle: "Aztech indoor 640x480 Front Maintenance fixed screen LED_P4", image: "/images/IMG_1484.PNG" },
+          { name: "AZ-BF3-CS", subtitle: "Aztech indoor 640x480 Front Maintenance fixed screen LED_P3", image: "/images/IMG_1484.PNG" },
+          { name: "AZ-BF2.5-CS", subtitle: "Aztech indoor 640x480 Front Maintenance fixed screen LED_P2.5", image: "/images/IMG_1484.PNG" },
+          { name: "AZ-BF2-CS", subtitle: "Aztech indoor 640x480 Front Maintenance fixed screen LED_P2", image: "/images/IMG_1484.PNG" },
+          { name: "AZ-BF1.86-CS", subtitle: "Aztech indoor 640x480 Front Maintenance fixed screen LED_P1.8", image: "/images/IMG_1484.PNG" },
+          { name: "AZ-BF1.53-CS", subtitle: "Aztech indoor 640x480 Front Maintenance fixed screen LED_P1.5", image: "/images/IMG_1484.PNG" },
           { name: "AZ-SIA1.5-AH", subtitle: "Flip COB Indoor Fine Pixel Pitch LED", image: "/images/gen_led_wall_indoor_1783343577831.png" },
           { name: "AZ-SIA1.2-AH", subtitle: "Flip COB Indoor Fine Pixel Pitch LED", image: "/images/gen_hires_led_10_1783345685654.png" },
           { name: "AZ-SIA0.9-AH", subtitle: "Flip COB Indoor Fine Pixel Pitch LED", image: "/images/gen_led_cabinet_1783343600017.png" },
@@ -10287,37 +10214,37 @@ export const categories = [
           { name: "AZ-SIA1.5-SS", subtitle: "Indoor Fine Pixel Pitch LED", image: "/images/gen_hires_led_1_1783344922186.png" },
           { name: "AZ-SIA1.2-SS", subtitle: "Indoor Fine Pixel Pitch LED", image: "/images/gen_hires_led_2_1783344932247.png" },
           { name: "AZ-SIA0.9-SS", subtitle: "Indoor Fine Pixel Pitch LED", image: "/images/gen_hires_led_3_1783344943959.png" },
-          { name: "AZ-SIA1.5-LS", subtitle: "Indoor Fine Pixel Pitch LED", image: "/images/gen_hires_led_2_1783344932247.png" },
-          { name: "AZ-SIA1.2-LS", subtitle: "Indoor Fine Pixel Pitch LED", image: "/images/gen_hires_led_5_1783344976320.png" },
-          { name: "AZ-MIA108-CC", subtitle: "Commercial All-In-One LED", image: "/images/gen_hires_led_6_1783344987071.png" },
-          { name: "AZ-MIA163-CC", subtitle: "Commercial All-In-One LED", image: "/images/gen_hires_led_7_1783345616576.png" },
-          { name: "AZ-MIA135-CC", subtitle: "Commercial All-In-One LED", image: "/images/gen_hires_led_8_1783345640777.png" },
-          { name: "AZ-MIA135-CF", subtitle: "COB Foldable All-In-One LED", image: "/images/gen_led_wall_indoor_1783343577831.png" },
+          { name: "AZ-SIA1.5-LS", subtitle: "Indoor Fine Pixel Pitch LED", image: "/images/IMG_1493.PNG" },
+          { name: "AZ-SIA1.2-LS", subtitle: "Indoor Fine Pixel Pitch LED", image: "/images/IMG_1493.PNG" },
+          { name: "AZ-AIO108-NF", subtitle: "Commercial All-In-One LED", image: "/images/IMG_1493.PNG" },
+          { name: "AZ-AIO163-NF", subtitle: "Commercial All-In-One LED", image: "/images/IMG_1493.PNG" },
+          { name: "AZ-AIO135-NF", subtitle: "Commercial All-In-One LED", image: "/images/IMG_1493.PNG" },
+          { name: "AZ-AIO135-F", subtitle: "COB Foldable All-In-One LED", image: "/images/IMG_1493.PNG" },
         ]
       },
       {
         id: "indoor-fixed",
         name: "Indoor Fixed",
         products: [
-          { name: "AZ-GIA4.81-SH", subtitle: "Aztech General Indoor Fixed LED", image: "/images/gen_hires_led_10_1783345685654.png" },
-          { name: "AZ-GIA3.91-SH", subtitle: "Aztech General Indoor Fixed LED", image: "/images/gen_led_cabinet_1783343600017.png" },
-          { name: "AZ-GIA2.97-SH", subtitle: "Aztech General Indoor Fixed LED", image: "/images/gen_led_wall_indoor_1783343577831.png" },
-          { name: "AZ-GIA2.61-SH", subtitle: "Aztech General Indoor Fixed LED", image: "/images/gen_led_cabinet_1783343600017.png" },
-          { name: "AZ-GIA1.95-SH", subtitle: "Aztech General Indoor Fixed LED", image: "/images/gen_spherical_led_1783343642805.png" },
+          { name: "AZ-RT4.81-CS", subtitle: "Aztech General Indoor Fixed LED", image: "/images/IMG_1487.PNG" },
+          { name: "AZ-RT3.91-CS", subtitle: "Aztech General Indoor Fixed LED", image: "/images/IMG_1487.PNG" },
+          { name: "AZ-RT2.97-CS", subtitle: "Aztech General Indoor Fixed LED", image: "/images/IMG_1487.PNG" },
+          { name: "AZ-RT2.61-CS", subtitle: "Aztech General Indoor Fixed LED", image: "/images/IMG_1487.PNG" },
+          { name: "AZ-RT1.95-CS", subtitle: "Aztech General Indoor Fixed LED", image: "/images/IMG_1487.PNG" },
         ]
       },
       {
         id: "outdoor-fixed",
         name: "Outdoor Fixed",
         products: [
-          { name: "AZ-GOA10-PH", subtitle: "Aztech outdoor 960x960 front and rear maintenance fixed screen", image: "/images/gen_digital_kiosk_1783343630287.png" },
-          { name: "AZ-GOA10-PH", subtitle: "Aztech General Outdoor Fixed LED", image: "/images/gen_hires_led_1_1783344922186.png" },
-          { name: "AZ-GOA8-PH", subtitle: "Aztech General Outdoor Fixed LED", image: "/images/gen_hires_led_2_1783344932247.png" },
-          { name: "AZ-GOA6-PH", subtitle: "Aztech General Outdoor Fixed LED", image: "/images/gen_hires_led_3_1783344943959.png" },
-          { name: "AZ-GOA5-PH", subtitle: "Aztech General Outdoor Fixed LED", image: "/images/gen_hires_led_4_1783344964877.png" },
-          { name: "AZ-GOA4.81-PH", subtitle: "Aztech General Outdoor Fixed LED", image: "/images/gen_hires_led_5_1783344976320.png" },
-          { name: "AZ-GOA3.91-PH", subtitle: "Aztech General Outdoor Fixed LED", image: "/images/gen_hires_led_6_1783344987071.png" },
-          { name: "AZ-GOA2.97-PH", subtitle: "Aztech General Outdoor Fixed LED", image: "/images/gen_hires_led_7_1783345616576.png" },
+          { name: "AZ-OFR10-CS", subtitle: "Aztech outdoor 960x960 front and rear maintenance fixed screen", image: "/images/IMG_1496.PNG" },
+          { name: "AZ-OR10-CS", subtitle: "Aztech General Outdoor Fixed LED", image: "/images/IMG_1496.PNG" },
+          { name: "AZ-OFR8-CS", subtitle: "Aztech General Outdoor Fixed LED", image: "/images/IMG_1496.PNG" },
+          { name: "AZ-OFR6-CS", subtitle: "Aztech General Outdoor Fixed LED", image: "/images/IMG_1496.PNG" },
+          { name: "AZ-OFR5-CS", subtitle: "Aztech General Outdoor Fixed LED", image: "/images/IMG_1496.PNG" },
+          { name: "AZ-OR4.81-CS", subtitle: "Aztech General Outdoor Fixed LED", image: "/images/IMG_1487.PNG" },
+          { name: "AZ-OR3.91-CS", subtitle: "Aztech General Outdoor Fixed LED", image: "/images/IMG_1487.PNG" },
+          { name: "AZ-OR2.97-CS", subtitle: "Aztech General Outdoor Fixed LED", image: "/images/IMG_1487.PNG" },
         ]
       },
 
@@ -10326,71 +10253,65 @@ export const categories = [
         id: "stadium",
         name: "Stadium",
         products: [
-          { name: "AZ-VOA10-EH", subtitle: "Aztech Outdoor Stadium LED", image: "/images/gen_hires_led_8_1783345640777.png" },
+          { name: "AZ-VOA10-EH", subtitle: "Aztech Outdoor Stadium LED", image: "/images/IMG_1498.JPG" },
         ]
       },
-      {
-        id: "commercial",
-        name: "Commercial",
-        products: [
-          { name: "AZ-MIA135-AC", subtitle: "Aztech Commercial All-In-One LED", image: "/images/gen_hires_led_9_1783345669587.png" },
-        ]
-      },
+
       {
         id: "conference-all-in-one",
         name: "Conference All-In-One",
         products: [
-          { name: "AZ-MIA216-EH", subtitle: "Aztech Indoor ALL-In-One LED", image: "/images/gen_hires_led_10_1783345685654.png" },
-          { name: "AZ-MIA163-EH", subtitle: "Aztech Indoor ALL-In-One LED", image: "/images/gen_led_cabinet_1783343600017.png" },
-          { name: "AZ-MIA135-EH", subtitle: "Aztech Indoor ALL-In-One LED", image: "/images/gen_led_wall_indoor_1783343577831.png" },
-          { name: "AZ-MIA108-EH", subtitle: "Aztech Indoor ALL-In-One LED", image: "/images/gen_led_wall_outdoor_1783343588691.png" },
+          { name: "AZ-MIA216-EH", subtitle: "Aztech Indoor ALL-In-One LED", image: "/images/IMG_1493.PNG" },
+          { name: "AZ-MIA163-EH", subtitle: "Aztech Indoor ALL-In-One LED", image: "/images/IMG_1493.PNG" },
+          { name: "AZ-MIA135-EH", subtitle: "Aztech Indoor ALL-In-One LED", image: "/images/IMG_1493.PNG" },
+          { name: "AZ-MIA108-EH", subtitle: "Aztech Indoor ALL-In-One LED", image: "/images/IMG_1493.PNG" },
         ]
       },
       {
         id: "led-module",
         name: "LED Module",
         products: [
-          { name: "AZ-EOA10S-C", subtitle: "Aztech LED Module", image: "/images/gen_spherical_led_1783343642805.png" },
-          { name: "AZ-EOA8S-C", subtitle: "Aztech LED Module", image: "/images/gen_digital_kiosk_1783343630287.png" },
-          { name: "AZ-EOA6S-C", subtitle: "Aztech LED Module", image: "/images/gen_hires_led_1_1783344922186.png" },
-          { name: "AZ-EOA5S-C", subtitle: "Aztech LED Module", image: "/images/gen_hires_led_2_1783344932247.png" },
-          { name: "AZ-EOA4S-C", subtitle: "Aztech LED Module", image: "/images/gen_hires_led_3_1783344943959.png" },
-          { name: "AZ-EOA3S-C", subtitle: "Aztech LED Module", image: "/images/gen_hires_led_4_1783344964877.png" },
-          { name: "AZ-EOA2.5S-C", subtitle: "Aztech LED Module", image: "/images/gen_hires_led_5_1783344976320.png" },
-          { name: "AZ-EIA2.5S-C", subtitle: "Aztech LED Module", image: "/images/gen_hires_led_6_1783344987071.png" },
-          { name: "AZ-EIA2S-C", subtitle: "Aztech LED Module", image: "/images/gen_hires_led_7_1783345616576.png" },
-          { name: "AZ-EIA1.8S-C", subtitle: "Aztech LED Module", image: "/images/gen_hires_led_8_1783345640777.png" },
-          { name: "AZ-EIA1.2S-C", subtitle: "Aztech LED Module", image: "/images/gen_hires_led_9_1783345669587.png" },
-          { name: "AZ-EIA1.5S-C", subtitle: "Aztech LED Module", image: "/images/gen_hires_led_10_1783345685654.png" },
+          { name: "AZ-EOA10S-C", subtitle: "Aztech LED Module", image: "/images/IMG_1506.JPG" },
+          { name: "AZ-EOA8S-C", subtitle: "Aztech LED Module", image: "/images/IMG_1508.JPG" },
+          { name: "AZ-EOA6S-C", subtitle: "Aztech LED Module", image: "/images/IMG_1510.JPG" },
+          { name: "AZ-EOA5S-C", subtitle: "Aztech LED Module", image: "/images/IMG_1512.JPG" },
+          { name: "AZ-EOA4S-C", subtitle: "Aztech LED Module", image: "/images/IMG_1514.JPG" },
+          { name: "AZ-EOA3S-C", subtitle: "Aztech LED Module", image: "/images/IMG_1506.JPG" },
+          { name: "AZ-EOA2.5S-C", subtitle: "Aztech LED Module", image: "/images/IMG_1506.JPG" },
+          { name: "AZ-EIA2.5S-C", subtitle: "Aztech LED Module", image: "/images/IMG_1506.JPG" },
+          { name: "AZ-EIA2S-C", subtitle: "Aztech LED Module", image: "/images/IMG_1506.JPG" },
+          { name: "AZ-EIA1.8S-C", subtitle: "Aztech LED Module", image: "/images/IMG_1506.JPG" },
+          { name: "AZ-EIA1.2S-C", subtitle: "Aztech LED Module", image: "/images/IMG_1506.JPG" },
+          { name: "AZ-EIA1.5S-C", subtitle: "Aztech LED Module", image: "/images/IMG_1506.JPG" },
         ]
       },
       {
         id: "rental-led-display",
         name: "Rental LED Display",
         products: [
-          { name: "AZ-RIA2.61-SH", subtitle: "Aztech Indoor Rental LED", image: "/images/gen_led_cabinet_1783343600017.png" },
-          { name: "AZ-RIA1.95-SH", subtitle: "Aztech Indoor Rental LED", image: "/images/gen_led_wall_indoor_1783343577831.png" },
-          { name: "AZ-RIA3.91-SH", subtitle: "Aztech Indoor Rental LED", image: "/images/gen_led_wall_outdoor_1783343588691.png" },
-          { name: "AZ-RIA2.97-SH", subtitle: "Aztech Indoor Rental LED", image: "/images/gen_spherical_led_1783343642805.png" },
-          { name: "AZ-ROA4.81-MH", subtitle: "Aztech Outdoor Rental LED", image: "/images/gen_digital_kiosk_1783343630287.png" },
-          { name: "AZ-ROA3.91-MH", subtitle: "Aztech Outdoor Rental LED", image: "/images/gen_hires_led_1_1783344922186.png" },
-          { name: "AZ-RIA1.95-RF", subtitle: "Aztech Creative Flexible Indoor Rental LED", image: "/images/gen_hires_led_2_1783344932247.png" },
-          { name: "AZ-ROA3.91-REL-V2", subtitle: "Aztech Ultimate Convenience Outdoor Rental LED", image: "/images/gen_hires_led_3_1783344943959.png" },
-          { name: "AZ-ROA2.97-REL-V2", subtitle: "Aztech Ultimate Convenience Outdoor Rental LED", image: "/images/gen_hires_led_4_1783344964877.png" },
-          { name: "AZ-RIA3.91-RE-V2", subtitle: "Aztech Ultimate Convenience Indoor Rental LED", image: "/images/gen_hires_led_5_1783344976320.png" },
-          { name: "AZ-RIA2.97-RE-V2", subtitle: "Aztech Ultimate Convenience Indoor Rental LED", image: "/images/gen_hires_led_6_1783344987071.png" },
-          { name: "AZ-RIA2.61-RE-V2", subtitle: "Aztech Ultimate Convenience Indoor Rental LED", image: "/images/gen_hires_led_7_1783345616576.png" },
-          { name: "AZ-RIA1.95-RE-G-V2", subtitle: "Aztech Ultimate Convenience Indoor Rental LED", image: "/images/gen_hires_led_8_1783345640777.png" },
-          { name: "AZ-RIA3.91-RC", subtitle: "Aztech General Indoor Rental LED", image: "/images/gen_hires_led_9_1783345669587.png" },
-          { name: "AZ-RIA2.97-RC", subtitle: "Aztech General Indoor Rental LED", image: "/images/gen_hires_led_10_1783345685654.png" },
-          { name: "AZ-RIA2.61-RC", subtitle: "Aztech General Indoor Rental LED", image: "/images/gen_led_cabinet_1783343600017.png" },
-          { name: "AZ-RIA1.95-RC", subtitle: "Aztech General Indoor Rental LED", image: "/images/gen_led_wall_indoor_1783343577831.png" },
-          { name: "AZ-ROA4.81-REL", subtitle: "Aztech General Outdoor Rental LED", image: "/images/gen_led_wall_outdoor_1783343588691.png" },
-          { name: "AZ-ROA3.91-REL", subtitle: "Aztech General Outdoor Rental LED", image: "/images/gen_spherical_led_1783343642805.png" },
-          { name: "AZ-RIA3.91-RE", subtitle: "Aztech General Indoor Rental LED", image: "/images/gen_digital_kiosk_1783343630287.png" },
-          { name: "AZ-RIA2.97-RE", subtitle: "Aztech General Indoor Rental LED", image: "/images/gen_hires_led_1_1783344922186.png" },
-          { name: "AZ-RIA2.61-RE", subtitle: "Aztech General Indoor Rental LED", image: "/images/gen_hires_led_2_1783344932247.png" },
-          { name: "AZ-RIA1.95-RE", subtitle: "Aztech General Indoor Rental LED", image: "/images/gen_hires_led_3_1783344943959.png" },
+          { name: "AZ-RIA2.61-SH", subtitle: "Aztech Indoor Rental LED", image: "/images/IMG_1504.JPG" },
+          { name: "AZ-RIA1.95-SH", subtitle: "Aztech Indoor Rental LED", image: "/images/IMG_1504.JPG" },
+          { name: "AZ-RIA3.91-SH", subtitle: "Aztech Indoor Rental LED", image: "/images/IMG_1504.JPG" },
+          { name: "AZ-RIA2.97-SH", subtitle: "Aztech Indoor Rental LED", image: "/images/IMG_1504.JPG" },
+          { name: "AZ-ROA4.81-MH", subtitle: "Aztech Outdoor Rental LED", image: "/images/IMG_1503.JPG" },
+          { name: "AZ-ROA3.91-MH", subtitle: "Aztech Outdoor Rental LED", image: "/images/IMG_1503.JPG" },
+          { name: "AZ-RIA1.95-RF", subtitle: "Aztech Creative Flexible Indoor Rental LED", image: "/images/IMG_1504.JPG" },
+          { name: "AZ-ROA3.91-REL-V2", subtitle: "Aztech Ultimate Convenience Outdoor Rental LED", image: "/images/IMG_1503.JPG" },
+          { name: "AZ-ROA2.97-REL-V2", subtitle: "Aztech Ultimate Convenience Outdoor Rental LED", image: "/images/IMG_1503.JPG" },
+          { name: "AZ-RIA3.91-RE-V2", subtitle: "Aztech Ultimate Convenience Indoor Rental LED", image: "/images/IMG_1504.JPG" },
+          { name: "AZ-RIA2.97-RE-V2", subtitle: "Aztech Ultimate Convenience Indoor Rental LED", image: "/images/IMG_1504.JPG" },
+          { name: "AZ-RIA2.61-RE-V2", subtitle: "Aztech Ultimate Convenience Indoor Rental LED", image: "/images/IMG_1504.JPG" },
+          { name: "AZ-RIA1.95-RE-G-V2", subtitle: "Aztech Ultimate Convenience Indoor Rental LED", image: "/images/IMG_1504.JPG" },
+          { name: "AZ-RIA3.91-RC", subtitle: "Aztech General Indoor Rental LED", image: "/images/IMG_1504.JPG" },
+          { name: "AZ-RIA2.97-RC", subtitle: "Aztech General Indoor Rental LED", image: "/images/IMG_1504.JPG" },
+          { name: "AZ-RIA2.61-RC", subtitle: "Aztech General Indoor Rental LED", image: "/images/IMG_1504.JPG" },
+          { name: "AZ-RIA1.95-RC", subtitle: "Aztech General Indoor Rental LED", image: "/images/IMG_1504.JPG" },
+          { name: "AZ-ROA4.81-REL", subtitle: "Aztech General Outdoor Rental LED", image: "/images/IMG_1503.JPG" },
+          { name: "AZ-ROA3.91-REL", subtitle: "Aztech General Outdoor Rental LED", image: "/images/IMG_1503.JPG" },
+          { name: "AZ-RIA3.91-RE", subtitle: "Aztech General Indoor Rental LED", image: "/images/IMG_1504.JPG" },
+          { name: "AZ-RIA2.97-RE", subtitle: "Aztech General Indoor Rental LED", image: "/images/IMG_1504.JPG" },
+          { name: "AZ-RIA2.61-RE", subtitle: "Aztech General Indoor Rental LED", image: "/images/IMG_1504.JPG" },
+          { name: "AZ-RIA1.95-RE", subtitle: "Aztech General Indoor Rental LED", image: "/images/IMG_1504.JPG" },
         ]
       }
     ]
@@ -10517,54 +10438,7 @@ export const categories = [
     name: "Control",
     description: "Advanced control solutions for seamless operation and monitoring.",
     subcategories: [
-      {
-        id: "matrix",
-        name: "Matrix",
-        products: [
-          { name: "AZ-CON2100-0416H", subtitle: "Aztech 1.5U EMBEDDED MULTI-SCREEN CONTROLLER", image: "/images/matrix_1.png" },
-          { name: "AZ-CON2100-0412H", subtitle: "Aztech 1.5U EMBEDDED MULTI-SCREEN CONTROLLER", image: "/images/matrix_2.png" },
-          { name: "AZ-CON2100-0410H", subtitle: "Aztech 1.5U EMBEDDED MULTI-SCREEN CONTROLLER", image: "/images/matrix_3.png" },
-          { name: "AZ-CON3000-7U", subtitle: "Multi-screen Controller", image: "/images/gen_matrix_controller_1783343619215.png" },
-          { name: "AZ-CON3000-4U", subtitle: "Multi-screen Controller", image: "/images/matrix_1.png" },
-          { name: "AZ-M70-D-0205HO(-H)", subtitle: "2 Channel HDMI Distributed Decoding Box", image: "/images/gen_hires_led_1_1783344922186.png" },
-          { name: "AZ-CON3000-M", subtitle: "Multi-screen Controller", image: "/images/matrix_2.png" },
-          { name: "AZ-M60-7U", subtitle: "Multi-service Video Management Platform", image: "/images/gen_hires_led_3_1783344943959.png" },
-          { name: "AZ-M70-4U-E", subtitle: "Multi-service Video Management Platform", image: "/images/gen_hires_led_4_1783344964877.png" },
-          { name: "AZ-M60-12U", subtitle: "Multi-service Video Management Platform", image: "/images/gen_hires_led_5_1783344976320.png" },
-        ]
-      },
-      {
-        id: "keyboards",
-        name: "Keyboards",
-        products: [
-          { name: "AZ-KB5200(-F)", subtitle: "Android Network Control Keyboard", image: "/images/keyboard_1.png" },
-          { name: "AZ-KB1000-E", subtitle: "Network Keyboard", image: "/images/keyboard_2.png" },
-          { name: "AZ-KB1000", subtitle: "Network Keyboard", image: "/images/keyboard_1.png" },
-        ]
-      },
-      {
-        id: "decoders",
-        name: "Decoders",
-        products: [
-          { name: "AZ-VD0200FX-A01", subtitle: "Aztech 2CH UHD NETWORK VIDEO DECODER", image: "/images/decoder_1.png" },
-          { name: "AZ-VD1605DU-4I-8K-2U2H", subtitle: "Aztech 16CH UHD NETWORK VIDEO DECODER", image: "/images/decoder_1.png" },
-          { name: "AZ-VD2005DU-4I-8K-4H", subtitle: "Aztech 20CH UHD NETWORK VIDEO DECODER", image: "/images/decoder_1.png" },
-          { name: "AZ-VD1205DU-4I-8K", subtitle: "Aztech 12CH UHD NETWORK VIDEO DECODER", image: "/images/decoder_1.png" },
-          { name: "AZ-VD0405DU-2I-8K", subtitle: "Ultra-HD Network Video Decoder", image: "/images/decoder_1.png" },
-          { name: "AZ-VD0105DH-4K", subtitle: "Ultra-HD Network Video Decoder", image: "/images/decoder_1.png" },
-          { name: "AZ-VD2105DH-4I-4K", subtitle: "Ultra-HD Network Video Decoder", image: "/images/decoder_1.png" },
-          { name: "AZ-VD1805DH-4I-4K", subtitle: "Ultra-HD Network Video Decoder", image: "/images/decoder_1.png" },
-          { name: "AZ-VD1505DH-4I-4K", subtitle: "Ultra-HD Network Video Decoder", image: "/images/decoder_1.png" },
-          { name: "AZ-VD1205DH-4I-4K", subtitle: "Ultra-HD Network Video Decoder", image: "/images/decoder_1.png" },
-        ]
-      },
-      {
-        id: "encoder",
-        name: "Encoder",
-        products: [
-          { name: "AZ-EB0105HI-4K", subtitle: "1 Channel Distributed Encoding Box", image: "/images/gen_hires_led_6_1783344987071.png" },
-        ]
-      },
+
       {
         id: "led-display-control",
         name: "LED Display Control",
