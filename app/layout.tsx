@@ -19,9 +19,9 @@ const dmMono = DM_Mono({
 })
 
 export const metadata: Metadata = {
-  title: "Aztech LED | #1 LED Screen Supplier in India | Indoor & Outdoor Displays",
-  description: "Aztech LED Screens — India’s premier LED screen supplier backed by 20+ years of Dubai excellence. Indoor LED displays, outdoor billboards, transparent LED & video walls. Serving all of India. Get a free quote today.",
-  keywords: "LED screen India, LED display supplier India, outdoor LED billboard India, indoor LED screen India, video wall India, transparent LED display India, LED screen installation India, digital signage India, LED screen price India, P2 LED screen India",
+  title: "Aztech LED | #1 LED Screen Supplier in Asia | Indoor & Outdoor Displays",
+  description: "Aztech LED Screens — Asia’s premier LED screen supplier backed by 20+ years of Dubai excellence. Indoor LED displays, outdoor billboards, transparent LED & video walls. Serving all of Asia. Get a free quote today.",
+  keywords: "LED screen Asia, LED display supplier Asia, outdoor LED billboard Asia, indoor LED screen Asia, video wall Asia, transparent LED display Asia, LED screen installation Asia, digital signage Asia, LED screen price Asia, P2 LED screen Asia",
   authors: [{ name: "Aztech LED Screens Private Limited" }],
   robots: {
     index: true,
@@ -36,8 +36,8 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: "https://aztechledscreens.com/",
-    title: "Aztech LED | #1 LED Screen Supplier in India",
-    description: "India’s most trusted LED display company, backed by 20+ years of Dubai excellence. Indoor, outdoor, transparent LED screens & video walls. Serving all of India.",
+    title: "Aztech LED | #1 LED Screen Supplier in Asia",
+    description: "Asia’s most trusted LED display company, backed by 20+ years of Dubai excellence. Indoor, outdoor, transparent LED screens & video walls. Serving all of Asia.",
     siteName: "Aztech LED Screens Private Limited",
     locale: "en_IN",
     images: [
@@ -51,8 +51,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Aztech LED | #1 LED Screen Supplier in India",
-    description: "India’s most trusted LED display company, backed by 20+ years of Dubai excellence. Indoor, outdoor & specialty LED screens. 500+ clients.",
+    title: "Aztech LED | #1 LED Screen Supplier in Asia",
+    description: "Asia’s most trusted LED display company, backed by 20+ years of Dubai excellence. Indoor, outdoor & specialty LED screens. 500+ clients.",
     images: ["https://aztechledscreens.com/images/hero_led_wall_1774782256673.webp"],
   },
   alternates: {

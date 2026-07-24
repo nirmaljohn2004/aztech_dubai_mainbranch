@@ -60,7 +60,7 @@ export function HeroSection() {
 
       {/* ── Foreground Hero Content ── */}
       <section
-        id="hero"
+        id="home"
         className="relative h-screen w-full flex flex-col justify-end pb-24 md:pb-32 pt-12"
       >
         <motion.div

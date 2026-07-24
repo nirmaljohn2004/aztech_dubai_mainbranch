@@ -89,22 +89,32 @@ export function ProductCard({ product, index }: ProductCardProps) {
         {/* Right: Decorative / Abstract Representation instead of Image */}
         <div className="flex flex-col justify-center h-full">
           <div className="relative w-full aspect-[4/3] overflow-hidden rounded-xl border border-white/10 bg-[#05020a] flex items-center justify-center group-hover:border-purple-500/30 transition-colors duration-500">
-            {/* Abstract Tech Graphic */}
-            <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] opacity-20 group-hover:opacity-40 transition-opacity duration-700"></div>
-            
-            <div className="relative z-10 flex flex-col items-center gap-6">
-               <div className="w-24 h-24 rounded-full bg-gradient-to-tr from-purple-600/20 to-purple-400/10 border border-purple-500/20 flex items-center justify-center backdrop-blur-md shadow-[0_0_30px_rgba(168,85,247,0.15)] group-hover:shadow-[0_0_50px_rgba(168,85,247,0.3)] transition-all duration-700 group-hover:scale-110">
-                 <span className="font-mono text-purple-300 tracking-widest uppercase text-xs rotate-[-45deg] opacity-70">
-                   {categoryTag}
-                 </span>
-               </div>
-               <div className="text-center z-10 px-4">
-                  <div className="text-[10px] font-mono text-purple-500/50 uppercase tracking-[0.3em] mb-2">Display Series</div>
-                  <div className="text-sm font-medium text-white/80">{product.name}</div>
-               </div>
-            </div>
+            {product.image ? (
+              <img 
+                src={product.image} 
+                alt={product.name} 
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              />
+            ) : (
+              <>
+                {/* Abstract Tech Graphic */}
+                <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] opacity-20 group-hover:opacity-40 transition-opacity duration-700"></div>
+                
+                <div className="relative z-10 flex flex-col items-center gap-6">
+                   <div className="w-24 h-24 rounded-full bg-gradient-to-tr from-purple-600/20 to-purple-400/10 border border-purple-500/20 flex items-center justify-center backdrop-blur-md shadow-[0_0_30px_rgba(168,85,247,0.15)] group-hover:shadow-[0_0_50px_rgba(168,85,247,0.3)] transition-all duration-700 group-hover:scale-110">
+                     <span className="font-mono text-purple-300 tracking-widest uppercase text-xs rotate-[-45deg] opacity-70">
+                       {categoryTag}
+                     </span>
+                   </div>
+                   <div className="text-center z-10 px-4">
+                      <div className="text-[10px] font-mono text-purple-500/50 uppercase tracking-[0.3em] mb-2">Display Series</div>
+                      <div className="text-sm font-medium text-white/80">{product.name}</div>
+                   </div>
+                </div>
 
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-100 rounded-xl pointer-events-none" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-100 rounded-xl pointer-events-none" />
+              </>
+            )}
           </div>
           <div className="mt-4 flex items-center gap-2 text-xs text-[var(--canvas-text-muted)]">
             <span className="w-1.5 h-1.5 rounded-full bg-purple-500 shadow-[0_0_8px_rgba(168,85,247,0.8)]"></span>
@@ -115,6 +125,7 @@ export function ProductCard({ product, index }: ProductCardProps) {
       
       <ProductModal 
         product={product}
+        imageSrc={product.image}
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}
       />

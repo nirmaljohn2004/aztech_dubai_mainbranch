@@ -4,7 +4,7 @@
  */
 export const siteConfig = {
   name: "Aztech LED",
-  title: "Aztech LED | #1 LED Screen Supplier in India",
+  title: "Aztech LED | #1 LED Screen Supplier in Asia",
   companyName: "Aztech LED Screens Private Limited",
   url: "https://aztechledscreens.com",
   ogImage: "/images/hero_led_wall_1774782256673.png",

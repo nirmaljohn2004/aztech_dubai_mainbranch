@@ -12,6 +12,7 @@ export interface ProductDetail {
     headers: string[];
     rows: { label: string; values: string[] }[];
   };
+  image?: string;
 }
 
 export const productDetails: Record<string, ProductDetail> = {
@@ -793,10 +794,103 @@ export const productDetails: Record<string, ProductDetail> = {
       }
     ]
   },
+  "AZ-COB1.86-M": {
+    id: "AZ-COB1.86-M",
+    name: "AZ-COB1.86-M",
+    title: "Indoor COB LED Module",
+    image: "/images/cob.png",
+    description: [
+      "The AZ-COB1.86-M Indoor COB LED Module is designed to deliver exceptional visual performance for professional indoor display applications. Built with advanced COB technology, it provides superior image quality, high contrast, excellent color consistency, and enhanced durability."
+    ],
+    features: [
+      "Advanced COB (Chip-on-Board) LED Technology",
+      "Fine Pixel Pitch for Ultra-HD Display",
+      "High Brightness with Excellent Color Uniformity",
+      "High Refresh Rate (3840Hz)",
+      "Wide 160° Horizontal & Vertical Viewing Angle",
+      "High Contrast Ratio",
+      "Low Power Consumption",
+      "Superior Heat Dissipation",
+      "Long Service Life",
+      "Easy Installation & Maintenance",
+      "Stable Performance",
+      "Suitable for Continuous Indoor Operation"
+    ],
+    specifications: [
+      {
+        category: "Parameters",
+        specs: [
+          { label: "Model", value: "AZ-COB1.86-M" },
+          { label: "LED Type", value: "COB 3 in 1" },
+          { label: "Module Size", value: "320 × 160 mm" },
+          { label: "Pixel Pitch", value: "Fine Pitch COB Module" },
+          { label: "Pixel Configuration", value: "1R1G1B" },
+          { label: "Viewing Angle", value: "160° (H) / 160° (V)" },
+          { label: "Refresh Rate", value: "3840 Hz" },
+          { label: "Brightness (Max)", value: "600 cd/m²" },
+          { label: "Working Voltage", value: "DC 4.5V" },
+          { label: "Operating Environment", value: "Indoor" },
+          { label: "Working Temperature", value: "-10°C to +40°C" },
+          { label: "Storage Temperature", value: "-20°C to +60°C" },
+          { label: "Working Humidity", value: "20%–70% RH" },
+          { label: "Storage Humidity", value: "10%–90% RH" }
+        ]
+      }
+    ]
+  },
+  "AZ-COB1.53-M": {
+    id: "AZ-COB1.53-M",
+    name: "AZ-COB1.53-M",
+    title: "Indoor COB LED Module",
+    image: "/images/cob.png",
+    description: [
+      "High-performance Indoor COB LED Module designed for superior image quality, high refresh rate, wide viewing angle, excellent contrast, and long-lasting reliability."
+    ],
+    features: [
+      "COB 3-in-1 LED Technology",
+      "Ultra Fine 1.53 mm Pixel Pitch",
+      "High Refresh Rate (3840Hz)",
+      "13-bit High Gray Scale",
+      "Wide 160° Viewing Angle",
+      "High Contrast Ratio",
+      "Excellent Color Uniformity",
+      "Stable Brightness",
+      "Long Lifespan",
+      "Energy Efficient",
+      "Indoor Installation",
+      "Premium Image Quality"
+    ],
+    specifications: [
+      {
+        category: "Parameters",
+        specs: [
+          { label: "Model", value: "AZ-COB1.53-M" },
+          { label: "Module Size", value: "320 × 160 mm" },
+          { label: "Pixel Pitch", value: "1.538 mm" },
+          { label: "Pixel Density", value: "422,753 dots/m²" },
+          { label: "LED Type", value: "COB 3 in 1" },
+          { label: "Resolution", value: "208 × 104 pixels" },
+          { label: "Weight", value: "0.5 kg" },
+          { label: "Viewing Angle", value: "160° (H) / 160° (V)" },
+          { label: "Pixel Configuration", value: "1R1G1B" },
+          { label: "Brightness (Max)", value: "600 cd/m²" },
+          { label: "Working Voltage", value: "DC 4.5V" },
+          { label: "Maximum Power Consumption", value: "≈21W" },
+          { label: "Refresh Rate", value: "3840 Hz" },
+          { label: "Operating Environment", value: "Indoor" },
+          { label: "Working Temperature", value: "-10°C to +40°C" },
+          { label: "Working Humidity", value: "20%–70% RH" },
+          { label: "Storage Temperature", value: "-20°C to +60°C" },
+          { label: "Storage Humidity", value: "10%–90% RH" }
+        ]
+      }
+    ]
+  },
   "AZ-EIA1.5S-C": {
     id: "AZ-EIA1.5S-C",
     name: "AZ-EIA1.5S-C",
     title: "LED Module",
+    image: "/images/IMG_1528.JPG",
     description: [
       "3840 refresh rate to meet a wide range of application scenarios",
       "Brand lamp beads, the picture consistency is high",
@@ -808,7 +902,7 @@ export const productDetails: Record<string, ProductDetail> = {
       {
         category: "Parameters",
         specs: [
-          { label: "Product Mode", value: "IFS-EIA1.5S-C" },
+          { label: "Product Mode", value: "AZ-EIA1.5S-C" },
           { label: "Module size", value: "320mm(W)×160mm(H)" },
           { label: "Pixel pitch", value: "1.538mm" },
           { label: "Pixel Density", value: "422500dots/m²" },
@@ -832,6 +926,7 @@ export const productDetails: Record<string, ProductDetail> = {
     id: "AZ-EIA1.2S-C",
     name: "AZ-EIA1.2S-C",
     title: "LED Module",
+    image: "/images/IMG_1524.JPG",
     description: [
       "3840 refresh rate to meet a wide range of application scenarios",
       "Brand lamp beads, the picture consistency is high",
@@ -843,7 +938,7 @@ export const productDetails: Record<string, ProductDetail> = {
       {
         category: "Parameters",
         specs: [
-          { label: "Product Mode", value: "IFS-EIA1.2S-C" },
+          { label: "Product Mode", value: "AZ-EIA1.2S-C" },
           { label: "Module size", value: "320mm(W)×160mm(H)" },
           { label: "Pixel pitch", value: "1.25mm" },
           { label: "Pixel Density", value: "640000dots/m²" },
@@ -867,6 +962,7 @@ export const productDetails: Record<string, ProductDetail> = {
     id: "AZ-EIA1.8S-C",
     name: "AZ-EIA1.8S-C",
     title: "LED Module",
+    image: "/images/IMG_1525.WEBP",
     description: [
       "3840 refresh rate to meet a wide range of application scenarios",
       "Brand lamp beads, the picture consistency is high",
@@ -878,7 +974,7 @@ export const productDetails: Record<string, ProductDetail> = {
       {
         category: "Parameters",
         specs: [
-          { label: "Product Mode", value: "IFS-EIA1.8S-C" },
+          { label: "Product Mode", value: "AZ-EIA1.8S-C" },
           { label: "Module size", value: "320mm(W)×160mm(H)" },
           { label: "Pixel pitch", value: "1.86mm" },
           { label: "Pixel Density", value: "288906dots/m²" },
@@ -902,6 +998,7 @@ export const productDetails: Record<string, ProductDetail> = {
     id: "AZ-EIA2S-C",
     name: "AZ-EIA2S-C",
     title: "LED Module",
+    image: "/images/IMG_1522.JPG",
     description: [
       "3840 refresh rate to meet a wide range of application scenarios",
       "Brand lamp beads, the picture consistency is high",
@@ -913,7 +1010,7 @@ export const productDetails: Record<string, ProductDetail> = {
       {
         category: "Parameters",
         specs: [
-          { label: "Product Mode", value: "IFS-EIA2S-C" },
+          { label: "Product Mode", value: "AZ-EIA2S-C" },
           { label: "Module size", value: "320mm(W)×160mm(H)" },
           { label: "Pixel pitch", value: "2mm" },
           { label: "Pixel Density", value: "250000dots/m²" },
@@ -937,6 +1034,7 @@ export const productDetails: Record<string, ProductDetail> = {
     id: "AZ-EIA2.5S-C",
     name: "AZ-EIA2.5S-C",
     title: "LED Module",
+    image: "/images/IMG_1520.JPG",
     description: [
       "3840 refresh rate to meet a wide range of application scenarios",
       "Brand lamp beads, the picture consistency is high",
@@ -948,7 +1046,7 @@ export const productDetails: Record<string, ProductDetail> = {
       {
         category: "Parameters",
         specs: [
-          { label: "Product Mode", value: "IFS-EIA2.5S-C" },
+          { label: "Product Mode", value: "AZ-EIA2.5S-C" },
           { label: "Module size", value: "320mm(W)×160mm(H)" },
           { label: "Pixel pitch", value: "2.5mm" },
           { label: "Pixel Density", value: "160000dots/m²" },
@@ -983,7 +1081,7 @@ export const productDetails: Record<string, ProductDetail> = {
       {
         category: "Parameters",
         specs: [
-          { label: "Product Mode", value: "IFS-EOA2.5S-C" },
+          { label: "Product Mode", value: "AZ-EOA2.5S-C" },
           { label: "Module size", value: "320mm(W)×160mm(H)" },
           { label: "Pixel pitch", value: "2.5mm" },
           { label: "Pixel Density", value: "160000dots/m²" },
@@ -1007,6 +1105,7 @@ export const productDetails: Record<string, ProductDetail> = {
     id: "AZ-EOA3S-C",
     name: "AZ-EOA3S-C",
     title: "LED Module",
+    image: "/images/IMG_1516.JPG",
     description: [
       "High refresh rate to meet a wide range of application scenarios",
       "Brand lamp beads, the picture consistency is high",
@@ -1018,7 +1117,7 @@ export const productDetails: Record<string, ProductDetail> = {
       {
         category: "Parameters",
         specs: [
-          { label: "Product Mode", value: "IFS-EOA3S-C" },
+          { label: "Product Mode", value: "AZ-EOA3S-C" },
           { label: "Module size", value: "320mm(W)×160mm(H)" },
           { label: "Pixel pitch", value: "3.076mm" },
           { label: "Pixel Density", value: "105625dots/m²" },
@@ -1053,7 +1152,7 @@ export const productDetails: Record<string, ProductDetail> = {
       {
         category: "Parameters",
         specs: [
-          { label: "Product Mode", value: "IFS-EOA4S-C" },
+          { label: "Product Mode", value: "AZ-EOA4S-C" },
           { label: "Module size", value: "320mm(W)×160mm(H)" },
           { label: "Pixel pitch", value: "4mm" },
           { label: "Pixel Density", value: "62500dots/m²" },
@@ -1088,7 +1187,7 @@ export const productDetails: Record<string, ProductDetail> = {
       {
         category: "Parameters",
         specs: [
-          { label: "Product Mode", value: "IFS-EOA5S-C" },
+          { label: "Product Mode", value: "AZ-EOA5S-C" },
           { label: "Module size", value: "320mm(W)×160mm(H)" },
           { label: "Pixel pitch", value: "5mm" },
           { label: "Pixel Density", value: "40000dots/m²" },
@@ -1123,7 +1222,7 @@ export const productDetails: Record<string, ProductDetail> = {
       {
         category: "Parameters",
         specs: [
-          { label: "Product Mode", value: "IFS-EOA6S-C" },
+          { label: "Product Mode", value: "AZ-EOA6S-C" },
           { label: "Module size", value: "320mm(W)×160mm(H)" },
           { label: "Pixel pitch", value: "6.67mm" },
           { label: "Pixel Density", value: "22500dots/m²" },
@@ -1158,7 +1257,7 @@ export const productDetails: Record<string, ProductDetail> = {
       {
         category: "Parameters",
         specs: [
-          { label: "Product Mode", value: "IFS-EOA8S-C" },
+          { label: "Product Mode", value: "AZ-EOA8S-C" },
           { label: "Module size", value: "320mm(W)×160mm(H)" },
           { label: "Pixel pitch", value: "8mm" },
           { label: "Pixel Density", value: "15625dots/m²" },
@@ -1193,7 +1292,7 @@ export const productDetails: Record<string, ProductDetail> = {
       {
         category: "Parameters",
         specs: [
-          { label: "Product Mode", value: "IFS-EOA10S-C" },
+          { label: "Product Mode", value: "AZ-EOA10S-C" },
           { label: "Module size", value: "320mm(W)×160mm(H)" },
           { label: "Pixel pitch", value: "10mm" },
           { label: "Pixel Density", value: "10000dots/m²" },
@@ -1217,6 +1316,7 @@ export const productDetails: Record<string, ProductDetail> = {
     id: "AZ-MIA108-EH",
     name: "AZ-MIA108-EH",
     title: "Indoor ALL-In-One LED",
+    image: "/images/IMG_1493.PNG",
     description: [
       "Global ultra-thin design (35mm), color saturation more than 97%.",
       "Support wireless projection, multi-screen networking interaction, one screen and multiple display.",
@@ -1261,6 +1361,7 @@ export const productDetails: Record<string, ProductDetail> = {
     id: "AZ-MIA135-EH",
     name: "AZ-MIA135-EH",
     title: "Indoor ALL-In-One LED",
+    image: "/images/IMG_1493.PNG",
     description: [
       "Global ultra-thin design (35mm), color saturation more than 97%.",
       "Support wireless projection, multi-screen networking interaction, one screen and multiple display.",
@@ -1305,6 +1406,7 @@ export const productDetails: Record<string, ProductDetail> = {
     id: "AZ-MIA163-EH",
     name: "AZ-MIA163-EH",
     title: "Indoor ALL-In-One LED",
+    image: "/images/IMG_1493.PNG",
     description: [
       "Global ultra-thin design (35mm), color saturation more than 97%.",
       "Support wireless projection, multi-screen networking interaction, one screen and multiple display.",
@@ -1349,6 +1451,7 @@ export const productDetails: Record<string, ProductDetail> = {
     id: "AZ-MIA216-EH",
     name: "AZ-MIA216-EH",
     title: "Indoor ALL-In-One LED",
+    image: "/images/IMG_1493.PNG",
     description: [
       "Global ultra-thin design (35mm), color saturation more than 97%.",
       "Support wireless projection, multi-screen networking interaction, one screen and multiple display.",
@@ -10271,18 +10374,20 @@ export const categories = [
         id: "led-module",
         name: "LED Module",
         products: [
-          { name: "AZ-EOA10S-C", subtitle: "Aztech LED Module", image: "/images/IMG_1506.JPG" },
-          { name: "AZ-EOA8S-C", subtitle: "Aztech LED Module", image: "/images/IMG_1508.JPG" },
-          { name: "AZ-EOA6S-C", subtitle: "Aztech LED Module", image: "/images/IMG_1510.JPG" },
-          { name: "AZ-EOA5S-C", subtitle: "Aztech LED Module", image: "/images/IMG_1512.JPG" },
-          { name: "AZ-EOA4S-C", subtitle: "Aztech LED Module", image: "/images/IMG_1514.JPG" },
-          { name: "AZ-EOA3S-C", subtitle: "Aztech LED Module", image: "/images/IMG_1506.JPG" },
-          { name: "AZ-EOA2.5S-C", subtitle: "Aztech LED Module", image: "/images/IMG_1506.JPG" },
-          { name: "AZ-EIA2.5S-C", subtitle: "Aztech LED Module", image: "/images/IMG_1506.JPG" },
-          { name: "AZ-EIA2S-C", subtitle: "Aztech LED Module", image: "/images/IMG_1506.JPG" },
-          { name: "AZ-EIA1.8S-C", subtitle: "Aztech LED Module", image: "/images/IMG_1506.JPG" },
-          { name: "AZ-EIA1.2S-C", subtitle: "Aztech LED Module", image: "/images/IMG_1506.JPG" },
-          { name: "AZ-EIA1.5S-C", subtitle: "Aztech LED Module", image: "/images/IMG_1506.JPG" },
+          { name: "AZ-COB1.86-M", subtitle: "Indoor COB LED Module", image: "/images/cob.png" },
+          { name: "AZ-COB1.53-M", subtitle: "Indoor COB LED Module", image: "/images/cob.png" },
+          { name: "AZ-EOA10S-C", subtitle: "Aztech Indoor SMD LED Module", image: "/images/IMG_1506.JPG" },
+          { name: "AZ-EOA8S-C", subtitle: "Aztech Indoor SMD LED Module", image: "/images/IMG_1508.JPG" },
+          { name: "AZ-EOA6S-C", subtitle: "Aztech Indoor SMD LED Module", image: "/images/IMG_1510.JPG" },
+          { name: "AZ-EOA5S-C", subtitle: "Aztech Indoor SMD LED Module", image: "/images/IMG_1512.JPG" },
+          { name: "AZ-EOA4S-C", subtitle: "Aztech Indoor SMD LED Module", image: "/images/IMG_1514.JPG" },
+          { name: "AZ-EOA3S-C", subtitle: "Aztech Indoor SMD LED Module", image: "/images/IMG_1516.JPG" },
+          { name: "AZ-EOA2.5S-C", subtitle: "Aztech Indoor SMD LED Module", image: "/images/IMG_1506.JPG" },
+          { name: "AZ-EIA2.5S-C", subtitle: "Aztech Indoor SMD LED Module", image: "/images/IMG_1520.JPG" },
+          { name: "AZ-EIA2S-C", subtitle: "Aztech Indoor SMD LED Module", image: "/images/IMG_1522.JPG" },
+          { name: "AZ-EIA1.8S-C", subtitle: "Aztech Indoor SMD LED Module", image: "/images/IMG_1525.WEBP" },
+          { name: "AZ-EIA1.2S-C", subtitle: "Aztech Indoor SMD LED Module", image: "/images/IMG_1524.JPG" },
+          { name: "AZ-EIA1.5S-C", subtitle: "Aztech Indoor SMD LED Module", image: "/images/IMG_1528.JPG" },
         ]
       },
       {

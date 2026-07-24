@@ -57,16 +57,26 @@ export default async function ProductDetailPage({ params }: PageProps) {
               
               {/* Product Visual */}
               <div className="relative aspect-square md:aspect-[4/3] lg:aspect-square overflow-hidden rounded-2xl border border-white/10 bg-[#05020a] flex items-center justify-center group shadow-2xl">
-                 <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:32px_32px] opacity-20"></div>
-                 <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 via-transparent to-purple-500/5"></div>
-                 
-                 <div className="relative z-10 flex flex-col items-center gap-8">
-                   <div className="w-32 h-32 md:w-40 md:h-40 rounded-full bg-gradient-to-tr from-purple-600/20 to-purple-400/10 border border-purple-500/30 flex items-center justify-center backdrop-blur-md shadow-[0_0_50px_rgba(168,85,247,0.2)] group-hover:scale-105 transition-transform duration-700">
-                     <span className="font-mono text-purple-300 tracking-widest uppercase text-sm md:text-base rotate-[-45deg] opacity-80">
-                       {categoryTag}
-                     </span>
-                   </div>
-                 </div>
+                {product.image ? (
+                  <img 
+                    src={product.image} 
+                    alt={product.name} 
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                ) : (
+                  <>
+                     <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:32px_32px] opacity-20"></div>
+                     <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 via-transparent to-purple-500/5"></div>
+                     
+                     <div className="relative z-10 flex flex-col items-center gap-8">
+                       <div className="w-32 h-32 md:w-40 md:h-40 rounded-full bg-gradient-to-tr from-purple-600/20 to-purple-400/10 border border-purple-500/30 flex items-center justify-center backdrop-blur-md shadow-[0_0_50px_rgba(168,85,247,0.2)] group-hover:scale-105 transition-transform duration-700">
+                         <span className="font-mono text-purple-300 tracking-widest uppercase text-sm md:text-base rotate-[-45deg] opacity-80">
+                           {categoryTag}
+                         </span>
+                       </div>
+                     </div>
+                  </>
+                )}
               </div>
 
               {/* Product Info */}
