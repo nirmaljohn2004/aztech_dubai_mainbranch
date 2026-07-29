@@ -72,8 +72,6 @@ export function MainNav() {
                   /* Shift image up so the icon fills the container and the text falls below the clip */
                   objectFit: "cover",
                   objectPosition: "top center",
-                  width: "90px",
-                  height: "90px",
                   marginTop: "-2px",
                 }}
               />

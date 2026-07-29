@@ -8,6 +8,7 @@ import { ProductsSection } from "@/components/sections/products"
 import { BrandMarquee } from "@/components/sections/brand-marquee"
 import { SolutionsSection } from "@/components/sections/solutions"
 import { PortfolioSection } from "@/components/sections/portfolio"
+import { ReviewsSection } from "@/components/sections/reviews"
 import { StatsCounter } from "@/components/sections/stats-counter"
 import { BrandingSection } from "@/components/sections/branding"
 import { BlogSection } from "@/components/sections/blog"
@@ -27,6 +28,7 @@ export default function Home() {
           <ClientMarquee />
           <SolutionsSection />
           <PortfolioSection />
+          <ReviewsSection />
           <StatsCounter />
           <BrandingSection />
           <BlogSection />

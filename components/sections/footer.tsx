@@ -57,8 +57,6 @@ export function Footer() {
                       style={{
                         objectFit: "cover",
                         objectPosition: "top center",
-                        width: "112px",
-                        height: "112px",
                         marginTop: "-2px",
                       }}
                     />
