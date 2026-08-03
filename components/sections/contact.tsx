@@ -583,6 +583,34 @@ export function ContactSection() {
             
           </div>
         </div>
+
+        {/* Google Map Previews */}
+        <div className="mt-8 lg:mt-16 grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="bg-[var(--canvas-text)]/[0.03] border border-[var(--canvas-border)] p-2 w-full relative h-[300px] sm:h-[400px]">
+            <iframe 
+              src="https://maps.google.com/maps?q=Warehouse+55,+Al+Quoz+Industrial+Area+3,+Dubai&t=&z=13&ie=UTF8&iwloc=&output=embed" 
+              width="100%" 
+              height="100%" 
+              style={{ border: 0 }} 
+              allowFullScreen
+              loading="lazy" 
+              referrerPolicy="no-referrer-when-downgrade"
+              className="w-full h-full transition-all duration-500"
+            />
+          </div>
+          <div className="bg-[var(--canvas-text)]/[0.03] border border-[var(--canvas-border)] p-2 w-full relative h-[300px] sm:h-[400px]">
+            <iframe 
+              src="https://maps.google.com/maps?q=CHAMMANY+COMPLEX,+SHOP+NO+65/869,+SEBASTIAN+ROAD,+KALOOR,+KOCHIN+682017&t=&z=16&ie=UTF8&iwloc=&output=embed" 
+              width="100%" 
+              height="100%" 
+              style={{ border: 0 }} 
+              allowFullScreen
+              loading="lazy" 
+              referrerPolicy="no-referrer-when-downgrade"
+              className="w-full h-full transition-all duration-500"
+            />
+          </div>
+        </div>
       </div>
     </section>
   )

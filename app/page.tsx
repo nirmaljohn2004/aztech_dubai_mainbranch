@@ -2,6 +2,7 @@ import { Navbar } from "@/components/layout/navbar"
 import { Footer } from "@/components/sections/footer"
 import { WhatsAppFAB } from "@/components/layout/whatsapp-fab"
 import { HeroSection } from "@/components/sections/hero"
+import { AboutSection } from "@/components/sections/about"
 import { CompanyProcess } from "@/components/sections/company-process"
 import { ClientMarquee } from "@/components/sections/client-marquee"
 import { ProductsSection } from "@/components/sections/products"
@@ -22,6 +23,7 @@ export default function Home() {
       <main id="main" role="main" className="min-h-screen bg-transparent overflow-x-clip">
         <DynamicCanvasWrapper>
           <HeroSection />
+          <AboutSection />
           <CompanyProcess />
           <BrandMarquee />
           <ProductsSection />
