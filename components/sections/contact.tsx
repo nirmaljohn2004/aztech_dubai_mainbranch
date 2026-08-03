@@ -18,22 +18,21 @@ const serviceOptions = [
 
 const locationOptions = [
   "",
-  "Mumbai",
-  "Delhi / NCR",
-  "Bangalore",
-  "Hyderabad",
-  "Chennai",
-  "Kochi",
-  "Other (within India)",
-  "Outside India",
+  "Dubai",
+  "Abu Dhabi",
+  "Sharjah",
+  "Muscat (Oman)",
+  "Riyadh (Saudi Arabia)",
+  "Doha (Qatar)",
+  "Other",
 ]
 
 const budgetOptions = [
   "",
-  "Under ₹50,000",
-  "₹50,000 – ₹2,00,000",
-  "₹2,00,000 – ₹10,00,000",
-  "₹10,00,000+",
+  "Under AED 5,000",
+  "AED 5,000 – AED 20,000",
+  "AED 20,000 – AED 100,000",
+  "AED 100,000+",
 ]
 
 const sourceOptions = [
@@ -550,7 +549,7 @@ export function ContactSection() {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full py-4 border-2 border-[var(--canvas-text)] text-[var(--canvas-bg)] bg-[var(--canvas-text)] text-[11px] tracking-widest uppercase font-mono font-bold transition-all duration-300 hover:bg-transparent hover:text-[var(--canvas-text)] disabled:opacity-50 rounded-none cursor-pointer"
+                  className="w-full min-h-[52px] py-4 border-2 border-[var(--canvas-text)] text-[var(--canvas-bg)] bg-[var(--canvas-text)] text-[11px] tracking-widest uppercase font-mono font-bold transition-all duration-300 hover:bg-transparent hover:text-[var(--canvas-text)] disabled:opacity-50 rounded-none cursor-pointer"
                 >
                   {isSubmitting ? "PREPARING..." : "SUBMIT INQUIRY"}
                 </button>

@@ -71,7 +71,7 @@ export function PortfolioSection() {
             >
               <img
                 src={projects[activeIndex].image}
-                alt=""
+                alt={`${projects[activeIndex].name} — ${projects[activeIndex].category} LED display installation by Aztech Dubai`}
                 className="w-full h-full object-cover object-center"
               />
               {/* Gradients to blend text perfectly */}

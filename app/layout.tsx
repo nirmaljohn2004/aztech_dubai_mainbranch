@@ -19,10 +19,10 @@ const dmMono = DM_Mono({
 })
 
 export const metadata: Metadata = {
-  title: "Aztech LED | #1 LED Screen Supplier in Asia | Indoor & Outdoor Displays",
-  description: "Aztech LED Screens — Asia’s premier LED screen supplier backed by 20+ years of Dubai excellence. Indoor LED displays, outdoor billboards, transparent LED & video walls. Serving all of Asia. Get a free quote today.",
-  keywords: "LED screen Asia, LED display supplier Asia, outdoor LED billboard Asia, indoor LED screen Asia, video wall Asia, transparent LED display Asia, LED screen installation Asia, digital signage Asia, LED screen price Asia, P2 LED screen Asia",
-  authors: [{ name: "Aztech LED Screens Private Limited" }],
+  title: "Aztech LED Screen Dubai | Premium Indoor & Outdoor Displays",
+  description: "Aztech LED is Dubai's leading LED screen supplier with 20+ years of expertise. We design, supply, install, and maintain high-quality indoor and outdoor LED displays across the UAE and Middle East.",
+  keywords: "LED screen Dubai, LED display supplier Dubai, outdoor LED billboard Dubai, indoor LED screen UAE, video wall Dubai, transparent LED display UAE, LED screen installation Dubai, digital signage Dubai, LED screen price Dubai, P2 LED screen UAE, LED wall Abu Dhabi, outdoor billboard UAE",
+  authors: [{ name: "Aztech General Trading LLC" }],
   robots: {
     index: true,
     follow: true,
@@ -35,34 +35,34 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: "website",
-    url: "https://aztechledscreens.com/",
-    title: "Aztech LED | #1 LED Screen Supplier in Asia",
-    description: "Asia’s most trusted LED display company, backed by 20+ years of Dubai excellence. Indoor, outdoor, transparent LED screens & video walls. Serving all of Asia.",
-    siteName: "Aztech LED Screens Private Limited",
-    locale: "en_IN",
+    url: "https://az-tech.ae/",
+    title: "Aztech LED Screen Dubai | Premium Indoor & Outdoor Displays",
+    description: "Dubai's most trusted LED display company with 20+ years of excellence. Indoor, outdoor, transparent LED screens & video walls across the UAE and Middle East.",
+    siteName: "Aztech General Trading LLC",
+    locale: "en_AE",
     images: [
       {
-        url: "https://aztechledscreens.com/images/hero_led_wall_1774782256673.webp",
+        url: "https://az-tech.ae/images/hero_led_wall_1774782256673.webp",
         width: 1200,
         height: 800,
-        alt: "Large LED video wall display in a modern Dubai commercial space",
+        alt: "Large LED video wall display installed in a modern Dubai commercial space by Aztech LED",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Aztech LED | #1 LED Screen Supplier in Asia",
-    description: "Asia’s most trusted LED display company, backed by 20+ years of Dubai excellence. Indoor, outdoor & specialty LED screens. 500+ clients.",
-    images: ["https://aztechledscreens.com/images/hero_led_wall_1774782256673.webp"],
+    title: "Aztech LED Screen Dubai | Premium Indoor & Outdoor Displays",
+    description: "Dubai's leading LED display company. Indoor, outdoor & specialty LED screens. 20+ years expertise, 500+ projects across UAE and Middle East.",
+    images: ["https://az-tech.ae/images/hero_led_wall_1774782256673.webp"],
   },
   alternates: {
-    canonical: "https://aztechledscreens.com/",
+    canonical: "https://az-tech.ae/",
   },
   other: {
-    'geo.region': 'IN-KL',
-    'geo.placename': 'Ernakulam, Kerala, India',
-    'geo.position': '10.0501;76.3108',
-    'ICBM': '10.0501, 76.3108',
+    'geo.region': 'AE-DU',
+    'geo.placename': 'Dubai, United Arab Emirates',
+    'geo.position': '25.1850;55.2467',
+    'ICBM': '25.1850, 55.2467',
     'http-equiv-Content-Language': 'en',
   },
   formatDetection: {
@@ -96,11 +96,11 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         {/* Preconnect for Fontshare (Clash Display) */}
         <link rel="preconnect" href="https://api.fontshare.com" />
-        {/* Geo tags for local SEO */}
-        <meta name="geo.region" content="IN-KL" />
-        <meta name="geo.placename" content="Ernakulam, Kerala, India" />
-        <meta name="geo.position" content="10.0501;76.3108" />
-        <meta name="ICBM" content="10.0501, 76.3108" />
+        {/* Geo tags for local SEO — Dubai, UAE */}
+        <meta name="geo.region" content="AE-DU" />
+        <meta name="geo.placename" content="Dubai, United Arab Emirates" />
+        <meta name="geo.position" content="25.1850;55.2467" />
+        <meta name="ICBM" content="25.1850, 55.2467" />
         <meta httpEquiv="Content-Language" content="en" />
         {/* LocalBusiness Schema */}
         <script
@@ -109,24 +109,24 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "LocalBusiness",
-              "name": "Aztech LED Screens Private Limited",
-              "image": "https://aztechledscreens.com/images/hero_led_wall_1774782256673.webp",
-              "@id": "https://aztechledscreens.com/",
-              "url": "https://aztechledscreens.com/",
-              "telephone": "+91 73567 80866",
-              "priceRange": "₹50,000 - ₹10,00,000+",
+              "name": "Aztech General Trading LLC",
+              "image": "https://az-tech.ae/images/hero_led_wall_1774782256673.webp",
+              "@id": "https://az-tech.ae/",
+              "url": "https://az-tech.ae/",
+              "telephone": "+971 56 142 5339",
+              "priceRange": "AED 5,000 - AED 100,000+",
               "address": {
                 "@type": "PostalAddress",
-                "streetAddress": "H.No.21, Kuttiyil House, Sundaragiri Road, Kalamassery",
-                "addressLocality": "Ernakulam",
-                "addressRegion": "Kerala",
-                "postalCode": "683104",
-                "addressCountry": "IN"
+                "streetAddress": "Warehouse 55, Al Quoz Industrial Area 3",
+                "addressLocality": "Dubai",
+                "addressRegion": "Dubai",
+                "postalCode": "00000",
+                "addressCountry": "AE"
               },
               "geo": {
                 "@type": "GeoCoordinates",
-                "latitude": 10.0501,
-                "longitude": 76.3108
+                "latitude": 25.1850,
+                "longitude": 55.2467
               },
               "openingHoursSpecification": {
                 "@type": "OpeningHoursSpecification",
@@ -135,9 +135,9 @@ export default function RootLayout({
                 "closes": "18:00"
               },
               "sameAs": [],
-              "description": "Aztech LED Screens Private Limited is India’s premier LED screen supplier backed by 20+ years of Dubai excellence. We supply indoor displays, outdoor billboards, transparent LED, video walls and specialty screens across India.",
-              "areaServed": ["Mumbai", "Delhi", "Bangalore", "Kochi", "Chennai", "Hyderabad", "India"],
-              "knowsAbout": ["LED Screen", "Digital Signage", "Outdoor Billboard", "Video Wall", "Indoor LED Display", "Transparent LED", "Architectural Lighting"]
+              "description": "Aztech General Trading LLC is Dubai's leading LED screen supplier with 20+ years of expertise. We design, supply, install, and maintain indoor and outdoor LED displays, video walls, and architectural lighting across the UAE and Middle East.",
+              "areaServed": ["Dubai", "Abu Dhabi", "Sharjah", "Muscat", "Riyadh", "Doha", "UAE", "Oman", "Saudi Arabia"],
+              "knowsAbout": ["LED Screen", "Digital Signage", "Outdoor Billboard", "Video Wall", "Indoor LED Display", "Transparent LED", "Architectural Lighting", "Rental LED Screen"]
             })
           }}
         />
@@ -149,14 +149,14 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "WebSite",
               "name": "Aztech LED",
-              "url": "https://aztechledscreens.com/",
-              "description": "India’s #1 LED screen supplier. Indoor, outdoor, specialty LED displays and video walls.",
+              "url": "https://az-tech.ae/",
+              "description": "Dubai's #1 LED screen supplier. Indoor, outdoor, specialty LED displays and video walls across UAE and the Middle East.",
               "publisher": {
                 "@type": "Organization",
-                "name": "Aztech LED Screens Private Limited",
+                "name": "Aztech General Trading LLC",
                 "logo": {
                   "@type": "ImageObject",
-                  "url": "https://aztechledscreens.com/icon.svg",
+                  "url": "https://az-tech.ae/icon.svg",
                   "width": 512,
                   "height": 512
                 }
@@ -172,11 +172,11 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "BreadcrumbList",
               "itemListElement": [
-                { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://aztechledscreens.com/" },
-                { "@type": "ListItem", "position": 2, "name": "Products", "item": "https://aztechledscreens.com/#products" },
-                { "@type": "ListItem", "position": 3, "name": "Solutions", "item": "https://aztechledscreens.com/#solutions" },
-                { "@type": "ListItem", "position": 4, "name": "Projects", "item": "https://aztechledscreens.com/#projects" },
-                { "@type": "ListItem", "position": 5, "name": "Contact", "item": "https://aztechledscreens.com/#contact" }
+                { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://az-tech.ae/" },
+                { "@type": "ListItem", "position": 2, "name": "Products", "item": "https://az-tech.ae/#products" },
+                { "@type": "ListItem", "position": 3, "name": "Solutions", "item": "https://az-tech.ae/#solutions" },
+                { "@type": "ListItem", "position": 4, "name": "Projects", "item": "https://az-tech.ae/#projects" },
+                { "@type": "ListItem", "position": 5, "name": "Contact", "item": "https://az-tech.ae/#contact" }
               ]
             })
           }}
@@ -191,18 +191,18 @@ export default function RootLayout({
               "mainEntity": [
                 {
                   "@type": "Question",
-                  "name": "What is the price of an LED screen in India?",
+                  "name": "What is the price of an LED screen in Dubai?",
                   "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "LED screen prices in India vary based on size, pixel pitch and type. Indoor LED screens start from ₹50,000, while large outdoor billboard displays range from ₹2,00,000 to ₹10,00,000+. Contact Aztech LED for a free custom quote."
+                    "text": "LED screen prices in Dubai vary based on size, pixel pitch and type. Indoor LED screens start from AED 5,000, while large outdoor billboard displays range from AED 20,000 to AED 100,000+. Contact Aztech LED for a free custom quote."
                   }
                 },
                 {
                   "@type": "Question",
-                  "name": "Does Aztech LED supply outdoor LED screens in India?",
+                  "name": "Does Aztech LED supply outdoor LED screens in Dubai and the UAE?",
                   "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Yes. Aztech LED supplies weatherproof outdoor DIP and SMD LED displays rated up to 5000 nits, suitable for billboards, building facades, and roadside signage across India."
+                    "text": "Yes. Aztech LED supplies weatherproof outdoor DIP and SMD LED displays rated up to 5000 nits, suitable for billboards, building facades, and roadside signage across Dubai, Abu Dhabi, Sharjah, and the wider UAE."
                   }
                 },
                 {
@@ -215,18 +215,18 @@ export default function RootLayout({
                 },
                 {
                   "@type": "Question",
-                  "name": "Does Aztech LED provide installation services in India?",
+                  "name": "Does Aztech LED provide installation services in Dubai?",
                   "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Yes. Aztech LED has a full in-house installation team that handles site survey, structural mounting, cable routing, screen assembly, controller configuration and final commissioning across India. No subcontractors are used."
+                    "text": "Yes. Aztech LED has a full in-house installation team that handles site survey, structural mounting, cable routing, screen assembly, controller configuration and final commissioning across Dubai and the UAE. No subcontractors are used."
                   }
                 },
                 {
                   "@type": "Question",
-                  "name": "Do you offer maintenance contracts for LED screens?",
+                  "name": "Do you offer maintenance contracts for LED screens in the UAE?",
                   "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Yes. Aztech LED offers Annual Maintenance Contracts (AMC) covering preventive maintenance, emergency callouts, spare parts supply, remote monitoring and firmware updates with a 24-hour response SLA."
+                    "text": "Yes. Aztech LED offers Annual Maintenance Contracts (AMC) covering preventive maintenance, emergency callouts, spare parts supply, remote monitoring and firmware updates with a 24-hour response SLA across the UAE and GCC."
                   }
                 }
               ]

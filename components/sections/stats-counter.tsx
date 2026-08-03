@@ -4,10 +4,10 @@ import { useEffect, useRef, useState } from 'react'
 import { motion, useInView } from 'framer-motion'
 
 const stats = [
-  { value: 91,  suffix: 'K+', label: 'Project Done',    color: '#7c3aed' },
-  { value: 84,  suffix: 'K+', label: 'Happy Clients',   color: '#6d28d9' },
-  { value: 42,  suffix: '+',  label: 'Company Support', color: '#5b21b6' },
-  { value: 4.7, suffix: '',   label: 'Client Reviews',  color: '#7c3aed', isDecimal: true },
+  { value: 20,  suffix: '+',  label: 'Years Expertise',  color: '#7c3aed' },
+  { value: 500, suffix: '+',  label: 'Projects Done',    color: '#6d28d9' },
+  { value: 200, suffix: '+',  label: 'Happy Clients',    color: '#5b21b6' },
+  { value: 5.0, suffix: '',   label: 'Google Reviews',   color: '#7c3aed', isDecimal: true },
 ]
 
 function useCountUp(target: number, duration = 1800, start = false, isDecimal = false, onDone?: () => void) {

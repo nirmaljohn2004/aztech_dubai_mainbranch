@@ -113,10 +113,11 @@ export function ClientMarquee() {
                 <div className="relative h-10 w-28 md:h-14 md:w-36">
                   <Image 
                     src={imageSrc} 
-                    alt={`Strategic Partner Logo ${index}`} 
+                    alt="Aztech strategic partner brand logo" 
                     fill
                     sizes="(max-width: 768px) 112px, 144px"
                     className="object-contain" 
+                    loading="lazy"
                   />
                 </div>
                 {/* Elegant Minimal Separator */}
