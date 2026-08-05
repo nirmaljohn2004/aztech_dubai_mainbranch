@@ -5,9 +5,9 @@ import { motion, useInView } from 'framer-motion'
 
 const stats = [
   { value: 20,  suffix: '+',  label: 'Years Expertise',  color: '#7c3aed' },
-  { value: 500, suffix: '+',  label: 'Projects Done',    color: '#6d28d9' },
+  { value: 5000, suffix: '+',  label: 'Projects Done',    color: '#6d28d9' },
   { value: 200, suffix: '+',  label: 'Happy Clients',    color: '#5b21b6' },
-  { value: 5.0, suffix: '',   label: 'Google Reviews',   color: '#7c3aed', isDecimal: true },
+  { value: 4.9, suffix: '',   label: 'Google Reviews',   color: '#7c3aed', isDecimal: true },
 ]
 
 function useCountUp(target: number, duration = 1800, start = false, isDecimal = false, onDone?: () => void) {

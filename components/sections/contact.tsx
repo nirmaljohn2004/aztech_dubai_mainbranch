@@ -168,6 +168,20 @@ export function ContactSection() {
                     Warehouse 55, Al Quoz Industrial Area 3,<br />Dubai, UAE
                   </address>
                 </a>
+
+                <a 
+                  href="https://www.google.com/maps/place/25%C2%B014'43.9%22N+55%C2%B017'57.0%22E/@25.2455254,55.2965889,17z" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="flex flex-col gap-2 group relative overflow-hidden"
+                >
+                  <address className="text-sm text-[var(--canvas-text-muted)] not-italic leading-relaxed font-medium">
+                    <strong className="text-[var(--canvas-text)] block font-sans text-sm tracking-wider uppercase font-bold mb-2 opacity-90 group-hover:opacity-100 transition-opacity flex items-center gap-2">
+                      <MapPin className="w-4 h-4" /> AZTECH EXPERIENCE CENTER
+                    </strong>
+                    Al Jumaire Building, Shop No. 2,<br />Sheikh Khalifa Bin Zayed St,<br />Near ADCB Metro Station,<br />Al Karama, Dubai,<br />United Arab Emirates
+                  </address>
+                </a>
                 
                 <div className="h-px w-full bg-[var(--canvas-border)]" />
 
@@ -584,30 +598,57 @@ export function ContactSection() {
         </div>
 
         {/* Google Map Previews */}
-        <div className="mt-8 lg:mt-16 grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="bg-[var(--canvas-text)]/[0.03] border border-[var(--canvas-border)] p-2 w-full relative h-[300px] sm:h-[400px]">
-            <iframe 
-              src="https://maps.google.com/maps?q=Warehouse+55,+Al+Quoz+Industrial+Area+3,+Dubai&t=&z=13&ie=UTF8&iwloc=&output=embed" 
-              width="100%" 
-              height="100%" 
-              style={{ border: 0 }} 
-              allowFullScreen
-              loading="lazy" 
-              referrerPolicy="no-referrer-when-downgrade"
-              className="w-full h-full transition-all duration-500"
-            />
-          </div>
-          <div className="bg-[var(--canvas-text)]/[0.03] border border-[var(--canvas-border)] p-2 w-full relative h-[300px] sm:h-[400px]">
-            <iframe 
-              src="https://maps.google.com/maps?q=CHAMMANY+COMPLEX,+SHOP+NO+65/869,+SEBASTIAN+ROAD,+KALOOR,+KOCHIN+682017&t=&z=16&ie=UTF8&iwloc=&output=embed" 
-              width="100%" 
-              height="100%" 
-              style={{ border: 0 }} 
-              allowFullScreen
-              loading="lazy" 
-              referrerPolicy="no-referrer-when-downgrade"
-              className="w-full h-full transition-all duration-500"
-            />
+        <div className="mt-8 lg:mt-16">
+          <span className="text-[10px] tracking-widest uppercase font-sans text-[var(--canvas-text)] block font-bold mb-6 opacity-60">OUR LOCATIONS</span>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {/* HQ Map */}
+            <div className="flex flex-col gap-3">
+              <span className="text-[10px] font-mono tracking-widest uppercase text-[var(--canvas-text-muted)] font-bold">Aztech Head Quarters — Dubai</span>
+              <div className="bg-[var(--canvas-text)]/[0.03] border border-[var(--canvas-border)] p-2 w-full relative h-[260px]">
+                <iframe 
+                  src="https://maps.google.com/maps?q=Warehouse+55,+Al+Quoz+Industrial+Area+3,+Dubai&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+                  width="100%" 
+                  height="100%" 
+                  style={{ border: 0 }} 
+                  allowFullScreen
+                  loading="lazy" 
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className="w-full h-full"
+                />
+              </div>
+            </div>
+            {/* Experience Center Map */}
+            <div className="flex flex-col gap-3">
+              <span className="text-[10px] font-mono tracking-widest uppercase text-[var(--canvas-text-muted)] font-bold">Aztech Experience Center — Al Karama</span>
+              <div className="bg-[var(--canvas-text)]/[0.03] border border-[var(--canvas-border)] p-2 w-full relative h-[260px]">
+                <iframe 
+                  src="https://maps.google.com/maps?q=25.2455254,55.2991638&t=&z=17&ie=UTF8&iwloc=&output=embed" 
+                  width="100%" 
+                  height="100%" 
+                  style={{ border: 0 }} 
+                  allowFullScreen
+                  loading="lazy" 
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className="w-full h-full"
+                />
+              </div>
+            </div>
+            {/* Kerala Map */}
+            <div className="flex flex-col gap-3">
+              <span className="text-[10px] font-mono tracking-widest uppercase text-[var(--canvas-text-muted)] font-bold">Aztech LED Screen — Kochi, Kerala</span>
+              <div className="bg-[var(--canvas-text)]/[0.03] border border-[var(--canvas-border)] p-2 w-full relative h-[260px]">
+                <iframe 
+                  src="https://maps.google.com/maps?q=CHAMMANY+COMPLEX,+SHOP+NO+65/869,+SEBASTIAN+ROAD,+KALOOR,+KOCHIN+682017&t=&z=16&ie=UTF8&iwloc=&output=embed" 
+                  width="100%" 
+                  height="100%" 
+                  style={{ border: 0 }} 
+                  allowFullScreen
+                  loading="lazy" 
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className="w-full h-full"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </div>

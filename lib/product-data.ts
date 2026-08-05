@@ -13,6 +13,9 @@ export interface ProductDetail {
     rows: { label: string; values: string[] }[];
   };
   image?: string;
+  applications?: { name: string }[];
+  downloads?: { title: string; url: string }[];
+  seo?: { title: string; description: string };
 }
 
 export const productDetails: Record<string, ProductDetail> = {
@@ -798,7 +801,7 @@ export const productDetails: Record<string, ProductDetail> = {
     id: "AZ-COB1.86-M",
     name: "AZ-COB1.86-M",
     title: "Indoor COB LED Module",
-    image: "/images/cob.png",
+    image: "/images/WhatsApp Image 2026-q08-05 at 4.44.45 PM.jpeg",
     description: [
       "The AZ-COB1.86-M Indoor COB LED Module is designed to deliver exceptional visual performance for professional indoor display applications. Built with advanced COB technology, it provides superior image quality, high contrast, excellent color consistency, and enhanced durability."
     ],
@@ -842,7 +845,7 @@ export const productDetails: Record<string, ProductDetail> = {
     id: "AZ-COB1.53-M",
     name: "AZ-COB1.53-M",
     title: "Indoor COB LED Module",
-    image: "/images/cob.png",
+    image: "/images/WhatsApp Image 2026-q08-05 at 4.44.45 PM.jpeg",
     description: [
       "High-performance Indoor COB LED Module designed for superior image quality, high refresh rate, wide viewing angle, excellent contrast, and long-lasting reliability."
     ],
@@ -3706,245 +3709,6 @@ export const productDetails: Record<string, ProductDetail> = {
     ],
     features: [],
     specifications: []
-  },
-  "AZ-VM10-SAI100": {
-    id: "AZ-VM10-SAI100",
-    name: "AZ-VM10-SAI100",
-    title: "Dahua 10.1\" Wall-mounted Digital Signage",
-    description: [
-      "Designed with an industrial-grade panel. It works up to 24 hours a day.",
-      "Linux operating system, more stable and cost-effective.",
-      "Support POE and DC input, wide power supply design.",
-      "Support Chrome, Firefox, Edge browser playback; Web upload ads for playback.",
-      "Built-in HD(1080P) camera, high-quality image display.",
-      "IP camera video output, H.264/H.265 encoding type selection output.",
-      "Support CVR storage (up to 1TB TF card)."
-    ],
-    features: [],
-    specifications: [
-      {
-        category: "Display",
-        specs: [
-          { label: "Panel Dimensions", value: "10.1 inch" },
-          { label: "Backlight", value: "LED" },
-          { label: "Resolution", value: "1280 (H) × 800 (V)" },
-          { label: "Viewable Size", value: "216.96mm × 135.6mm" },
-          { label: "Aspect Ratio", value: "16:10" },
-          { label: "Brightness", value: "250 cd/m² (typ.)" },
-          { label: "Contrast", value: "1000:1" },
-          { label: "Display Colors", value: "16.7 Million colors" },
-          { label: "Viewing Angle", value: "170° (H) / 170° (V)" },
-          { label: "Response Time", value: "30ms(typ.)" },
-          { label: "Display Mode", value: "Landscape/Portrait" }
-        ]
-      },
-      {
-        category: "Built-in System",
-        specs: [
-          { label: "Processor", value: "RV1126 Quad-core Cortex-A7" },
-          { label: "Operating System", value: "Linux" },
-          { label: "RAM", value: "1 GB" },
-          { label: "ROM", value: "8 GB" }
-        ]
-      },
-      {
-        category: "Connectivity",
-        specs: [
-          { label: "Interface", value: "Micro USB×1; TF card slot×1; LAN In×1" },
-          { label: "Network Port", value: "RJ45×1 10M/100M" },
-          { label: "Wi-Fi", value: "No (Can be customized)" }
-        ]
-      },
-      {
-        category: "Speaker",
-        specs: [
-          { label: "Built-in Speaker", value: "2 × 2 W" }
-        ]
-      },
-      {
-        category: "Camera",
-        specs: [
-          { label: "Sensor", value: "1/2.9\", 2MP CMOS" },
-          { label: "Encoding Format", value: "H.264 / H.265" },
-          { label: "Effective Pixels", value: "1920×1080" },
-          { label: "Lens", value: "3.3mm Fixed Lens" },
-          { label: "Field of View", value: "H: 79°, V: 43°, D: 93°" },
-          { label: "Integration Protocol", value: "ONVIF" },
-          { label: "Recording Resolution", value: "1920×1080@25FPS" },
-          { label: "Motion Detection", value: "Support" }
-        ]
-      },
-      {
-        category: "General",
-        specs: [
-          { label: "Power Supply", value: "DC12V±10% / POE 48V-56V±10%" },
-          { label: "Consumption (Typical)", value: "10W" },
-          { label: "Operating Temperature", value: "0°C to +40°C(32°F to +104°F)(avoid direct sunlight)" },
-          { label: "Storage Temperature", value: "-20°C to +60°C(-4°F to +140°F)" },
-          { label: "Operating Humidity", value: "10%–85% (RH), non-condensing" },
-          { label: "Storage Humidity", value: "10%–90% (RH), non-condensing" },
-          { label: "Product Material", value: "Metal casing" },
-          { label: "Casing Color (Frame/Rear)", value: "Black" },
-          { label: "Product Dimensions", value: "252mm × 200mm × 26mm" },
-          { label: "Packaging Dimensions", value: "355mm × 240mm × 75mm" },
-          { label: "Net Weight", value: "1.3kg" },
-          { label: "Gross Weight", value: "2.3kg" },
-          { label: "VESA", value: "75mm×75mm" },
-          { label: "Accessory", value: "Mount bracket, User's manual, legal and regulatory information" }
-        ]
-      },
-      {
-        category: "Function",
-        specs: [
-          { label: "Image Settings", value: "Chroma, contrast, brightness, sharpness, saturation, wide dynamics, backlight compensation, strong light suppression, 3D noise reduction" },
-          { label: "Video", value: "You can choose to record normally and trigger motion detection/face detection/alarm input to record" },
-          { label: "Advertising", value: "Support full-screen or half-screen image or video ads less than 1GB in size" },
-          { label: "Warning Information and Logo", value: "The warning information supports warning pictures and warning voices, and the logo picture can set the size and position of the picture" }
-        ]
-      },
-      {
-        category: "External Ports",
-        specs: [
-          { label: "ADB/USB", value: "It is used to download the firmware" },
-          { label: "TF", value: "TF Card slot (max 1TB)" },
-          { label: "LAN", value: "RJ45, 100MB" },
-          { label: "ALARM OUT", value: "Alarm output interface. The default state is low level; high level is the trigger state." },
-          { label: "ALARM IN", value: "Alarm input interface, two modes of open circuit or short circuit are optional." },
-          { label: "GND", value: "GND" },
-          { label: "NO", value: "Normal open contact point of the relay" },
-          { label: "COM", value: "Common contact point of the relay" },
-          { label: "NC", value: "Normal close contact point of the relay" },
-          { label: "EMERGENCY", value: "Emergency mode trigger interface, external trigger level DC 3-40V" },
-          { label: "FACE OUT", value: "Face detection alarm output, the default state is low level; high level is the trigger state." },
-          { label: "MOTION OUT", value: "Motion detection alarm output, the default state is low level; high level is the trigger state." },
-          { label: "12V", value: "DC power 12V+" }
-        ]
-      }
-    ]
-  },
-  "AZ-AI-W": {
-    id: "AZ-AI-W",
-    name: "AZ-AI-W",
-    title: "USB Wi-Fi dongle",
-    description: [
-      "The USB Wi-Fi dongle supports dual frequency band of 2.4 GHz and 5 GHz. It is widely used for intelligent cloud display terminals without Wi-Fi function. As an external Wi-Fi dongle, it can be easily connected to devices through the USB port for receiving Wi-Fi signals."
-    ],
-    features: [],
-    specifications: [
-      {
-        category: "Device Ports",
-        specs: [
-          { label: "Wi-Fi", value: "Yes" },
-          { label: "Wi-Fi Standard", value: "802.11b/g/n/ac/ax" },
-          { label: "Wi-Fi Frequency Range", value: "2400-2483.5 MHz; 5150-5250 MHz; 5470-5725 MHz; 5725-5850 MHz" },
-          { label: "USB", value: "USB 2.0, Type-A" }
-        ]
-      },
-      {
-        category: "General",
-        specs: [
-          { label: "Power Supply", value: "USB" },
-          { label: "Power Consumption", value: "1.5W" },
-          { label: "Operating Temperature", value: "0 °C to +40 °C (+32 °F to +104 °F)" },
-          { label: "Storage Temperature", value: "-20 °C to +60 °C (-4 °F to +140 °F)" },
-          { label: "Operating Humidity", value: "10%–85% (RH), non-condensing" },
-          { label: "Storage Humidity", value: "10%–90% (RH), non-condensing" },
-          { label: "Product Material", value: "Case: SPCC" },
-          { label: "Casing Color (Frame/Rear)", value: "Black" },
-          { label: "Product Dimensions", value: "173.5 mm × 117.8 mm × 14 mm (6.83\" × 4.64\" × 0.55\") (The antenna is folded)" },
-          { label: "Packaging Dimensions", value: "250 mm × 144 mm × 67 mm (9.84\" × 5.67\" × 2.64\")" },
-          { label: "Net Weight", value: "130 g (0.29 lb)" },
-          { label: "Gross Weight", value: "260 g (0.57 lb)" },
-          { label: "Holes Distance", value: "51 mm (2.01\")" }
-        ]
-      }
-    ]
-  },
-  "AZ-DS04-AI400": {
-    id: "AZ-DS04-AI400",
-    name: "AZ-DS04-AI400",
-    title: "Dahua Media Player Box",
-    description: [
-      "It works up to 24 hours a day.",
-      "Industrial design, small and portable, matching monitor, video wall, LED screen for advertising.",
-      "4 function modules include network release, local release, app manager and system settings.",
-      "Supports video, picture, audio, txt, PDF, IPC stream, time, weather and other multimedia information released, made for advertising industry.",
-      "Support the program material off the network or outage resume function, greatly save bandwidth and network flux.",
-      "Dahua MPS platform provides unified remote management for system integrators and media operators."
-    ],
-    features: [],
-    specifications: [
-      {
-        category: "Built-in System",
-        specs: [
-          { label: "Operating System", value: "Android 8.1" },
-          { label: "CPU", value: "4 cores A17, 1.6 GHz" },
-          { label: "RAM", value: "2 GB" },
-          { label: "ROM", value: "16 GB" }
-        ]
-      },
-      {
-        category: "Function",
-        specs: [
-          { label: "Information Release Platform", value: "Supports multi-level management and media publishing systems with B/S architecture" },
-          { label: "Information Release", value: "Releases information in real-time such as images, text, rich text, and videos" },
-          { label: "Rolling Titles", value: "Displays rolling titles over the image" },
-          { label: "Play Mode", value: "Supports inter-cut play, specified time play, periodic play and gasket play" },
-          { label: "Play Plan", value: "Play periods can be customized by day, week, or month" },
-          { label: "Smart Screen Split", value: "Displays images, text and videos at the same time; The screen can be split into 5 windows." },
-          { label: "Real-time Monitoring", value: "Yes" },
-          { label: "Wireless Frequency Range", value: "2400 MHz–2483.5 MHz" },
-          { label: "Wireless Transmission Rate", value: "MAX: 2.4 GHz: 50 Mbps" },
-          { label: "Audio Compression", value: "MPEG-2, WMA, WAV" },
-          { label: "Video Compression", value: "MPEG-4, H.264 AVC/MVC, H.265 HEVC" },
-          { label: "Video Format", value: "mp4, avi, mov, asf, mkv, wmv" },
-          { label: "Time/Weather", value: "Updates clock and weather information in real-time" }
-        ]
-      },
-      {
-        category: "Device Ports",
-        specs: [
-          { label: "Network Port", value: "1 × RJ-45 10/100/1000 Mbps self-adaptive Ethernet port" },
-          { label: "Wi-Fi", value: "Yes. Supports 2.4 GHz." },
-          { label: "4G", value: "No (Connect with external 4G modules)" },
-          { label: "Bluetooth", value: "No" },
-          { label: "Data Transmission Ports", value: "1 × TF card slot, up to 128 GB; 2 × USB 2.0 ports (type A)" },
-          { label: "Video Input", value: "No" },
-          { label: "Video Output", value: "1 × HDMI Out (480p, 720p, 1080p, 4K @60Hz)" },
-          { label: "Audio Port", value: "1 × 3.5 mm jack Mic" },
-          { label: "External Control", value: "1 × RS-232; 1 × RJ-45" },
-          { label: "IR Receiver", value: "Yes" }
-        ]
-      },
-      {
-        category: "General",
-        specs: [
-          { label: "Power Supply", value: "12 VDC" },
-          { label: "Power Consumption", value: "2W (typ.); 4W (max.)" },
-          { label: "Standby Power Consumption", value: "< 0.5 W" },
-          { label: "Operating Temperature", value: "-10 °C to +55 °C (+14 °F to +131 °F)" },
-          { label: "Storage Temperature", value: "-20 °C to +60 °C (-4 °F to +140 °F)" },
-          { label: "Operating Humidity", value: "10%–90% (RH), non-condensing" },
-          { label: "Storage Humidity", value: "5%–95% (RH), non-condensing" },
-          { label: "Protection", value: "IP20" },
-          { label: "Product Material", value: "Metal casing" },
-          { label: "Casing Color", value: "Black" },
-          { label: "Product Dimensions", value: "184.5 mm × 105 mm × 30 mm (7.26\" × 4.13\" × 1.18\") (with Wi-Fi antenna)" },
-          { label: "Packaging Dimensions", value: "266 mm × 220 mm × 77 mm (10.47\" × 8.41\" × 3.03\")" },
-          { label: "Net Weight", value: "405 g (0.89 lb)" },
-          { label: "Gross Weight", value: "870 g (1.92 lb)" },
-          { label: "Installation", value: "Wall mount; desk mount" },
-          { label: "Display Mode", value: "External display" },
-          { label: "Accessory", value: "Power adapter, Wi-Fi antenna, remote control, quick start guide, legal and regulatory information" }
-        ]
-      },
-      {
-        category: "Certification",
-        specs: [
-          { label: "Certifications", value: "CE, FCC, CE RED, FCC ID" }
-        ]
-      }
-    ]
   },
   "AZ-DV43-EAO400L": {
     id: "AZ-DV43-EAO400L",
@@ -10286,6 +10050,82 @@ export const productDetails: Record<string, ProductDetail> = {
         { label: "Screen Mirroring Activation", values: ["Default to activate full screen", "Default to activate full screen", "Default to activate 9 split screen"] }
       ]
     }
+  },
+  "indoor-p1-86-flexible-module": {
+    id: "indoor-p1-86-flexible-module",
+    name: "Indoor P1.86 Flexible Module",
+    title: "Indoor Fine Pixel Pitch Flexible LED Module",
+    description: [
+      "The Indoor P1.86 Flexible Module is a high-performance indoor LED display module designed for creative curved and custom display installations. Featuring a 1.86mm pixel pitch, high refresh rate of 3840Hz, exceptional grayscale performance, and wide viewing angles, it delivers smooth visuals, vivid colors, and excellent image uniformity. The lightweight flexible design enables seamless integration into curved walls, cylindrical displays, and other innovative indoor digital signage applications."
+    ],
+    features: [
+      "High Refresh Rate: Refresh Rate ≥3840Hz. Smooth flicker-free visuals. Ideal for broadcast and commercial displays.",
+      "High Grayscale: 12–14 Bit Color Processing. Excellent low-brightness performance. Natural color reproduction.",
+      "Flexible Design: Curved installation support. Suitable for creative LED applications. Lightweight flexible construction.",
+      "High Contrast: Contrast Ratio: 3000:1. Rich blacks. Vibrant colors.",
+      "Wide Viewing Angle: Horizontal: 120°. Vertical: 120°. Consistent brightness across viewing positions.",
+      "Long Lifespan: Up to 100,000 Hours. Reliable commercial operation."
+    ],
+    specifications: [
+      {
+        category: "Module Specifications",
+        specs: [
+          { label: "Product Model", value: "IFS-FIA1.8S-C" },
+          { label: "Pixel Pitch", value: "1.86 mm" },
+          { label: "Pixel Composition", value: "SMD1515" },
+          { label: "Module Resolution", value: "172 × 86" },
+          { label: "Module Size", value: "320 × 160 mm" },
+          { label: "Module Weight", value: "0.2 kg" },
+          { label: "Input Voltage", value: "DC 4.2–5V" },
+          { label: "Maximum Current", value: "≤6.5A" },
+          { label: "Maximum Power", value: "≤32.5W" }
+        ]
+      },
+      {
+        category: "Optical Specifications",
+        specs: [
+          { label: "Brightness", value: "550 nits" },
+          { label: "Viewing Angle", value: "120° / 120°" },
+          { label: "Brightness Uniformity", value: "≥95%" },
+          { label: "Contrast Ratio", value: "3000:1" }
+        ]
+      },
+      {
+        category: "Performance Specifications",
+        specs: [
+          { label: "Refresh Rate", value: "≥3840Hz" },
+          { label: "Driving Method", value: "Constant Current, 1/43 Scan" },
+          { label: "Color Processing", value: "12–14 Bit" },
+          { label: "Operating Frequency", value: "≥50/60Hz" },
+          { label: "Lifespan", value: "100,000 Hours" },
+          { label: "Working Temperature", value: "-10°C to 50°C" },
+          { label: "Working Humidity", value: "10–90% RH" },
+          { label: "Storage Temperature", value: "-10°C to 60°C" },
+          { label: "Storage Humidity", value: "10–90% RH" }
+        ]
+      }
+    ],
+    applications: [
+      { name: "Shopping Malls" },
+      { name: "Corporate Meeting Rooms" },
+      { name: "Command & Control Centers" },
+      { name: "Retail Displays" },
+      { name: "Exhibition Booths" },
+      { name: "Broadcast Studios" },
+      { name: "Digital Signage" },
+      { name: "Curved LED Walls" }
+    ],
+    downloads: [
+      {
+        title: "Product Datasheet (PDF)",
+        url: "/downloads/IFS-FIA1.8S-C-Datasheet.pdf"
+      }
+    ],
+    seo: {
+      title: "Indoor P1.86 Flexible Module | AZTECH",
+      description: "Indoor P1.86 Flexible Module featuring 1.86mm pixel pitch, 3840Hz refresh rate, flexible installation, high contrast, 120° viewing angle, and outstanding image quality for premium indoor LED applications."
+    },
+    image: "/images/WhatsApp Image 2026-q08-05 at 4.44.45 PM.jpeg"
   }
 };
 
@@ -10307,18 +10147,18 @@ export const categories = [
           { name: "AZ-BF2-CS", subtitle: "Aztech indoor 640x480 Front Maintenance fixed screen LED_P2", image: "/images/IMG_1484.PNG" },
           { name: "AZ-BF1.86-CS", subtitle: "Aztech indoor 640x480 Front Maintenance fixed screen LED_P1.8", image: "/images/IMG_1484.PNG" },
           { name: "AZ-BF1.53-CS", subtitle: "Aztech indoor 640x480 Front Maintenance fixed screen LED_P1.5", image: "/images/IMG_1484.PNG" },
-          { name: "AZ-SIA1.5-AH", subtitle: "Flip COB Indoor Fine Pixel Pitch LED", image: "/images/gen_led_wall_indoor_1783343577831.png" },
-          { name: "AZ-SIA1.2-AH", subtitle: "Flip COB Indoor Fine Pixel Pitch LED", image: "/images/gen_hires_led_10_1783345685654.png" },
-          { name: "AZ-SIA0.9-AH", subtitle: "Flip COB Indoor Fine Pixel Pitch LED", image: "/images/gen_led_cabinet_1783343600017.png" },
-          { name: "AZ-SIA1.5-CH", subtitle: "Flip COB Indoor Fine Pixel Pitch LED", image: "/images/gen_led_wall_indoor_1783343577831.png" },
-          { name: "AZ-SIA1.2-CH", subtitle: "Flip COB Indoor Fine Pixel Pitch LED", image: "/images/gen_hires_led_1_1783344922186.png" },
-          { name: "AZ-SIA0.9-CH", subtitle: "Flip COB Indoor Fine Pixel Pitch LED", image: "/images/gen_spherical_led_1783343642805.png" },
-          { name: "AZ-SIA1.8-SS", subtitle: "Indoor Fine Pixel Pitch LED", image: "/images/gen_digital_kiosk_1783343630287.png" },
-          { name: "AZ-SIA1.5-SS", subtitle: "Indoor Fine Pixel Pitch LED", image: "/images/gen_hires_led_1_1783344922186.png" },
-          { name: "AZ-SIA1.2-SS", subtitle: "Indoor Fine Pixel Pitch LED", image: "/images/gen_hires_led_2_1783344932247.png" },
-          { name: "AZ-SIA0.9-SS", subtitle: "Indoor Fine Pixel Pitch LED", image: "/images/gen_hires_led_3_1783344943959.png" },
-          { name: "AZ-SIA1.5-LS", subtitle: "Indoor Fine Pixel Pitch LED", image: "/images/IMG_1493.PNG" },
-          { name: "AZ-SIA1.2-LS", subtitle: "Indoor Fine Pixel Pitch LED", image: "/images/IMG_1493.PNG" },
+          { name: "AZ-SIA1.5-AH", subtitle: "Flip COB Indoor Fine Pixel Pitch LED", image: "/images/IMG_1490.PNG" },
+          { name: "AZ-SIA1.2-AH", subtitle: "Flip COB Indoor Fine Pixel Pitch LED", image: "/images/IMG_1490.PNG" },
+          { name: "AZ-SIA0.9-AH", subtitle: "Flip COB Indoor Fine Pixel Pitch LED", image: "/images/IMG_1490.PNG" },
+          { name: "AZ-SIA1.5-CH", subtitle: "Flip COB Indoor Fine Pixel Pitch LED", image: "/images/IMG_1490.PNG" },
+          { name: "AZ-SIA1.2-CH", subtitle: "Flip COB Indoor Fine Pixel Pitch LED", image: "/images/IMG_1490.PNG" },
+          { name: "AZ-SIA0.9-CH", subtitle: "Flip COB Indoor Fine Pixel Pitch LED", image: "/images/IMG_1490.PNG" },
+          { name: "AZ-SIA1.8-SS", subtitle: "Indoor Fine Pixel Pitch LED", image: "/images/IMG_1490.PNG" },
+          { name: "AZ-SIA1.5-SS", subtitle: "Indoor Fine Pixel Pitch LED", image: "/images/IMG_1490.PNG" },
+          { name: "AZ-SIA1.2-SS", subtitle: "Indoor Fine Pixel Pitch LED", image: "/images/IMG_1490.PNG" },
+          { name: "AZ-SIA0.9-SS", subtitle: "Indoor Fine Pixel Pitch LED", image: "/images/IMG_1490.PNG" },
+          { name: "AZ-SIA1.5-LS", subtitle: "Indoor Fine Pixel Pitch LED", image: "/images/IMG_1490.PNG" },
+          { name: "AZ-SIA1.2-LS", subtitle: "Indoor Fine Pixel Pitch LED", image: "/images/IMG_1490.PNG" },
           { name: "AZ-AIO108-NF", subtitle: "Commercial All-In-One LED", image: "/images/IMG_1493.PNG" },
           { name: "AZ-AIO163-NF", subtitle: "Commercial All-In-One LED", image: "/images/IMG_1493.PNG" },
           { name: "AZ-AIO135-NF", subtitle: "Commercial All-In-One LED", image: "/images/IMG_1493.PNG" },
@@ -10374,8 +10214,8 @@ export const categories = [
         id: "led-module",
         name: "LED Module",
         products: [
-          { name: "AZ-COB1.86-M", subtitle: "Indoor COB LED Module", image: "/images/cob.png" },
-          { name: "AZ-COB1.53-M", subtitle: "Indoor COB LED Module", image: "/images/cob.png" },
+          { name: "AZ-COB1.86-M", subtitle: "Indoor COB LED Module", image: "/images/WhatsApp Image 2026-q08-05 at 4.44.45 PM.jpeg" },
+          { name: "AZ-COB1.53-M", subtitle: "Indoor COB LED Module", image: "/images/WhatsApp Image 2026-q08-05 at 4.44.45 PM.jpeg" },
           { name: "AZ-EOA10S-C", subtitle: "Aztech Indoor SMD LED Module", image: "/images/IMG_1506.JPG" },
           { name: "AZ-EOA8S-C", subtitle: "Aztech Indoor SMD LED Module", image: "/images/IMG_1508.JPG" },
           { name: "AZ-EOA6S-C", subtitle: "Aztech Indoor SMD LED Module", image: "/images/IMG_1510.JPG" },
@@ -10388,6 +10228,7 @@ export const categories = [
           { name: "AZ-EIA1.8S-C", subtitle: "Aztech Indoor SMD LED Module", image: "/images/IMG_1525.WEBP" },
           { name: "AZ-EIA1.2S-C", subtitle: "Aztech Indoor SMD LED Module", image: "/images/IMG_1524.JPG" },
           { name: "AZ-EIA1.5S-C", subtitle: "Aztech Indoor SMD LED Module", image: "/images/IMG_1528.JPG" },
+          { name: "indoor-p1-86-flexible-module", subtitle: "Indoor P1.86 Flexible Module", image: "/images/WhatsApp Image 2026-08-05 at 4.44.45 PM.jpeg" },
         ]
       },
       {
@@ -10463,74 +10304,59 @@ export const categories = [
         id: "lite",
         name: "Lite Series",
         products: [
-          { name: "AZ-DH65-LAI400L", subtitle: "Aztech 65 inch LCD Digital Signage", image: "/images/gen_hires_led_7_1783345616576.png" },
-          { name: "AZ-DH55-LAI400L", subtitle: "Aztech 55 inch LCD Digital Signage", image: "/images/gen_hires_led_8_1783345640777.png" },
-          { name: "AZ-DH50-LAI400L", subtitle: "Aztech 50 inch LCD Digital Signage", image: "/images/gen_hires_led_9_1783345669587.png" },
-          { name: "AZ-DH43-LAI400L", subtitle: "Aztech 43 inch LCD Digital Signage", image: "/images/gen_hires_led_10_1783345685654.png" },
+          { name: "AZ-DH65-LAI400L", subtitle: "Aztech 65 inch LCD Digital Signage", image: "/images/IMG_2347.PNG" },
+          { name: "AZ-DH55-LAI400L", subtitle: "Aztech 55 inch LCD Digital Signage", image: "/images/IMG_2347.PNG" },
+          { name: "AZ-DH50-LAI400L", subtitle: "Aztech 50 inch LCD Digital Signage", image: "/images/IMG_2347.PNG" },
+          { name: "AZ-DH43-LAI400L", subtitle: "Aztech 43 inch LCD Digital Signage", image: "/images/IMG_2347.PNG" },
         ]
       },
       {
         id: "standard",
         name: "Standard Series",
         products: [
-          { name: "AZ-DH55-SAI400TL", subtitle: "Aztech 55 inch Indoor Wall-mounted LCD Digital Signage", image: "/images/gen_led_cabinet_1783343600017.png" },
-          { name: "AZ-DH43-SAI400TL", subtitle: "Aztech 43 Inch Indoor Wall-mounted LCD Digital Signage", image: "/images/gen_led_wall_indoor_1783343577831.png" },
-          { name: "AZ-DH55-SAI400L", subtitle: "Aztech 55 inch Indoor Wall-mounted LCD Digital Signage", image: "/images/gen_led_wall_outdoor_1783343588691.png" },
-          { name: "AZ-DH65-SAI400L", subtitle: "Aztech 65 inch Indoor Wall-mounted LCD Digital Signage", image: "/images/gen_spherical_led_1783343642805.png" },
-          { name: "AZ-DH43-SAI400L", subtitle: "Aztech 43 inch Indoor Wall-mounted LCD Digital Signage", image: "/images/gen_digital_kiosk_1783343630287.png" },
-          { name: "AZ-DH43-SWI200", subtitle: "43\" Wall-mounted Digital Signage", image: "/images/lcd_digital_signage_1.png" },
-          { name: "AZ-DH32-SAI200L", subtitle: "Aztech 32 inch Indoor Wall-mounted LCD Digital Signage", image: "/images/gen_hires_led_1_1783344922186.png" },
-          { name: "AZ-DH22-SAI200L", subtitle: "Aztech 21.5 inch Indoor Wall-mounted LCD Digital Signage", image: "/images/gen_hires_led_2_1783344932247.png" },
-          { name: "AZ-DV65-SAI400TL", subtitle: "Aztech 65 inch Indoor Vertical LCD Digital Signage", image: "/images/gen_hires_led_3_1783344943959.png" },
-          { name: "AZ-DV55-SAI400TL", subtitle: "Aztech 55 inch Indoor Vertical LCD Digital Signage", image: "/images/gen_hires_led_4_1783344964877.png" },
-          { name: "AZ-DV43-SAI400TL", subtitle: "Aztech 43 inch Indoor Vertical LCD Digital Signage", image: "/images/gen_hires_led_5_1783344976320.png" },
-          { name: "AZ-DV75-SAI400L", subtitle: "Aztech 75 inch Vertical LCD Digital Signage", image: "/images/gen_hires_led_6_1783344987071.png" },
-          { name: "AZ-DV65-SAI400L", subtitle: "Aztech 65 inch Indoor Vertical LCD Digital Signage", image: "/images/gen_hires_led_7_1783345616576.png" },
-          { name: "AZ-DV55-SAI400L", subtitle: "Aztech 55 inch Indoor Vertical LCD Digital Signage", image: "/images/gen_hires_led_8_1783345640777.png" },
-          { name: "AZ-DV43-SAI400L", subtitle: "Aztech 43 inch Indoor Vertical LCD Digital Signage", image: "/images/gen_hires_led_9_1783345669587.png" },
-          { name: "AZ-DV43-SAI400K", subtitle: "Aztech 43 inch Vertical LCD Digital Signage", image: "/images/gen_hires_led_10_1783345685654.png" },
+          { name: "AZ-DH55-SAI400TL", subtitle: "Aztech 55 inch Indoor Wall-mounted LCD Digital Signage", image: "/images/IMG_2347.PNG" },
+          { name: "AZ-DH43-SAI400TL", subtitle: "Aztech 43 Inch Indoor Wall-mounted LCD Digital Signage", image: "/images/IMG_2347.PNG" },
+          { name: "AZ-DH55-SAI400L", subtitle: "Aztech 55 inch Indoor Wall-mounted LCD Digital Signage", image: "/images/IMG_2347.PNG" },
+          { name: "AZ-DH65-SAI400L", subtitle: "Aztech 65 inch Indoor Wall-mounted LCD Digital Signage", image: "/images/IMG_2347.PNG" },
+          { name: "AZ-DH43-SAI400L", subtitle: "Aztech 43 inch Indoor Wall-mounted LCD Digital Signage", image: "/images/IMG_2347.PNG" },
+          { name: "AZ-DH43-SWI200", subtitle: "43\" Wall-mounted Digital Signage", image: "/images/IMG_2347.PNG" },
+          { name: "AZ-DH32-SAI200L", subtitle: "Aztech 32 inch Indoor Wall-mounted LCD Digital Signage", image: "/images/IMG_2347.PNG" },
+          { name: "AZ-DH22-SAI200L", subtitle: "Aztech 21.5 inch Indoor Wall-mounted LCD Digital Signage", image: "/images/IMG_2347.PNG" },
+          { name: "AZ-DV65-SAI400TL", subtitle: "Aztech 65 inch Indoor Vertical LCD Digital Signage", image: "/images/IMG_2347.PNG" },
+          { name: "AZ-DV55-SAI400TL", subtitle: "Aztech 55 inch Indoor Vertical LCD Digital Signage", image: "/images/IMG_2347.PNG" },
+          { name: "AZ-DV43-SAI400TL", subtitle: "Aztech 43 inch Indoor Vertical LCD Digital Signage", image: "/images/IMG_2347.PNG" },
+          { name: "AZ-DV75-SAI400L", subtitle: "Aztech 75 inch Vertical LCD Digital Signage", image: "/images/IMG_2347.PNG" },
+          { name: "AZ-DV65-SAI400L", subtitle: "Aztech 65 inch Indoor Vertical LCD Digital Signage", image: "/images/IMG_2347.PNG" },
+          { name: "AZ-DV55-SAI400L", subtitle: "Aztech 55 inch Indoor Vertical LCD Digital Signage", image: "/images/IMG_2347.PNG" },
+          { name: "AZ-DV43-SAI400L", subtitle: "Aztech 43 inch Indoor Vertical LCD Digital Signage", image: "/images/IMG_2347.PNG" },
+          { name: "AZ-DV43-SAI400K", subtitle: "Aztech 43 inch Vertical LCD Digital Signage", image: "/images/IMG_2347.PNG" },
         ]
       },
       {
         id: "pro",
         name: "Pro Series",
         products: [
-          { name: "AZ-DH65-WAI200L", subtitle: "Aztech 65 Inch LCD Digital Signage", image: "/images/gen_led_cabinet_1783343600017.png" },
-          { name: "AZ-DH55-WAI200L", subtitle: "Aztech 55 Inch LCD Digital Signage", image: "/images/gen_led_wall_indoor_1783343577831.png" },
-          { name: "AZ-DH43-WAI200L", subtitle: "Aztech 43 Inch LCD Digital Signage", image: "/images/gen_led_wall_outdoor_1783343588691.png" },
-          { name: "AZ-DH32-WAI200L", subtitle: "Aztech 32 Inch LCD Digital Signage", image: "/images/gen_spherical_led_1783343642805.png" },
-          { name: "AZ-DH65-HAI400L", subtitle: "Aztech 65 inch Indoor Wall-mounted LCD Digital Signage", image: "/images/gen_digital_kiosk_1783343630287.png" },
-          { name: "AZ-DH55-HAI400L", subtitle: "Aztech 55 inch Indoor Wall-mounted LCD Digital Signage", image: "/images/gen_hires_led_1_1783344922186.png" },
-          { name: "AZ-DH43-HAI400L", subtitle: "Aztech 43 inch Indoor Wall-mounted LCD Digital Signage", image: "/images/gen_hires_led_2_1783344932247.png" },
+          { name: "AZ-DH65-WAI200L", subtitle: "Aztech 65 Inch LCD Digital Signage", image: "/images/IMG_2347.PNG" },
+          { name: "AZ-DH55-WAI200L", subtitle: "Aztech 55 Inch LCD Digital Signage", image: "/images/IMG_2347.PNG" },
+          { name: "AZ-DH43-WAI200L", subtitle: "Aztech 43 Inch LCD Digital Signage", image: "/images/IMG_2347.PNG" },
+          { name: "AZ-DH32-WAI200L", subtitle: "Aztech 32 Inch LCD Digital Signage", image: "/images/IMG_2347.PNG" },
+          { name: "AZ-DH65-HAI400L", subtitle: "Aztech 65 inch Indoor Wall-mounted LCD Digital Signage", image: "/images/IMG_2347.PNG" },
+          { name: "AZ-DH55-HAI400L", subtitle: "Aztech 55 inch Indoor Wall-mounted LCD Digital Signage", image: "/images/IMG_2347.PNG" },
+          { name: "AZ-DH43-HAI400L", subtitle: "Aztech 43 inch Indoor Wall-mounted LCD Digital Signage", image: "/images/IMG_2347.PNG" },
         ]
       },
       {
         id: "outdoor",
         name: "Outdoor Series",
         products: [
-          { name: "AZ-DH65-EAO400L", subtitle: "Aztech 65 inch Wall-mounted LCD Digital Signage", image: "/images/gen_hires_led_3_1783344943959.png" },
-          { name: "AZ-DH55-EAO400L", subtitle: "Aztech 55 inch Wall-mounted LCD Digital Signage", image: "/images/gen_hires_led_4_1783344964877.png" },
-          { name: "AZ-DH43-EAO400L", subtitle: "Aztech 43 inch Wall-mounted LCD Digital Signage", image: "/images/gen_hires_led_5_1783344976320.png" },
-          { name: "AZ-DV65-EAO400L", subtitle: "Aztech 65 inch Vertical LCD Digital Signage", image: "/images/gen_hires_led_6_1783344987071.png" },
-          { name: "AZ-DV55-EAO400L", subtitle: "Aztech 55 inch Vertical LCD Digital Signage", image: "/images/gen_hires_led_7_1783345616576.png" },
-          { name: "AZ-DV43-EAO400L", subtitle: "Aztech 43 inch Vertical LCD Digital Signage", image: "/images/gen_hires_led_8_1783345640777.png" },
+          { name: "AZ-DH65-EAO400L", subtitle: "Aztech 65 inch Wall-mounted LCD Digital Signage", image: "/images/IMG_2347.PNG" },
+          { name: "AZ-DH55-EAO400L", subtitle: "Aztech 55 inch Wall-mounted LCD Digital Signage", image: "/images/IMG_2347.PNG" },
+          { name: "AZ-DH43-EAO400L", subtitle: "Aztech 43 inch Wall-mounted LCD Digital Signage", image: "/images/IMG_2347.PNG" },
+          { name: "AZ-DV65-EAO400L", subtitle: "Aztech 65 inch Vertical LCD Digital Signage", image: "/images/IMG_2347.PNG" },
+          { name: "AZ-DV55-EAO400L", subtitle: "Aztech 55 inch Vertical LCD Digital Signage", image: "/images/IMG_2347.PNG" },
+          { name: "AZ-DV43-EAO400L", subtitle: "Aztech 43 inch Vertical LCD Digital Signage", image: "/images/IMG_2347.PNG" },
         ]
       },
-      {
-        id: "media-player",
-        name: "Media Player",
-        products: [
-          { name: "AZ-DS04-AI400", subtitle: "Aztech Media Player Box", image: "/images/gen_hires_led_9_1783345669587.png" },
-        ]
-      },
-      {
-        id: "others",
-        name: "Others",
-        products: [
-          { name: "AZ-AI-W", subtitle: "USB Wi-Fi dongle", image: "/images/gen_hires_led_10_1783345685654.png" },
-          { name: "AZ-VM10-SAI100", subtitle: "Aztech 10.1\" Wall-mounted Digital Signage", image: "/images/lcd_digital_signage_others_10inch.png" },
-        ]
-      }
     ]
   },
   {

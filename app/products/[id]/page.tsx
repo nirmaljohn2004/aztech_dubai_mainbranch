@@ -1,6 +1,7 @@
+import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
-import { ArrowLeft, Check, ChevronRight } from 'lucide-react'
+import { ArrowLeft, Check, ChevronRight, Download, LayoutGrid } from 'lucide-react'
 import { productDetails } from '@/lib/product-data'
 import { DynamicCanvasWrapper } from '@/components/layout/dynamic-canvas'
 import { Footer } from '@/components/layout/footer'
@@ -17,6 +18,20 @@ export function generateStaticParams() {
   return Object.keys(productDetails).map((id) => ({
     id,
   }))
+}
+
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const { id } = await params
+  const product = productDetails[id]
+  
+  if (!product) {
+    return { title: 'Product Not Found | AZTECH' }
+  }
+
+  return {
+    title: product.seo?.title || `${product.name} | AZTECH`,
+    description: product.seo?.description || product.title,
+  }
 }
 
 export default async function ProductDetailPage({ params }: PageProps) {
@@ -169,6 +184,44 @@ export default async function ProductDetailPage({ params }: PageProps) {
                 ))}
               </div>
             </div>
+
+            {/* Applications (if any) */}
+            {product.applications && product.applications.length > 0 && (
+              <div className="mt-20">
+                <div className="mb-10 flex items-center gap-4 opacity-80">
+                  <span className="uppercase tracking-[0.35em] text-[11px] font-mono text-purple-300/70">Applications</span>
+                  <div className="flex-1 h-[1px] bg-gradient-to-r from-purple-500/30 to-transparent"></div>
+                </div>
+                
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                  {product.applications.map((app, idx) => (
+                    <div key={idx} className="flex flex-col items-center justify-center p-6 rounded-xl border border-white/10 bg-white/5 backdrop-blur-sm text-center group hover:bg-white/10 transition-colors">
+                      <LayoutGrid className="w-6 h-6 text-purple-400 mb-3 opacity-70 group-hover:opacity-100 transition-opacity" />
+                      <span className="text-sm font-medium text-white/90">{app.name}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* Downloads (if any) */}
+            {product.downloads && product.downloads.length > 0 && (
+              <div className="mt-20">
+                <div className="mb-10 flex items-center gap-4 opacity-80">
+                  <span className="uppercase tracking-[0.35em] text-[11px] font-mono text-purple-300/70">Downloads</span>
+                  <div className="flex-1 h-[1px] bg-gradient-to-r from-purple-500/30 to-transparent"></div>
+                </div>
+                
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  {product.downloads.map((download, idx) => (
+                    <a key={idx} href={download.url} target="_blank" rel="noopener noreferrer" className="flex items-center justify-between p-6 rounded-xl border border-white/10 bg-white/5 backdrop-blur-sm group hover:bg-white/10 hover:border-purple-500/30 transition-all">
+                      <span className="font-medium text-white/90">{download.title}</span>
+                      <Download className="w-5 h-5 text-purple-400 opacity-70 group-hover:opacity-100 transition-opacity" />
+                    </a>
+                  ))}
+                </div>
+              </div>
+            )}
 
           </div>
         </DynamicCanvasWrapper>

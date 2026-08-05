@@ -1,1 +1,0 @@
-const fs = require('fs'); let content = fs.readFileSync('c:/Btech/Freelance/aztech_dubai/lib/product-data.ts', 'utf8'); content = content.replace(/[ \t]*\{ label: "Model", value: "DHI-[a-zA-Z0-9.\-]+" \},?\r?\n?/g, ''); fs.writeFileSync('c:/Btech/Freelance/aztech_dubai/lib/product-data.ts', content);
