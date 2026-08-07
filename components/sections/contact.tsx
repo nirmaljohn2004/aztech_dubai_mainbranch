@@ -155,19 +155,32 @@ export function ContactSection() {
               
               <div className="grid grid-cols-1 gap-6 w-full">
                 {/* Aztech Head Quarters */}
-                <a 
-                  href="https://maps.google.com/?q=Warehouse+55,+Al+Quoz+Industrial+Area+3,+Dubai" 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className="flex flex-col gap-2 group relative overflow-hidden"
-                >
+                <div className="flex flex-col gap-2 group relative overflow-hidden">
                   <address className="text-sm text-[var(--canvas-text-muted)] not-italic leading-relaxed font-medium">
                     <strong className="text-[var(--canvas-text)] block font-sans text-sm tracking-wider uppercase font-bold mb-2 opacity-90 group-hover:opacity-100 transition-opacity flex items-center gap-2">
                       <MapPin className="w-4 h-4" /> AZTECH HEAD QUARTERS
                     </strong>
-                    Warehouse 55, Al Quoz Industrial Area 3,<br />Dubai, UAE
+                    AZTECH GENERAL TRADING LLC<br />
+                    Karama, Dubai Al Nishwan Building,<br />
+                    Near ADCB Metro Station<br />
+                    P.O. Box 239101, UAE<br />
+                    <a href="https://www.ledscreenuae.com" target="_blank" rel="noopener noreferrer" className="hover:underline text-[var(--canvas-text)]">www.ledscreenuae.com</a>
                   </address>
-                </a>
+                </div>
+
+                <div className="h-px w-full bg-[var(--canvas-border)]" />
+
+                {/* Aztech Warehouse */}
+                <div className="flex flex-col gap-2 group relative overflow-hidden">
+                  <address className="text-sm text-[var(--canvas-text-muted)] not-italic leading-relaxed font-medium">
+                    <strong className="text-[var(--canvas-text)] block font-sans text-sm tracking-wider uppercase font-bold mb-2 opacity-90 group-hover:opacity-100 transition-opacity flex items-center gap-2">
+                      <MapPin className="w-4 h-4" /> AZTECH GENERAL TRADING BRANCH
+                    </strong>
+                    Al Quoz Industrial Area 3<br />
+                    NRL Warehouse 55, Dubai, UAE<br />
+                    <a href="https://www.aztechmnc.com" target="_blank" rel="noopener noreferrer" className="hover:underline text-[var(--canvas-text)]">www.aztechmnc.com</a>
+                  </address>
+                </div>
 
                 <a 
                   href="https://www.google.com/maps/place/25%C2%B014'43.9%22N+55%C2%B017'57.0%22E/@25.2455254,55.2965889,17z" 
@@ -186,17 +199,17 @@ export function ContactSection() {
                 <div className="h-px w-full bg-[var(--canvas-border)]" />
 
                 {/* Sister Concern */}
-                <a 
-                  href="#" 
-                  className="flex flex-col gap-2 group relative overflow-hidden"
-                >
+                <div className="flex flex-col gap-2 group relative overflow-hidden">
                   <address className="text-sm text-[var(--canvas-text-muted)] not-italic leading-relaxed font-medium">
                     <strong className="text-[var(--canvas-text)] block font-sans text-sm tracking-wider uppercase font-bold mb-2 opacity-90 group-hover:opacity-100 transition-opacity flex items-center gap-2">
                       <MapPin className="w-4 h-4" /> SISTER CONCERN
                     </strong>
-                    Lamps Plus
+                    LAMPS PLUS ELECTRONICS TRADING LLC<br />
+                    AAD01, Dragon Mart 1<br />
+                    International City, Dubai, UAE<br />
+                    <a href="https://www.lampsplusdisplay.com" target="_blank" rel="noopener noreferrer" className="hover:underline text-[var(--canvas-text)]">www.lampsplusdisplay.com</a>
                   </address>
-                </a>
+                </div>
 
                 <div className="h-px w-full bg-[var(--canvas-border)]" />
 
@@ -246,29 +259,30 @@ export function ContactSection() {
                 <div className="h-px w-full bg-[var(--canvas-border)]" />
 
                 {/* Kerala */}
-                <a 
-                  href="https://www.google.com/maps/search/?api=1&query=CHAMMANY+COMPLEX,+SHOP+NO+65%2F869,+SEBASTIAN+ROAD,+KALOOR,+KOCHIN+682017" 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className="flex flex-col gap-2 group relative overflow-hidden"
-                >
+                <div className="flex flex-col gap-2 group relative overflow-hidden">
                   <address className="text-sm text-[var(--canvas-text-muted)] not-italic leading-relaxed font-medium">
                     <strong className="text-[var(--canvas-text)] block font-sans text-sm tracking-wider uppercase font-bold mb-2 opacity-90 group-hover:opacity-100 transition-opacity flex items-center gap-2">
-                      <MapPin className="w-4 h-4" /> AZTECH LED SCREEN
+                      <MapPin className="w-4 h-4" /> AZTECH LED SCREENS PRIVATE LIMITED
                     </strong>
-                    CHAMMANY COMPLEX, SHOP NO 65/869,<br />
-                    SEBASTIAN ROAD, KALOOR, KOCHIN 682017<br />
-                    Kerala, India
+                    Chammany Complex, Sebastian Road, Kaloor<br />
+                    Kochi – 682017 KERALA INDIA<br />
+                    Indian Office<br />
+                    <a href="https://www.aztechledscreens.com" target="_blank" rel="noopener noreferrer" className="hover:underline">www.aztechledscreens.com</a>
                   </address>
-                </a>
+                </div>
               </div>
             </div>
+          </div>
 
+          {/* Right Column: Hotlines + Application Form */}
+          <div className="col-span-12 lg:col-span-7 space-y-8">
+
+            {/* Direct Hotlines */}
             <div className="bg-[var(--canvas-text)]/[0.03] border border-[var(--canvas-border)] p-8 space-y-6 w-full relative">
               <span className="text-[10px] tracking-widest uppercase font-sans text-[var(--canvas-text)] block font-bold">
                 DIRECT HOTLINES
               </span>
-              <div className="grid grid-cols-1 gap-4 text-sm font-semibold text-[var(--canvas-text)] opacity-90">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm font-semibold text-[var(--canvas-text)] opacity-90">
                 <a href="tel:+917356780866" className="flex items-center gap-3 hover:opacity-100 transition-all">
                   <Phone className="w-4 h-4" />
                   <span>+91 73567 80866 (IN)</span>
@@ -287,10 +301,7 @@ export function ContactSection() {
                 <span>BUSINESS HOURS: MON–SAT (8AM–6PM)</span>
               </div>
             </div>
-          </div>
 
-          {/* Right Column: Application Form */}
-          <div className="col-span-12 lg:col-span-7">
             {isSubmitted ? (
               <div className="flex flex-col items-start py-12">
                 <div className="text-[var(--canvas-text)] mb-6">
@@ -635,7 +646,7 @@ export function ContactSection() {
             </div>
             {/* Kerala Map */}
             <div className="flex flex-col gap-3">
-              <span className="text-[10px] font-mono tracking-widest uppercase text-[var(--canvas-text-muted)] font-bold">Aztech LED Screen — Kochi, Kerala</span>
+              <span className="text-[10px] font-mono tracking-widest uppercase text-[var(--canvas-text-muted)] font-bold">Aztech LED Screens Private Limited — Kochi, Kerala</span>
               <div className="bg-[var(--canvas-text)]/[0.03] border border-[var(--canvas-border)] p-2 w-full relative h-[260px]">
                 <iframe 
                   src="https://maps.google.com/maps?q=CHAMMANY+COMPLEX,+SHOP+NO+65/869,+SEBASTIAN+ROAD,+KALOOR,+KOCHIN+682017&t=&z=16&ie=UTF8&iwloc=&output=embed" 

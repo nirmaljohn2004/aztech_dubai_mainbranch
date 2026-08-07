@@ -149,14 +149,18 @@ export function Footer() {
               </h3>
               <address className="not-italic font-sans text-[0.82rem] text-gray-600 leading-[1.7] mb-4">
                 <strong className="text-gray-900">Head Quarters - Dubai</strong><br />
-                Warehouse 55,<br />
-                Al Quoz Industrial Area 3,<br />
-                Dubai, UAE
+                AZTECH GENERAL TRADING LLC<br />
+                Karama, Dubai Al Nishwan Building,<br />
+                Near ADCB Metro Station<br />
+                P.O. Box 239101, UAE<br />
+                <a href="https://www.ledscreenuae.com" target="_blank" rel="noopener noreferrer" className="hover:text-gray-900 transition-colors">www.ledscreenuae.com</a>
               </address>
               <address className="not-italic font-sans text-[0.82rem] text-gray-600 leading-[1.7] mb-4">
                 <strong className="text-gray-900">Branch Office - India</strong><br />
-                CHAMMANY COMPLEX, SHOP NO 65/869,<br />
-                SEBASTIAN ROAD, KALOOR, KOCHIN 682017
+                AZTECH LED SCREENS PRIVATE LIMITED<br />
+                Chammany Complex, Sebastian Road, Kaloor<br />
+                Kochi – 682017 KERALA INDIA<br />
+                <a href="https://www.aztechledscreens.com" target="_blank" rel="noopener noreferrer" className="hover:text-gray-900 transition-colors">www.aztechledscreens.com</a>
               </address>
               <p className="font-sans text-[0.82rem] text-gray-600 mb-4">
                 Mon–Sat: 8:00 AM – 6:00 PM
@@ -188,7 +192,7 @@ export function Footer() {
               <p className="font-sans text-[0.75rem] text-gray-400 hidden sm:block">
                 Head Quarters: <span className="font-medium text-gray-500">Aztech General Trading LLC, Dubai</span>
                 <span className="mx-1.5 text-gray-300">·</span>
-                Sister Concern: <span className="font-medium text-gray-500">Lamps Plus Electronics Trading LLC</span>
+                Sister Concern: <a href="https://www.lampsplusdisplay.com" target="_blank" rel="noopener noreferrer" className="font-medium text-gray-500 hover:text-gray-900 transition-colors">Lamps Plus Electronics Trading LLC</a>
               </p>
             </div>
             <div className="flex flex-col gap-1.5 lg:text-right">

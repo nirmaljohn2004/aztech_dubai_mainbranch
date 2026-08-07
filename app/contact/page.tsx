@@ -156,36 +156,32 @@ export default function ContactPage() {
                   </span>
                   
                   <div className="grid grid-cols-1 gap-4 w-full">
-                    <a 
-                      href="https://www.google.com/maps/search/?api=1&query=CHAMMANY+COMPLEX,+SHOP+NO+65%2F869,+SEBASTIAN+ROAD,+KALOOR,+KOCHIN+682017" 
-                      target="_blank" 
-                      rel="noopener noreferrer" 
-                      className="flex items-start gap-4 p-5 bg-white/[0.02] border border-[var(--canvas-border)] hover:border-purple-500/30 transition-all duration-300 group relative overflow-hidden"
-                    >
+                    <div className="flex items-start gap-4 p-5 bg-white/[0.02] border border-[var(--canvas-border)] hover:border-purple-500/30 transition-all duration-300 group relative overflow-hidden">
                       <div className="p-2.5 bg-purple-500/10 text-purple-400 group-hover:bg-purple-500/20 group-hover:text-purple-300 transition-colors">
                         <MapPin className="w-4 h-4 shrink-0" />
                       </div>
                       <address className="text-xs text-neutral-400 not-italic leading-relaxed">
                         <strong className="text-white block font-sans text-xs tracking-wider uppercase font-semibold mb-1 group-hover:text-purple-400 transition-colors">INDIA OFFICE</strong>
-                        CHAMMANY COMPLEX, SHOP NO 65/869,<br />
-                        SEBASTIAN ROAD, KALOOR, KOCHIN 682017
+                        AZTECH LED SCREENS PRIVATE LIMITED<br />
+                        Chammany Complex, Sebastian Road, Kaloor<br />
+                        Kochi – 682017 KERALA INDIA<br />
+                        <a href="https://www.aztechledscreens.com" target="_blank" rel="noopener noreferrer" className="hover:text-purple-400 transition-colors relative z-10">www.aztechledscreens.com</a>
                       </address>
-                    </a>
+                    </div>
                     
-                    <a 
-                      href="https://maps.google.com/?q=Warehouse+55,+Al+Quoz+Industrial+Area+3,+Dubai" 
-                      target="_blank" 
-                      rel="noopener noreferrer" 
-                      className="flex items-start gap-4 p-5 bg-white/[0.02] border border-[var(--canvas-border)] hover:border-purple-500/30 transition-all duration-300 group relative overflow-hidden"
-                    >
+                    <div className="flex items-start gap-4 p-5 bg-white/[0.02] border border-[var(--canvas-border)] hover:border-purple-500/30 transition-all duration-300 group relative overflow-hidden">
                       <div className="p-2.5 bg-purple-500/10 text-purple-400 group-hover:bg-purple-500/20 group-hover:text-purple-300 transition-colors">
                         <MapPin className="w-4 h-4 shrink-0" />
                       </div>
                       <address className="text-xs text-neutral-400 not-italic leading-relaxed">
                         <strong className="text-white block font-sans text-xs tracking-wider uppercase font-semibold mb-1 group-hover:text-purple-400 transition-colors">DUBAI MAIN OFFICE</strong>
-                        Warehouse 55, Al Quoz Industrial Area 3, Dubai, UAE
+                        AZTECH GENERAL TRADING LLC<br />
+                        Karama, Dubai Al Nishwan Building,<br />
+                        Near ADCB Metro Station<br />
+                        P.O. Box 239101, UAE<br />
+                        <a href="https://www.ledscreenuae.com" target="_blank" rel="noopener noreferrer" className="hover:text-purple-400 transition-colors relative z-10">www.ledscreenuae.com</a>
                       </address>
-                    </a>
+                    </div>
                   </div>
                 </div>
 

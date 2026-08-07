@@ -31,7 +31,7 @@ export function TopBar() {
       <div className="h-full px-[var(--section-pad-x)] flex items-center justify-between max-w-[1920px] mx-auto">
         <div className="hidden md:flex items-center gap-1.5">
           <MapPin className="w-3 h-3 text-neutral-400" aria-hidden="true" />
-          <span className="text-neutral-400">CHAMMANY COMPLEX, SHOP NO 65/869, SEBASTIAN ROAD, KALOOR, KOCHIN 682017</span>
+          <span className="text-neutral-400">AZTECH LED SCREENS PRIVATE LIMITED, Chammany Complex, Sebastian Road, Kaloor, Kochi – 682017 KERALA INDIA</span>
         </div>
         
         <div className="flex items-center gap-3 ml-auto md:ml-0 text-[9px]">

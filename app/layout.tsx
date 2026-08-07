@@ -117,10 +117,10 @@ export default function RootLayout({
               "priceRange": "AED 5,000 - AED 100,000+",
               "address": {
                 "@type": "PostalAddress",
-                "streetAddress": "Warehouse 55, Al Quoz Industrial Area 3",
+                "streetAddress": "Karama, Dubai Al Nishwan Building, Near ADCB Metro Station",
                 "addressLocality": "Dubai",
                 "addressRegion": "Dubai",
-                "postalCode": "00000",
+                "postalCode": "239101",
                 "addressCountry": "AE"
               },
               "geo": {
